@@ -66,7 +66,7 @@ During these sprints, we offer 2 support sessions per week (to best accomodate t
 ## Reporting
 
 We intend to report upon the progress of the programme through the bSI website/blog as well as
- through the [International Tunnelling Association (ITA)](www.ita-aites.org) and its national branches.
+ through the [International Tunnelling Association (ITA)](https://www.ita-aites.org) and its national branches.
 
 
 ## Participation
