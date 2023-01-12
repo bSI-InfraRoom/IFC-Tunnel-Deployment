@@ -11,7 +11,7 @@ Read more about the programme [here](./about.md).
 ## Contact
 
 For general inquiries about the IFC-for-Tunneling project
- or the IFC-for-Tunneling Deployment programme, please contact project manager Mr. Michel Rives: 
+ or the IFC-for-Tunneling Deployment programme, please contact : Michel Rives, Project Manager, or André Borrmann, Technical Lead, at : 
 
 > [info.deployment.ifctunnel@lists.lrz.de](mailto:info.deployment.ifctunnel@lists.lrz.de)
 
