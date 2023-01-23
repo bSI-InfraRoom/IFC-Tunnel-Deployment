@@ -29,7 +29,6 @@ This sprint encompasses the following usages:
     - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
 - [Body Brep Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-brep-geometry.htm)
     - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
-- [Voxel Geometry]()
+- Voxel Geometry
     - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
-- [Actor Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/actor-assignment.htm) (optional)
 - [Library Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm) (optional)
