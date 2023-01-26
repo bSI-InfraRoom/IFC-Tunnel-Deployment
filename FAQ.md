@@ -3,15 +3,17 @@
 
 **Where can I find the latest IFC schema?**
 
-*TODO*
+See [here](https://github.com/bSI-InfraRoom/IFC-Documentation-Tunnel/tree/main/4_4_0_0/general/EXPRESS).
 
 **Where can I find the latest IFC documentation?**
 
-*TODO*
+See [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/).
+
+This page will be updated during the course of the programme following the updates from [this repository](https://github.com/bSI-InfraRoom/IFC-Documentation-Tunnel).
 
 **Where can I find the change log?**
 
-*TODO*
+See [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/annex-f.htm).
 
 **The check is failing. Where is the report?**
 
