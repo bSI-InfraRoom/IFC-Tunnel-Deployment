@@ -33,6 +33,7 @@ DATA;
 #19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
 #20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
 
+/* -------- Adding an angle unit ----------------------------------------------------------------*/
 #22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
 
 #25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
