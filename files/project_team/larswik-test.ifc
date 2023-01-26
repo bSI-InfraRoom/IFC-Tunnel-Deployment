@@ -28,10 +28,15 @@ DATA;
 
 /* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
 /* ------- when the units are not otherwise defined -------------------------------------------- */
-#17 = IFCUNITASSIGNMENT((#18, #19, #20, #25, #26, #27));
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #24, #25, #26, #27));
 #18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
 #19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
 #20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+
+/* ------- Example of non-SI unit used for angles: degree instead of radian -------------------- */
+#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.017453292519943295), #22);
+#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'degree', #23);
 
 #25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
 #26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
