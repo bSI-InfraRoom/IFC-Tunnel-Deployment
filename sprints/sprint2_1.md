@@ -27,7 +27,7 @@ This sprint encompasses the following usages:
     - only including `IfcSite`, `IfcTunnel`, `IfcTunnelPart`
 - [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm)
     - only including `IfcSite`, `IfcTunnel`, `IfcTunnelPart`
-- [Linear Composition]()
+- Linear Composition
 - [Alignment Layout](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-layout.htm)
 - [Object Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/object-nesting.htm)
     - only for `IfcReferent`
