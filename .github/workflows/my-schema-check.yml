@@ -114,17 +114,4 @@ jobs:
           echo ":exclamation: Note: :exclamation:"
           echo "This does not mean that the file is *completely* correct, though. :broken_heart:" >> $GITHUB_STEP_SUMMARY
           echo "We are not checking everything, only what is required by the current [sprint](https://github.com/bSI-InfraRoom/IFC-Tunnel-Deployment/tree/main/sprints)." >> $GITHUB_STEP_SUMMARY
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
