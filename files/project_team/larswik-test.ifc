@@ -28,7 +28,8 @@ DATA;
 
 /* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
 /* ------- when the units are not otherwise defined -------------------------------------------- */
-#17 = IFCUNITASSIGNMENT((#19, #20, #25, #26, #27));
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #25, #26, #27));
+#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
 #19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
 #20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
 
