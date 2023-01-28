@@ -2,11 +2,11 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [Ifc4X3NotAssigned]'),'2;1');
 FILE_NAME(
-/* name */ 'BeverControl.ifc',
-/* time_stamp */ '2023-01-27T11:56:33',
-/* author */ ('Ivar Oppen'),
-/* organization */ ('Bever Control AS'),
-/* preprocessor_version */ 'Bever Team v1.0.0.0 by Geometry Gym Pty Ltd built 2023-01-27T10:56:31',
+/* name */ '.\\files\\BeverControl.ifc',
+/* time_stamp */ '2023-01-28T08:27:23',
+/* author */ ('ivar'),
+/* organization */ ('Unknown'),
+/* preprocessor_version */ 'Bever Team v1.0.0.0 by Geometry Gym Pty Ltd built 2023-01-28T07:27:22',
 /* originating_system */ 'Bever Team v1.0.0.0',
 /* authorization */ 'None'
 );
@@ -15,28 +15,25 @@ FILE_SCHEMA (('IFC4X3'));
 ENDSEC;
 
 DATA;
-#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#2= IFCAXIS2PLACEMENT3D(#1,$,$);
-#3= IFCLOCALPLACEMENT($,#2);
-#4= IFCSITE('11fHH21dzAJODGo9QAfhV9',#8,'IfcTunnel deployment site',$,$,#3,$,$,$,$,$,$,$,$);
-#5= IFCPERSON('IOP','Oppen','Ivar',$,$,$,(#0),$);
-#6= IFCORGANIZATION($,'Bever Control AS',$,$,$);
-#7= IFCPERSONANDORGANIZATION(#5,#6,$);
-#8= IFCOWNERHISTORY(#7,#0,$,.ADDED.,1674816993,$,$,1674816993);
-#9= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
-#10= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
-#11= IFCUNITASSIGNMENT((#9,#10));
-#12= IFCPROJECT('3x96uLPpr7DAa0Ul4uYt9L',#8,'IfcTunnel deployment project','Sprint 1.1',$,$,$,(#19),#11);
-#13= IFCRELAGGREGATES('31kNfnTA_hDWFNkmBP85o2',#8,$,$,#12,(#4));
-#14= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#15= IFCDIRECTION((0.0,0.0,1.0));
-#16= IFCDIRECTION((1.0,0.0,0.0));
-#17= IFCAXIS2PLACEMENT3D(#14,#15,#16);
-#18= IFCDIRECTION((1.0,0.0,0.0));
-#19= IFCGEOMETRICREPRESENTATIONCONTEXT('Model','3D',3,0.00000001,#17,#20);
-#20= IFCDIRECTION((0.0,1.0));
-#21= IFCACTOR('2q5_TznKz1zBO_Cwqehshm',#8,$,$,$,#5);
-#22= IFCRELDECLARES('3a3e7brXzF0u_b4rY$lPJj',#8,$,$,#12,(#21));
+#1= IFCPROJECT('1_co_zp31D98bpnkBacmSL',#5,'IfcTunnel deployment project','Sprint 1.1',$,$,$,(#14),#8);
+#2= IFCPERSON('ivar',$,$,$,$,$,$,$);
+#3= IFCORGANIZATION($,'Unknown',$,$,$);
+#4= IFCPERSONANDORGANIZATION(#2,#3,$);
+#5= IFCOWNERHISTORY(#4,#0,$,.ADDED.,1674890843,$,$,1674890843);
+#6= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#7= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#8= IFCUNITASSIGNMENT((#6,#7));
+#9= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#10= IFCDIRECTION((0.0,0.0,1.0));
+#11= IFCDIRECTION((1.0,0.0,0.0));
+#12= IFCAXIS2PLACEMENT3D(#9,#10,#11);
+#13= IFCDIRECTION((1.0,0.0,0.0));
+#14= IFCGEOMETRICREPRESENTATIONCONTEXT('Model','3D',3,0.00000001,#12,#15);
+#15= IFCDIRECTION((0.0,1.0));
+#16= IFCACTORROLE(.ENGINEER.,$,$);
+#17= IFCPERSON($,'Oppen','Ivar',$,$,$,(#16),$);
+#18= IFCACTOR('3L7dOokKzEcQu4WI8ryeln',#5,$,$,$,#17);
+#19= IFCRELDECLARES('3KA_tv6_L4l9a9KjqSPpyd',#5,$,$,#1,(#18));
 ENDSEC;
 
 END-ISO-10303-21;
