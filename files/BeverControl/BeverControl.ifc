@@ -1,0 +1,36 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X3NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ 'files\\BeverControl.ifc',
+/* time_stamp */ '2023-01-30T06:33:03',
+/* author */ ('Ivar Oppen'),
+/* organization */ ('Bever Control AS'),
+/* preprocessor_version */ 'Bever Team v1.0.0.0 by Geometry Gym Pty Ltd built 2023-01-29T15:45:04',
+/* originating_system */ 'Bever Team v1.0.0.0',
+/* authorization */ 'None'
+);
+
+FILE_SCHEMA (('IFC4X3'));
+ENDSEC;
+
+DATA;
+#1= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#2= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#3= IFCPROJECT('1b1xwRx4PB6887t1vcBihf',#7,'IfcTunnel deployment project','Sprint 1.1',$,$,$,(#13),#8);
+#4= IFCPERSON('IOP','Oppen','Ivar',$,$,$,$,$);
+#5= IFCORGANIZATION($,'Bever Control AS',$,$,$);
+#6= IFCPERSONANDORGANIZATION(#4,#5,$);
+#7= IFCOWNERHISTORY(#6,#0,$,.ADDED.,1675056783,$,$,1675056783);
+#8= IFCUNITASSIGNMENT((#1,#2));
+#9= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#10= IFCDIRECTION((0.0,0.0,1.0));
+#11= IFCDIRECTION((1.0,0.0,0.0));
+#12= IFCAXIS2PLACEMENT3D(#9,#10,#11);
+#13= IFCGEOMETRICREPRESENTATIONCONTEXT('Model','3D',3,0.00000001,#12,#14);
+#14= IFCDIRECTION((0.0,1.0));
+#15= IFCACTOR('0fIXIs8s11O9W7YloUNJW9',#7,$,$,$,#4);
+#16= IFCRELDECLARES('3ZJ9m$o4H2vB$kr0LEiDEu',#7,$,$,#3,(#15));
+ENDSEC;
+
+END-ISO-10303-21;
