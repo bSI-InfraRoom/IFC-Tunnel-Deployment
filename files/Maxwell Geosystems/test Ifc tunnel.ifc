@@ -26,3 +26,5 @@ DATA;
 #19=IFCGEOMETRICREPRESENTATIONCONTEXT($,'Model',3,0.001,#18,$);
 #20=IFCPROJECT('1lJabQd_uHxRu0c2ccXCgh',#5,'Generic project',$,$,$,$,(#19),#13);
 #21=IFCRELAGGREGATES('1lJabRd_uHxOR8c2ccXCgh',#5,'Generic project Container',$,#20,(#139741));
+ENDSEC;
+END-ISO-10303-21;
