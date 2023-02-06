@@ -28,7 +28,7 @@ jobs:
         run: |
           echo 'The following files were identified for checking:' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          IFS=';;;'; arrIN=(${{ steps.file_changes.outputs.all_changed_files }}); unset IFS;
+          IFS=';;;'; arrIN="${{ steps.file_changes.outputs.all_changed_files }}"; unset IFS;
           for i in "${arrIN[@]}"; do
             echo '- ' $i >> $GITHUB_STEP_SUMMARY
           done
