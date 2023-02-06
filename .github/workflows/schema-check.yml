@@ -28,13 +28,11 @@ jobs:
         run: |
           echo 'The following files were identified for checking:' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          OIFS = $IFS
           IFS=';;;'
           files="${{ steps.file_changes.outputs.all_changed_files }}"
           for i in $files; do
             echo '- ' $i >> $GITHUB_STEP_SUMMARY
           done
-          IFS=$OIFS
           echo '' >> $GITHUB_STEP_SUMMARY
   check-ifc:
     runs-on: windows-latest
