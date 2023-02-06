@@ -1,0 +1,44 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X4NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ 'BeverControl.ifc',
+/* time_stamp */ '2023-02-06T06:29:26',
+/* author */ ('Ivar Oppen'),
+/* organization */ ('Bever Control AS'),
+/* preprocessor_version */ 'Bever Team v1.0.0.0 powered by GeometryGymIFC from Geometry Gym Pty Ltd. Built 2023-02-06T05:29:24',
+/* originating_system */ 'Bever Team v1.0.0.0',
+/* authorization */ 'None'
+);
+
+FILE_SCHEMA (('IFC4X4_DRAFT'));
+ENDSEC;
+
+DATA;
+#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#2= IFCAXIS2PLACEMENT3D(#1,$,$);
+#3= IFCLOCALPLACEMENT($,#2);
+#4= IFCTUNNEL('1XEHcHCgz9qvh$R3aNZech',#10,'My tunnel',$,$,#3,$,$,$,.NOTDEFINED.);
+#5= IFCPERSON('IOP','Oppen','Ivar',$,$,$,$,$);
+#6= IFCORGANIZATION($,'Bever Control AS',$,$,$);
+#7= IFCPERSONANDORGANIZATION(#5,#6,$);
+#8= IFCORGANIZATION($,'Bever Control AS',$,$,$);
+#9= IFCAPPLICATION(#8,' v1.0.0.0','Bever Team','Bever Team v1.0.0.0');
+#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1675661366,$,$,1675661366);
+#11= IFCPROJECT('3mx5z968XAPeLfnPUsLN0B',#10,'IfcTunnel deployment project','Sprint 1.1',$,$,$,(#19),#12);
+#12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17));
+#13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#18= IFCRELAGGREGATES('0Sva6ntGseJS6Rrf1Y5UJA',#10,$,$,#11,(#4));
+#19= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.0001,#21,#22);
+#20= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#21= IFCAXIS2PLACEMENT3D(#20,$,$);
+#22= IFCDIRECTION((0.0,1.0));
+#23= IFCACTOR('26GEaRI8jCR8XFfwnGiH9T',#10,$,$,$,#5);
+#24= IFCRELDECLARES('1Zd_b6p1XEjQGILSZdoPqL',#10,$,$,#11,(#23));
+ENDSEC;
+
+END-ISO-10303-21;
