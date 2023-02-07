@@ -1,0 +1,1 @@
+This folder contains the IFC files produced by Geometry Gym toolkit for the IfcTunnel deployment project.  Open source example code to generate this file is found at https://github.com/GeometryGym/GeometryGymIFCExamples/blob/master/IFC4X4_Tunnel_Deployment/Program.cs 
