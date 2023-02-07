@@ -43,7 +43,7 @@ DATA;
 #27 = IFCMONETARYUNIT('EUR');
 
 /* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
-#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('Model', '3D', 3, 1.E-6, #29, #30);
+#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #29, #30);
 #29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
 #30 = IFCDIRECTION((0.,1.));
 
