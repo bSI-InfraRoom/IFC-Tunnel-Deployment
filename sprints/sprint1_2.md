@@ -26,7 +26,7 @@ This sprint encompasses the following usages:
 - [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm)
 	1. There shall be either an `IfcSite` or an `IfcFacility` (with subtypes irrelevant to the check) aggregated in the `IfcProject`. Observe the *NOTE* in the documentation.
 
-Georeferencing can be achieved in three different ways with three different usages.
+Georeferencing can be achieved in three different ways with three different usages as presented in the figure below.
 The participants are encouraged to submit three separate files, each with a different scenario.
 To enable easier review process, please denote the file names with `Georef_A`, `Georef_B` or `Georef_C` corresponding to the lines below.
 There shall be only one of these in the `ifc` dataset for the check to pass:
@@ -46,3 +46,4 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (which is irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 
+![grafik](https://user-images.githubusercontent.com/59165496/217640011-d367efdc-e74a-4ff8-8fa3-28d0d75e380d.png "Top path corresponds to `Georef_C`, diagonal path to `Georef_A` and bottom path to `Georef_B`.")
