@@ -1,0 +1,56 @@
+ISO-10303-21;
+
+/* ------- This file was produced manually for IFC Infra Extension Deployment project. --------- */
+/* ------- And further adapted for IFC-for-Tunneling Deployment Programme ---------------------- */
+/* ------- Stefan Jaud, stefan@the-hard-code.com, 2023.01.25. ---------------------------------- */
+
+HEADER;
+FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
+FILE_NAME ('larswik-test.ifc', '2023-01-26T18:00:00', ('Lars Wikstrom'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
+FILE_SCHEMA (('IFC4X4_notYetAgreed'));
+ENDSEC;
+
+DATA;
+
+/* ------- General definitions ----------------------------------------------------------------- */
+#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
+/* ------- Reusable X direction ---------------------------------------------------------------- */
+#2 = IFCDIRECTION((1., 0., 0.));
+/* ------- Reusable Y direction ---------------------------------------------------------------- */
+#3 = IFCDIRECTION((0., 1., 0.));
+/* ------- Reusable Z direction ---------------------------------------------------------------- */
+#4 = IFCDIRECTION((0., 0., 1.));
+/* ------- Reusable origin --------------------------------------------------------------------- */
+#5 = IFCCARTESIANPOINT((0., 0., 0.));
+
+/* ------- IfcProject is the top most element in the project structure ------------------------- */
+#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'Sprint 1.1', 'Ifc Tunnel Deployment Sprint 1.1.', $, $, $, (#28), #17);
+
+/* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
+/* ------- when the units are not otherwise defined -------------------------------------------- */
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #22, #25, #26, #27));
+#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
+#19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
+#20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+
+/* -------- Adding an angle unit ----------------------------------------------------------------*/
+#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
+
+#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
+#27 = IFCMONETARYUNIT('EUR');
+
+/* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
+#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #29, #30);
+#29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#30 = IFCDIRECTION((0.,1.));
+
+/* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
+#51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
+#52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
+#53 = IFCPERSON($, 'Wikstrom', 'Lars', $, $, $, #54, $);
+#54 = IFCACTORROLE(.CONSULTANT., $, $);
+
+
+ENDSEC;
+END-ISO-10303-21;
