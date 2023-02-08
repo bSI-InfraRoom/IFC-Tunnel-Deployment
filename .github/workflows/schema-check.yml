@@ -30,8 +30,9 @@ jobs:
           echo '' >> $GITHUB_STEP_SUMMARY
           IFS='§'
           files="${{ steps.file_changes.outputs.all_changed_files }}"
+          deletedFiles=("${{ steps.file_changes.outputs.deleted_files }}")
           for i in $files; do
-            echo '- ' $i >> $GITHUB_STEP_SUMMARY
+            [[ ! " ${deletedFiles[*]} " =~ " ${i} " ]] && echo '- ' $i >> $GITHUB_STEP_SUMMARY
           done
           echo '' >> $GITHUB_STEP_SUMMARY
   check-ifc:
