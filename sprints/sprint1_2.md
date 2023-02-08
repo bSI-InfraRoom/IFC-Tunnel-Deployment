@@ -33,17 +33,17 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 - [Project Global Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning.htm) - scenario `Georef_A`
 	1. `IfcMapConversion` or `IfcMapConversionScaled` is used (attributes' values are irrelevant).
 	2. one of these shall be true:
-		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (which is irrelevant to the checker).
+		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 - Project Global Positioning Geodetic - scenario `Georef_B`
 	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
 	2. one of these shall be true:
-		- `IfcGeodeticCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (which is irrelevant to the checker).
+		- `IfcGeodeticCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcGeodeticCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 - Project Global Positioning Mapped - scenario `Georef_C`
 	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
 	2. one of these shall be true:
-		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (which is irrelevant to the checker).
+		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 
 ![grafik](https://user-images.githubusercontent.com/59165496/217640011-d367efdc-e74a-4ff8-8fa3-28d0d75e380d.png)
