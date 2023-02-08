@@ -46,6 +46,6 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 
-![grafik](https://user-images.githubusercontent.com/59165496/217640011-d367efdc-e74a-4ff8-8fa3-28d0d75e380d.png)
+![grafik](https://user-images.githubusercontent.com/59165496/217642943-edfbf726-dbe4-4428-a596-7ce6357bc8bb.png)
 
 Top path corresponds to `Georef_C`, diagonal path to `Georef_A` and bottom path to `Georef_B`. Sketch courtesy of Stefan Jaud.
