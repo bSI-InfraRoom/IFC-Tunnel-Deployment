@@ -41,7 +41,7 @@ DATA;
 #28 = IFCSIUNIT(*, .THERMODYNAMICTEMPERATUREUNIT., $, .DEGREE_CELSIUS.);
 
 /* ------- none unit used to represent change (e.g. slope -------------------------------------- */
-#29 = IFCSIUNIT(*, .USERDEFINED., $, "percentage");
+#29 = IFCCONTEXTDEPENDENTUNIT($,.USERDEFINED.,'percentage');
 
 /* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
 #40 = IFCGEOMETRICREPRESENTATIONCONTEXT('Model', '3D', 3, 1.E-6, #41, #42);
