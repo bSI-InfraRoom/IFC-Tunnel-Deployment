@@ -3,7 +3,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
 FILE_NAME('','2023-02-09T10:58:21',(),(),'','','');
-FILE_SCHEMA(('IFC4'));
+FILE_SCHEMA(('IFC4X4_notYetAgreed'));
 ENDSEC;
 
 DATA;
@@ -44,7 +44,7 @@ DATA;
 #29 = IFCCONTEXTDEPENDENTUNIT($,.USERDEFINED.,'percentage');
 
 /* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
-#40 = IFCGEOMETRICREPRESENTATIONCONTEXT('Model', '3D', 3, 1.E-6, #41, #42);
+#40 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #41, #42);
 #41 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
 #42 = IFCDIRECTION((0.,1.));
 
