@@ -36,12 +36,14 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 - [Project Global Positioning Geographic](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning-geodetic.htm) - scenario `Georef_B`
-	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
+	1. `IfcRigidOperation` is used
+		- 3rd and 4th attributes' type shall be `IfcPlaneAngleMeasure`
 	2. one of these shall be true:
 		- `IfcGeographicCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcGeographicCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 - [Project Global Positioning Mapped](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning-mapped.htm) - scenario `Georef_C`
-	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
+	1. `IfcRigidOperation` is used
+		- 3rd and 4th attributes' type shall be `IfcLengthMeasure`
 	2. one of these shall be true:
 		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
