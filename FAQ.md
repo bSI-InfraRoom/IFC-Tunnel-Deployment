@@ -3,7 +3,10 @@
 
 **Where can I find the latest IFC schema?**
 
-See [here](https://github.com/bSI-InfraRoom/IFC-Documentation-Tunnel/tree/main/4_4_0_0/general/EXPRESS).
+See [here](https://github.com/bSI-InfraRoom/IFC-Specification/actions/workflows/schema-generation-tunnel.yml). 
+
+Please click on the top-most element in the list of runs and download the artifact `IFC Schema`.
+
 
 **Where can I find the latest IFC documentation?**
 
