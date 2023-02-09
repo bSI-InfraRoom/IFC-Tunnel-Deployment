@@ -35,11 +35,11 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 	2. one of these shall be true:
 		- `IfcProjectedCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
 		- `IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
-- Project Global Positioning Geodetic - scenario `Georef_B`
+- Project Global Positioning Geographic - scenario `Georef_B`
 	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
 	2. one of these shall be true:
-		- `IfcGeodeticCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
-		- `IfcGeodeticCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
+		- `IfcGeographicCRS.Name` shall begin with `EPSG:` and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).
+		- `IfcGeographicCRS.HasWellKnownTextRepresentation.WellKnownText` shall be non-empty.
 - Project Global Positioning Mapped - scenario `Georef_C`
 	1. `IfcRigidOperation` is used (attributes' values are irrelevant).
 	2. one of these shall be true:
