@@ -7,7 +7,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
 FILE_NAME ('example_sprint_1.2_Georef_A.ifc', '2023-02-09T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
-FILE_SCHEMA (('IFC4X4_notYetAgreed'));
+FILE_SCHEMA (('IFC4X4_17239aaa'));
 ENDSEC;
 
 DATA;
