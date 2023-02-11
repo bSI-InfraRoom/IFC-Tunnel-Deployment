@@ -7,7 +7,7 @@ This sprint implements and tests `IfcProject` specific usages.
 
 This sprint assumes you completed the following sprints:
 
-- none.
+- [Sprint 1.1](./sprint1_1.md)
 
 
 ## Duration
