@@ -50,11 +50,11 @@ DATA;
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
 #52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
-#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, #54, $);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
 #54 = IFCACTORROLE(.CONSULTANT., $, $);
 
 /* ------- IfcSite is the top most element in the spatial structure ---------------------------- */
-#61 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, "Top element in project structure", $, $, #62, $, $, .ELEMENT., $, $, $, $, $);
+#61 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, 'Top element in project structure', $, $, #62, $, $, .ELEMENT., $, $, $, $, $);
 /* ------- The IfcSite's placement is the top-most placement ----------------------------------- */
 #62 = IFCLOCALPLACEMENT($, #29);
 /* ------- Project/Spatial structure ----------------------------------------------------------- */
