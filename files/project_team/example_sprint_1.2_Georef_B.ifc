@@ -65,7 +65,7 @@ DATA;
 #72 = IFCCLASSIFICATION('Stefan Jaud', '0.0.0.1', '2023-02-09', 'Stefan Jaud classification', $, $, $);
 
 /* ------- IfcGeographicCRS provides information about the underlying CRS ---------------------- */
-#81 = IFCGEOGRAPHICCRS('EPSG:4258', $, $, 'EPSG:6258', 'EPSG:8901', #24);
+#81 = IFCGEOGRAPHICCRS('EPSG:4258', $, 'EPSG:6258', 'EPSG:8901', #24, #18);
 /* ------- IfcRigidOperation provides data about the global-to-local transformation ------------ */
 #82 = IFCRIGIDOPERATION(#28, #81, IFCPLANEANGLEMEASURE(14.0902217), IFCPLANEANGLEMEASURE(46.3623297), 475.);
 /* ------- If interpreted correctly, the base point should be at the --------------------------- */
