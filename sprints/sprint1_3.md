@@ -14,7 +14,7 @@ This sprint assumes you completed the following sprints:
 ## Duration
 
 | Kick-off    | Submission  | Closure     |
-|-------------|-------------|-------------|
+| ----------- | ----------- | ----------- |
 | 2023.02.23. | 2023.03.13. | 2023.03.16. |
 
 
@@ -39,3 +39,11 @@ This sprint encompasses the following usages:
     - The `IfcProject` shall declare an `IfcArchElementType`.
 - [Project Template Definitions](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-template-definitions.htm)
     - The `IfcProject` shall declare an `IfcPropertySetTemplate` with the following structure:
+      - `Name` : 'Pset_GeoObsBoreholeConstruction'
+      - `TemplateType` : .PSET_TYPEDRIVENOVERRIDE.
+      - `ApplicableEntity` : 'IfcBorehole'
+      - `HasPropertyTemplates` :
+        - `IfcSimplePropertyTemplate` :
+          - `Name` : 'DrillingDiameter'
+          - `TemplateType` : .P_SINGLEVALUE.
+          - `PrimaryMeasureType` : 'IfcPositiveLengthMeasure'
