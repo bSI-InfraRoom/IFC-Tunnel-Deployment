@@ -6,8 +6,8 @@ ISO-10303-21;
 
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
-FILE_NAME ('example_sprint_1.1.ifc', '2023-01-26T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
-FILE_SCHEMA (('IFC4X4_notYetAgreed'));
+FILE_NAME ('example_sprint_1.2_Georef_A.ifc', '2023-02-09T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
+FILE_SCHEMA (('IFC4X4_17239aaa'));
 ENDSEC;
 
 DATA;
@@ -24,7 +24,7 @@ DATA;
 #5 = IFCCARTESIANPOINT((0., 0., 0.));
 
 /* ------- IfcProject is the top most element in the project structure ------------------------- */
-#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'Sprint 1.1', 'Ifc Tunnel Deployment Sprint 1.1.', $, $, $, (#28), #17);
+#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'Sprint 1.2', 'Ifc Tunnel Deployment Sprint 1.2.', $, $, $, (#28), #17);
 
 /* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
 /* ------- when the units are not otherwise defined -------------------------------------------- */
@@ -43,20 +43,35 @@ DATA;
 #27 = IFCMONETARYUNIT('EUR');
 
 /* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
-<<<<<<< HEAD
-#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('Model', '3D', 3, 1.E-6, #29, #30);
-=======
 #28 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #29, #30);
->>>>>>> refs/remotes/origin/Development
 #29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
 #30 = IFCDIRECTION((0.,1.));
 
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
 #52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
-#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, #54, $);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
 #54 = IFCACTORROLE(.CONSULTANT., $, $);
 
+/* ------- IfcSite is the top most element in the spatial structure ---------------------------- */
+#61 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, 'Top element in project structure', $, $, #62, $, $, .ELEMENT., $, $, $, $, $);
+/* ------- The IfcSite's placement is the top-most placement ----------------------------------- */
+#62 = IFCLOCALPLACEMENT($, #29);
+/* ------- Project/Spatial structure ----------------------------------------------------------- */
+#63 = IFCRELAGGREGATES('3Hu7f6BmT14B_XS9yS78Jr', $, $, $, #16, (#61));
+
+/* ------- Associating a made up classification ------------------------------------------------ */
+#71 = IFCRELASSOCIATESCLASSIFICATION('3Hu7f6BmT14B_XS9yS78Ja', $, $, $, (#16), #72);
+#72 = IFCCLASSIFICATION('Stefan Jaud', '0.0.0.1', '2023-02-09', 'Stefan Jaud classification', $, $, $);
+
+/* ------- IfcProjectedCRS provides information about the underlying CRS ----------------------- */
+#81 = IFCPROJECTEDCRS('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', #18);
+/* ------- IfcMapConversion provides data about the global-to-local transformation ------------- */
+/* ------- The last attribute is not needed, as the IfcProjectedCRS and the IfcProject --------- */
+/* ------- use the same length unit (metres, defined in #18) ----------------------------------- */
+#82 = IFCMAPCONVERSION(#28, #81, 4468005., 5334600., 515., 1., 0., 1., $);
+/* ------- If interpreted correctly, the base point should be the main entrance to the --------- */
+/* ------- Technical University of Munich, Arcisstrasse 21, 80333 Munich, Germany -------------- */
 
 ENDSEC;
 END-ISO-10303-21;
