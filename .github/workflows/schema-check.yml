@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "**.ifc"
 
 jobs:
   filter:
@@ -23,14 +25,16 @@ jobs:
         with:
           files: |
             **/*.ifc
-          files_separator: ";"
+          separator: "§"
       - name: Logging
         run: |
           echo 'The following files were identified for checking:' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          IFS=';'; arrIN=(${{ steps.file_changes.outputs.all_changed_files }}); unset IFS;
-          for i in "${arrIN[@]}"; do
-            echo '- ' $i >> $GITHUB_STEP_SUMMARY
+          IFS='§'
+          files="${{ steps.file_changes.outputs.all_changed_files }}"
+          deletedFiles=("${{ steps.file_changes.outputs.deleted_files }}")
+          for i in $files; do
+            [[ ! " ${deletedFiles[*]} " =~ " ${i} " ]] && echo '- ' $i >> $GITHUB_STEP_SUMMARY
           done
           echo '' >> $GITHUB_STEP_SUMMARY
   check-ifc:
@@ -51,16 +55,17 @@ jobs:
         id: downloadfile
         run: |
           mkdir download
-          $urlPath = "https://thc.lyforms.com/documents/thc/public/IFChecker.TunnelDeployment.zip"
-          $path = "${{ github.workspace }}\download\IFChecker.TunnelDeployment.zip"
+          $urlPath = "https://thc.lyforms.com/documents/thc/public/IFChecker.TunnelDeployment"
+          $path = "${{ github.workspace }}\download\IFChecker.TunnelDeployment"
           Invoke-WebRequest -URI $urlPath -OutFile $path
           Expand-Archive $path -DestinationPath "${{ github.workspace }}\.github\workflows\"
       - name: Check IFC files
         id: checker
         run: |
           mkdir results
+          $removed = "${{ needs.filter.outputs.removedfiles }}"
           $cmnd = "${{ github.workspace }}\.github\workflows\IFChecker.TunnelDeployment.exe"
-          "${{ needs.filter.outputs.allchangedfiles }}".Split(";") | ForEach {
+          "${{ needs.filter.outputs.allchangedfiles }}".Split("§") | ForEach {
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
