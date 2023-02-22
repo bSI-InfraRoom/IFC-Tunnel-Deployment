@@ -2,7 +2,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ikke spesifisert]'), '2;1');
 FILE_NAME ('D:\\Download\\RoadAlignment.ifc', '2023-02-09 T16:59:45', ('Artemis_Karlatou'), ('Trimble Solutions Gothenburg'), 'Ifc Engine <1.0.1.1357>', 'Quadri <25.0.40062.0>', 'Artemis_Karlatou');
-FILE_SCHEMA (('IFC4X4'));
+FILE_SCHEMA (('IFC4X4abcdef'));
 ENDSEC;
 DATA;
 #1 = IFCPOSTALADDRESS(.OFFICE., $, $, $, ('Kungsgatan 2'), '', 'Gothenburg', '', '41105', 'Sweden');
