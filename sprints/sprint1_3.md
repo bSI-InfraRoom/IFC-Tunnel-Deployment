@@ -7,14 +7,22 @@ This sprint implements and tests `IfcProject` specific usages.
 
 This sprint assumes you completed the following sprints:
 
+<<<<<<< HEAD
+- none.
+=======
 - [Sprint 1.1](./sprint1_1.md) and
 - [Sprint 1.2](./sprint1_2.md).
+>>>>>>> refs/remotes/origin/Development
 
 
 ## Duration
 
 | Kick-off    | Submission  | Closure     |
+<<<<<<< HEAD
+|-------------|-------------|-------------|
+=======
 | ----------- | ----------- | ----------- |
+>>>>>>> refs/remotes/origin/Development
 | 2023.02.23. | 2023.03.13. | 2023.03.16. |
 
 
@@ -23,6 +31,12 @@ This sprint assumes you completed the following sprints:
 This sprint encompasses the following usages:
 
 - [Project Document Information](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-document-information.htm)
+<<<<<<< HEAD
+- Project Dataset Information
+- [Project Library Information](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-library-information.htm)
+- [Project Type Definitions](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-type-definitions.htm)
+- [Project Template Definitions](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-template-definitions.htm)
+=======
     - The `IfcProject` shall associate `IfcDocumentInformation` with;
         - non-empty `Identification`, `Name` and `Location` attributes (content of the attributes is irrelevant to the check at this stage); as well as
         - `ElectronicFormat` shall be `application/pdf` to denote the format of the "virtually" attached file; (you are not required to attach any such file for the test) and
@@ -47,3 +61,4 @@ This sprint encompasses the following usages:
           - `Name` : 'DrillingDiameter'
           - `TemplateType` : .P_SINGLEVALUE.
           - `PrimaryMeasureType` : 'IfcPositiveLengthMeasure'
+>>>>>>> refs/remotes/origin/Development

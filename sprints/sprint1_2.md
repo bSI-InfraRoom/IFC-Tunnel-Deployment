@@ -7,7 +7,11 @@ This sprint implements and tests `IfcProject` specific usages.
 
 This sprint assumes you completed the following sprints:
 
+<<<<<<< HEAD
+- none.
+=======
 - [Sprint 1.1](./sprint1_1.md)
+>>>>>>> refs/remotes/origin/Development
 
 
 ## Duration
@@ -21,6 +25,13 @@ This sprint assumes you completed the following sprints:
 
 This sprint encompasses the following usages:
 
+<<<<<<< HEAD
+- [Project Global Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning.htm)
+- Project Global Positioning Geodetic
+- Project Global Positioning Mapped
+- [Classification Information](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
+- [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm)
+=======
 - [Project Classification Information](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-classification-information.htm)
 	1. The `IfcProject` shall associate `IfcClassification` with non-empty `Source` and `Name` attributes (content of the attributes is irrelevant to the check at this stage)
 - [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm)
@@ -51,3 +62,4 @@ There shall be only one of these in the `ifc` dataset for the check to pass:
 ![grafik](https://user-images.githubusercontent.com/59165496/217642943-edfbf726-dbe4-4428-a596-7ce6357bc8bb.png)
 
 Top path corresponds to `Georef_C`, diagonal path to `Georef_A` and bottom path to `Georef_B`. Sketch courtesy of Stefan Jaud.
+>>>>>>> refs/remotes/origin/Development
