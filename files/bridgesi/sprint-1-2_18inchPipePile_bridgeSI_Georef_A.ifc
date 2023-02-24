@@ -2,7 +2,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION ((''), '2;1');
 FILE_NAME ('', '2020-09-17T00:38:34', (''), (''), '', '', '');
-FILE_SCHEMA (('IFC4'));
+FILE_SCHEMA (('IFC4x4'));
 ENDSEC;
 DATA;
 
@@ -25,10 +25,10 @@ DATA;
 
 #17=IFCCARTESIANPOINT((0.,0.,0.));
 #18=IFCAXIS2PLACEMENT3D(#17,$,$);
-#19=IFCGEOMETRICREPRESENTATIONCONTEXT('Building Model','Model',3,1.E-05,#18,$);
+#19=IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,1.E-05,#18,$);
 #20=IFCCARTESIANPOINT((0.,0.));
 #21=IFCAXIS2PLACEMENT2D(#20,$);
-#22=IFCGEOMETRICREPRESENTATIONCONTEXT('Building Plan View','Plan',2,1.E-05,#21,$);
+#22=IFCGEOMETRICREPRESENTATIONCONTEXT('2D','Plan',2,1.E-05,#21,$);
 
 #23=IFCBUILDING('0E2ZduM25BKQS0BGcAuPIT',$,'Converted Bridge Model',$,$,#24,$,$,.ELEMENT.,$,$,$);
 #24=IFCLOCALPLACEMENT($,#25);
@@ -97,5 +97,14 @@ DATA;
 #86=IFCPROPERTYSET('270I2FssLFE8jU$CnpxRCM',$,'SteelParameters',$,(#87,#88));
 #87=IFCPROPERTYSINGLEVALUE('Yield Stress',$,IFCTEXT('60'),$);
 #88=IFCPROPERTYSINGLEVALUE('Youngs Modulus',$,IFCTEXT('29000'),$);
+
+#89= IFCCLASSIFICATION('BSI',$,$,'Masterformat',$,'https://www.csiresources.org/standards/masterformat',$);
+#90= IFCRELASSOCIATESCLASSIFICATION('3CySecA9nEdRmCY328dhef',$,$,$,(#1),#89);
+
+#91 = IFCSITE('2q0A6$eDbEJx$bZGM8f7tv', $, 'Default Bridge', $, $, #24, $, $, .ELEMENT., (0, 0, 0), (0, 0, 0), 0., $, $);
+#92 = IFCRELAGGREGATES('2w4vtdhVoEH810nVKpCtY1', $, 'Project Bin', 'Project to Spatial Element', #1, (#91));
+
+#93= IFCPROJECTEDCRS('EPSG:12364',$,$,$,$,$,$);
+#94= IFCMAPCONVERSION(#19,#93,123873.948,4921762.1274,0.0,$,$,$);
 ENDSEC;
 END-ISO-10303-21;
