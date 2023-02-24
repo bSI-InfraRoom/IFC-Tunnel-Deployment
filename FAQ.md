@@ -1,5 +1,6 @@
 # FAQ
 
+## Documentation
 
 **Where can I find the latest IFC schema?**
 
@@ -18,9 +19,25 @@ This page will be updated during the course of the programme following the updat
 
 See [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/annex-f.htm).
 
+
+## Review
+
 **The check is failing. Where is the report?**
 
 ![grafik](https://user-images.githubusercontent.com/59165496/214881281-2f428c31-2de1-48f3-8564-2a7b27fe4174.png "In the Action tab, click on *Summary*.")
+
+**I get the following message in review**
+
+- *lftm*
+
+Looks fine to me. This means the reviewer did not spot any obvious mistakes.
+
+- *The file has a lot more content than required - this approval only covers the concepts as part of Sprint x.y. It may be that the file will fail future checks and will need amendment.*
+
+The file exceeds the requirements from Sprint x.y. While the submitted file has been approved, this does not constitute any approval for content outside the Sprint x.y's scope.
+
+
+## Miscellaneous
 
 **I need the link to the technical call.**
 
