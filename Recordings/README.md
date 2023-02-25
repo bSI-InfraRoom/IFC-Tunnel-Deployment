@@ -9,3 +9,7 @@
 [Sprint 1.2 KickOff 2023-02-09](https://www.youtube.com/watch?v=vsemMxGn60k)
 
 [Sprint 1.2 support calls 2023-02-16](https://youtu.be/XFVki-hB5XI)
+
+[Sprint 1.2 support calls 2023-02-23](https://www.youtube.com/watch?v=yBFi7uadCJQ)
+
+[Sprint 1.3 KickOff 2023-02-23](https://www.youtube.com/watch?v=asbIJt011Qs)
