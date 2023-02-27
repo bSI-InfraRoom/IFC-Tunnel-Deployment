@@ -1,9 +1,9 @@
 ISO-10303-21;
 HEADER;
-FILE_DESCRIPTION(('ViewDefinition [Ifc4X3NotAssigned]'),'2;1');
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X4NotAssigned]'),'2;1');
 FILE_NAME(
 /* name */ 'IFCTunnelDep1.3.ifc',
-/* time_stamp */ '2023-02-21T11:22:35',
+/* time_stamp */ '2023-02-27T08:49:16',
 /* author */ ('lars'),
 /* organization */ ('Unknown'),
 /* preprocessor_version */ 'GeometryGymIFCcore v0.2.11.0 by Geometry Gym Pty Ltd built 2023-02-17T09:18:34',
@@ -11,28 +11,28 @@ FILE_NAME(
 /* authorization */ 'None'
 );
 
-FILE_SCHEMA (('IFC4X4_41272F09'));
+FILE_SCHEMA (('IFC4X4_3840CC65'));
 ENDSEC;
 
 DATA;
 #1= IFCCARTESIANPOINT((0.0,0.0,0.0));
 #2= IFCAXIS2PLACEMENT3D(#1,$,$);
 #3= IFCLOCALPLACEMENT($,#2);
-#4= IFCTUNNEL('0ZhDb1EcrFlB7Pt8ThZRKT',#10,'My Tunnel',$,$,#3,$,$,$,.ROAD.);
+#4= IFCTUNNEL('1xVKJI_Tn01v_SpaNDugH3',#10,'My Tunnel',$,$,#3,$,$,$,.ROAD.);
 #5= IFCPERSON('lars',$,$,$,$,$,$,$);
 #6= IFCORGANIZATION($,'Unknown',$,$,$);
 #7= IFCPERSONANDORGANIZATION(#5,#6,$);
 #8= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
 #9= IFCAPPLICATION(#8,' v1.0.0.0','IFCTunnelDep1 v1.0.0.0','IFCTunnelDep1 v1.0.0.0');
-#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1676974955,$,$,1676974955);
-#11= IFCPROJECT('27JcVZzyP2Lfos66GaVpVr',#10,'SPRINT 1.2 example with Project Global Positioning',$,$,$,$,(#25),#12);
+#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1677484156,$,$,1677484156);
+#11= IFCPROJECT('3fJroumu16PhSiQJaY5ybd',#10,'SPRINT 1.3 example',$,$,$,$,(#25),#12);
 #12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17,#19));
 #13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
 #14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
 #15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
 #16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
 #17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#18= IFCRELAGGREGATES('0mQHVnMprPbfErV6HrUhF2',#10,$,$,#11,(#4));
+#18= IFCRELAGGREGATES('0Iq3aY8Hnt_OueJoeEZ$93',#10,$,$,#11,(#4));
 #19= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
 #20= IFCCARTESIANPOINT((0.0,0.0,0.0));
 #21= IFCDIRECTION((0.0,0.0,1.0));
@@ -44,22 +44,24 @@ DATA;
 #27= IFCGEOGRAPHICCRS('EPSG:4326',$,'World Geodetic System 1984 ensemble',$,$,$);
 #28= IFCRIGIDOPERATION(#25,#27,IFCPLANEANGLEMEASURE(24.4769747),IFCPLANEANGLEMEASURE(61.9908225),0.0);
 #29= IFCCLASSIFICATION('Triona AB',$,$,'My classification',$,$,$);
-#30= IFCRELASSOCIATESCLASSIFICATION('3ddD2x5TvBIvBOSwJAT$a4',#10,$,$,(#11),#29);
-#31= IFCBUILTSYSTEM('3fug7PpajBPAqauiUTIxqk',#10,'A system',$,$,.TUNNEL_SUPPORT.,$);
-#32= IFCRELREFERENCEDINSPATIALSTRUCTURE('2X824mwzn24wNfF5xM5M$D',#10,$,$,(#31),#4);
-#33= IFCRELDECLARES('0XxzEMhRjEsx6ATpetrXW7',#10,$,$,#11,(#31,#43,#45));
-#34= IFCDOCUMENTINFORMATION('ISBN: 978-91-7725-946-6','Titel: Krav - VGU, V\X2\00E4\X0\gars och gators utformning',$,'http://trafikverket.diva-portal.org/smash/get/diva2:1621114/FULLTEXT02.pdf',$,$,$,$,$,$,$,$,'application/pdf',$,$,$,$);
-#35= IFCRELASSOCIATESDOCUMENT('2D6TlgIn99LP7LllSlTHuo',#10,$,$,(#11),#34);
-#36= IFCDATASETINFORMATION('Dataset-xxx','Dataset-xxx-xml',$,'http://xxx.yyy.se/Datasets/Dataset-xxx.xml',$,$,$,$,$,$,$,$,'text/xml,$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
-#37= IFCRELASSOCIATESDATASET('0lM02zei1F0OCnzjuEMfHz',#10,$,$,(#11),#36);
-#38= IFCLIBRARYINFORMATION('My library','1.0',#41,'2023-02-21T11:22:35','http://xxx.yyy.se/Libraries/MyLib.ifc',$);
-#39= IFCPERSON($,'Wikstr\X2\00F6\X0\m','Lars',$,$,$,$,$);
-#40= IFCORGANIZATION($,'Triona AB',$,$,$);
-#41= IFCPERSONANDORGANIZATION(#39,#40,$);
-#42= IFCRELASSOCIATESLIBRARY('3BtsGx9$19ZOr4YDjnzJf1',#10,$,$,(#11),#38);
-#43= IFCARCHELEMENTTYPE('1DlE0cqGX8XQh$z_muWlk4',#10,'Arch-123',$,$,$,$,$,'MyArchType',.USERDEFINED.);
-#45= IFCPROPERTYSETTEMPLATE('3ruRe82Pv35A6pl1gt8lzj',#10,'Pset_GeoObsBoreholeCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#46));
-#46= IFCSIMPLEPROPERTYTEMPLATE('1f2_2YKCj7eue1uin2eSsk',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthyMeasure',$,$,$,$,$,$);
+#30= IFCRELASSOCIATESCLASSIFICATION('2CZA3gyxL2Yh2dUHMJjXOK',#10,$,$,(#11),#29);
+#31= IFCBUILTSYSTEM('2tvdufStD1UQzXyfzKdWKo',#10,'A system',$,$,.TUNNEL_SUPPORT.,$);
+#32= IFCRELREFERENCEDINSPATIALSTRUCTURE('12130nciv2tO4L4umuKzt2',#10,$,$,(#31),#4);
+#33= IFCRELDECLARES('1BQjXRPjb8g8xC6CjxfzkY',#10,$,$,#11,(#31,#36,#45,#47));
+#34= IFCDOCUMENTINFORMATION('ISBN: 978-91-7725-946-6','Titel: Krav - VGU, V\X2\00E4\X0\gars och gators utformning',$,'http://trafikverket.diva-portal.org/smash/get/diva2:1621114/FULLTEXT02.pdf',$,$,$,$,$,(#35),$,$,'application/pdf',$,$,$,$);
+#35= IFCORGANIZATION('http://www.trafikverket.se','Trafikverket',$,$,$);
+#36= IFCACTOR('2IaoL90jX2cxmhDUw4be95',#10,$,$,$,#35);
+#37= IFCRELASSOCIATESDOCUMENT('1sNNdpLT19zvCwfUJg2ZcJ',#10,$,$,(#11),#34);
+#38= IFCDATASETINFORMATION('http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#39= IFCRELASSOCIATESDATASET('1xDwx8SrT2thcm_N6IJ6mf',#10,$,$,(#11));
+#40= IFCLIBRARYINFORMATION('My library','1.0',#43,'2023-02-27T08:49:16','http://xxx.yyy.se/Libraries/MyLib.ifc',$);
+#41= IFCPERSON($,'Wikstr\X2\00F6\X0\m','Lars',$,$,$,$,$);
+#42= IFCORGANIZATION($,'Triona AB',$,$,$);
+#43= IFCPERSONANDORGANIZATION(#41,#42,$);
+#44= IFCRELASSOCIATESLIBRARY('1mx84vmVb3ge6aOk8f8GcE',#10,$,$,(#11),#40);
+#45= IFCARCHELEMENTTYPE('2HTQKsN7T4kO48NuyIJC$f',#10,'Arch-123',$,$,$,$,$,'MyArchType',.USERDEFINED.);
+#47= IFCPROPERTYSETTEMPLATE('1HU_DpJF19VAuUZKIKWs8o',#10,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#48));
+#48= IFCSIMPLEPROPERTYTEMPLATE('18M4slF4z75BeVs5hperIN',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthyMeasure',$,$,$,$,$,$);
 ENDSEC;
 
 END-ISO-10303-21;
