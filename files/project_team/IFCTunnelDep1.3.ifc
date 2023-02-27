@@ -58,7 +58,7 @@ DATA;
 #41= IFCPERSONANDORGANIZATION(#39,#40,$);
 #42= IFCRELASSOCIATESLIBRARY('3BtsGx9$19ZOr4YDjnzJf1',#10,$,$,(#11),#38);
 #43= IFCARCHELEMENTTYPE('1DlE0cqGX8XQh$z_muWlk4',#10,'Arch-123',$,$,$,$,$,'MyArchType',.USERDEFINED.);
-#45= IFCPROPERTYSETTEMPLATE('3ruRe82Pv35A6pl1gt8lzj',#10,'Pset_GeoObsBoreholeCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#46));
+#45= IFCPROPERTYSETTEMPLATE('3ruRe82Pv35A6pl1gt8lzj',#10,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#46));
 #46= IFCSIMPLEPROPERTYTEMPLATE('1f2_2YKCj7eue1uin2eSsk',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthyMeasure',$,$,$,$,$,$);
 ENDSEC;
 
