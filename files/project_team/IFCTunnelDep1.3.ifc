@@ -50,7 +50,7 @@ DATA;
 #33= IFCRELDECLARES('0XxzEMhRjEsx6ATpetrXW7',#10,$,$,#11,(#31,#43,#45));
 #34= IFCDOCUMENTINFORMATION('ISBN: 978-91-7725-946-6','Titel: Krav - VGU, V\X2\00E4\X0\gars och gators utformning',$,'http://trafikverket.diva-portal.org/smash/get/diva2:1621114/FULLTEXT02.pdf',$,$,$,$,$,$,$,$,'application/pdf',$,$,$,$);
 #35= IFCRELASSOCIATESDOCUMENT('2D6TlgIn99LP7LllSlTHuo',#10,$,$,(#11),#34);
-#36= IFCDATASETINFORMATION('Dataset-xxx','Dataset-xxx-xml',$,'http://xxx.yyy.se/Datasets/Dataset-xxx.xml',$,$,$,$,$,$,$,$,'text/xml,$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#36= IFCDATASETINFORMATION('Dataset-xxx','Dataset-xxx-xml',$,'http://xxx.yyy.se/Datasets/Dataset-xxx.xml',$,$,$,$,$,$,$,$,'text/xml',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
 #37= IFCRELASSOCIATESDATASET('0lM02zei1F0OCnzjuEMfHz',#10,$,$,(#11),#36);
 #38= IFCLIBRARYINFORMATION('My library','1.0',#41,'2023-02-21T11:22:35','http://xxx.yyy.se/Libraries/MyLib.ifc',$);
 #39= IFCPERSON($,'Wikstr\X2\00F6\X0\m','Lars',$,$,$,$,$);
