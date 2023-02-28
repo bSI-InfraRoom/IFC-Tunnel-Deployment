@@ -3,46 +3,63 @@ HEADER;
 FILE_DESCRIPTION(('ViewDefinition [Ifc4X4NotAssigned]'),'2;1');
 FILE_NAME(
 /* name */ 'BeverControl.ifc',
-/* time_stamp */ '2023-02-12T06:22:00',
+/* time_stamp */ '2023-02-28T08:53:05',
 /* author */ ('Ivar Oppen'),
 /* organization */ ('Bever Control AS'),
-/* preprocessor_version */ 'Bever Team v1.0.0.0 powered by GeometryGymIFC from Geometry Gym Pty Ltd. Built 2023-02-12T05:21:58',
+/* preprocessor_version */ 'Bever Team v1.0.0.0 powered by Geometry Gym Pty Ltd. Built 2023-02-28T07:41:38',
 /* originating_system */ 'Bever Team v1.0.0.0',
 /* authorization */ 'None'
 );
 
-FILE_SCHEMA (('IFC4X4_DRAFT'));
+FILE_SCHEMA (('IFC4X4_17239AAA'));
 ENDSEC;
 
 DATA;
 #1= IFCCARTESIANPOINT((0.0,0.0,0.0));
 #2= IFCAXIS2PLACEMENT3D(#1,$,$);
-#4= IFCTUNNEL('0Z6uXLgxr2meiLK5aNrICZ',#10,'My tunnel',$,$,#27,$,$,$,.NOTDEFINED.);
+#4= IFCTUNNEL('2$GGGbk1PFAfiLTa60smQ7',#10,'My tunnel',$,$,#30,$,$,$,.ROAD.);
 #5= IFCPERSON('IOP','Oppen','Ivar',$,$,$,$,$);
 #6= IFCORGANIZATION($,'Bever Control AS',$,$,$);
 #7= IFCPERSONANDORGANIZATION(#5,#6,$);
 #8= IFCORGANIZATION($,'Bever Control AS',$,$,$);
 #9= IFCAPPLICATION(#8,' v1.0.0.0','Bever Team','Bever Team v1.0.0.0');
-#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1676179319,$,$,1676179319);
-#11= IFCPROJECT('2AOvJ7XKD3zPFk43u0qcsO',#10,'IfcTunnel deployment project','Sprint 1.2: Georef A',$,$,$,(#21),#12);
+#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1677570785,$,$,1677570785);
+#11= IFCPROJECT('0Eg5QYP$z7hPIXMlnxR85S',#10,'IfcTunnel deployment project','Sprint 1.3',$,$,$,(#24),#12);
 #12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17));
 #13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
 #14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
 #15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
 #16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
 #17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
-#18= IFCRELAGGREGATES('2k_bW5uDeFkyZTHitYCkW0',#10,$,$,#11,(#4));
-#19= IFCACTOR('06z8xlGPbDVh5YdEW3lJhn',#10,$,$,$,#5);
-#20= IFCRELDECLARES('0GxOrAoy5FgPNS6KLoIdnG',#10,$,$,#11,(#19));
-#21= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.0001,#23,#24);
-#22= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#23= IFCAXIS2PLACEMENT3D(#22,$,$);
-#24= IFCDIRECTION((0.0,1.0));
-#25= IFCPROJECTEDCRS('EPSG:5110',$,'ETRS89 / NTM zone 10','5776:NN54 height',$,$,$);
-#26= IFCMAPCONVERSION(#21,#25,1.0,1.0,0.0,$,$,$);
-#27= IFCLOCALPLACEMENT($,#23);
-#28= IFCCLASSIFICATION('My source','My Edition','2023-02-12','My classification',$,$,$);
-#29= IFCRELASSOCIATESCLASSIFICATION('2rL4Y20s5BUhHRmrhrsU_H',#10,$,$,(#11),#28);
+#18= IFCRELAGGREGATES('3rW9IXZEPEE7PIwTHfF04d',#10,$,$,#11,(#4));
+#19= IFCACTOR('1OCh6roRnE$8FcawfWnFtT',#10,$,$,$,#5);
+#20= IFCRELDECLARES('2k$8xkjs5AnfZev6bZDOhg',#10,$,$,#11,(#19,#21,#23,#44,#47));
+#21= IFCACTOR('1AWc2CvtP2PAMkQyQ2QeI4',#10,$,$,$,#6);
+#22= IFCORGANIZATION($,'buildingSMART International Ltd.',$,$,$);
+#23= IFCACTOR('35PO$TJsD7xvHrD6FUKKKf',#10,$,$,$,#22);
+#24= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.0001,#26,#27);
+#25= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#26= IFCAXIS2PLACEMENT3D(#25,$,$);
+#27= IFCDIRECTION((0.0,1.0));
+#28= IFCPROJECTEDCRS('EPSG:5110',$,'ETRS89 / NTM zone 10','5776:NN54 height',$,$,$);
+#29= IFCMAPCONVERSION(#24,#28,1.0,1.0,0.0,$,$,$);
+#30= IFCLOCALPLACEMENT($,#26);
+#31= IFCCLASSIFICATION('NBS',$,$,'Uniclass',$,'https://uniclass.thenbs.com/',$);
+#32= IFCRELASSOCIATESCLASSIFICATION('2CqdJzAgDBKO0JtlWZleoX',#10,$,$,(#11),#31);
+#33= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en','En','Entities',#31,$,$);
+#34= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80','En_80','Transport Entities',#33,$,$);
+#35= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80_96','En_80_96','Tunnels and Shafts',#34,$,$);
+#36= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80_96_90','En_80_96_90','Tunnels',#35,$,$);
+#37= IFCRELASSOCIATESCLASSIFICATION('0Jri7zNT5ETQtcVuEub1Gc',#10,$,$,(#4),#36);
+#38= IFCDOCUMENTINFORMATION('BeverControl','Conditions of sale',$,'https://www.bevercontrol.com/uploads/F6xmAR5I/BeverControl-Termsandconditionsofsale2021.pdf',$,$,$,$,$,(#6),$,$,'application/pdf',$,$,$,$);
+#39= IFCRELASSOCIATESDOCUMENT('1rtB$nJAb3TBDoAGkyA9j9',#10,$,$,(#11),#38);
+#40= IFCDATASETINFORMATION('Dataset1','My dataset',$,'https://www.bevercontrol.com',$,$,$,$,$,$,$,$,'text/xml',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd','http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#41= IFCRELASSOCIATESDATASET('3f3umKa9P8dhT$d6HrNqtI',#10,$,$,(#11),#40);
+#42= IFCLIBRARYINFORMATION('IFC-XML property and quantity templates','4x4',#22,'2023-02-09T00:00:00','https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/annex/annex-a/general-usage/IFC4x3.ifc',$);
+#43= IFCRELASSOCIATESLIBRARY('12VRHRpGz0Bvj0dosEYz9K',#10,$,$,(#11),#42);
+#44= IFCARCHELEMENTTYPE('2zPf95vIf3zxjjIzzLPNwx',#10,'My arch',$,$,$,$,$,'My element type',.USERDEFINED.);
+#46= IFCSIMPLEPROPERTYTEMPLATE('3XvjyHAFjAPw$FStI6Fi$7',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
+#47= IFCPROPERTYSETTEMPLATE('2dGSYW21XDiPufcYCAa0Hb',#10,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#46));
 ENDSEC;
 
 END-ISO-10303-21;
