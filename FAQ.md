@@ -32,7 +32,7 @@ See [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/gene
 
 Looks fine to me. This means the reviewer did not spot any obvious mistakes.
 
-- *The file has a lot more content than required - this approval only covers the concepts as part of Sprint x.y. It may be that the file will fail future checks and will need amendment.*
+- *The file has a lot more content than required - this approval only covers the concepts as part of Sprint x.y and its prerequisites. It may be that the file will fail future checks and will need amendment.*
 
 The file exceeds the requirements from Sprint x.y. While the submitted file has been approved, this does not constitute any approval for content outside the Sprint x.y's scope.
 
