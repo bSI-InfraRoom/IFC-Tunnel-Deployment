@@ -22,7 +22,7 @@ DATA;
 #15 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-5, #13, #16);
 #16 = IFCDIRECTION((-0., 1., 0.));
 #17 = IFCPROJECTEDCRS('EPSG:5110', 'ETRS89 / NTM zone 10', $, '5776:NN54 height', $, $, #7);
-#18 = IFCMAPCONVERSION(#15, #17, 0., 0., 0., $, $, $, $, $);
+#18 = IFCRIGIDOPERATION(#15,#17,0.0,0.0,0.0);
 #19 = IFCPROJECT('2asHOZnWT0VRXFyyVBm89j', #6, 'Default Project', 'Description of Project', $, $, $, (#15), #12);
 #20 = IFCLOCALPLACEMENT($, #13);
 #21 = IFCALIGNMENT('2fz6oeiN98yxC5xE$AhUhl', #6, 'Road Alignment 1', $, $, #265, #268, .USERDEFINED.);
@@ -286,5 +286,24 @@ DATA;
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #279 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #19, (#280));
 #280 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #4);
+/* ------- Project document information ------------------- */
+#281 = IFCDOCUMENTINFORMATION('ISBN: 978-91-7725-946-6','Titel: Krav - VGU, V\X2\00E4\X0\gars och gators utformning',$,'http://trafikverket.diva-portal.org/smash/get/diva2:1621114/FULLTEXT02.pdf',$,$,$,$,$,(#282),$,$,'application/pdf',$,$,$,$);
+#282 = IFCORGANIZATION('http://www.trafikverket.se','Trafikverket',$,$,$);
+#283 = IFCACTOR('0wsHlhF5PCKfHLdut7b21R',#6,$,$,$,#282);
+#284 = IFCRELASSOCIATESDOCUMENT('1N9OFwKeT9i8GR9o8eGxrw',#6,$,$,(#19),#281);
+/* ------- Project dataset information ------------------- */
+#285 = IFCDATASETINFORMATION('Dataset-xxx','Dataset-xxx-xml',$,'http://xxx.yyy.se/Datasets/Dataset-xxx.xml',$,$,$,$,$,$,$,$,'text/xml',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#286= IFCRELASSOCIATESDATASET('3405BEFv59wOrPxJYxijAB',#6,$,$,(#19),#285);
+/* ------- Project library information ------------------- */
+#287 = IFCLIBRARYINFORMATION('AgileAssets','1.0',#290,'2023-03-05T18:00:00','https://svvqa.agileassets.net',$);
+#288 = IFCPERSON($,'Hoel','Jan Erik',$,$,$,$,$);
+#289 = IFCORGANIZATION($,'Trimble',$,$,$);
+#290 = IFCPERSONANDORGANIZATION(#288,#289,$);
+#291 = IFCRELASSOCIATESLIBRARY('0MI3Y_AHnFFvyT6xMMcHzQ',#6,$,$,(#19),#287);
+/* ------- Arch type object ------------------- */
+#292 = IFCARCHELEMENTTYPE('3kZgSr3zLDkukzvRODCjg_',#6,'Arch-Quadri',$,$,$,$,$,'QArchType',.USERDEFINED.);
+/* ------- Propert set template ------------------- */
+#293 = IFCPROPERTYSETTEMPLATE('3C8eXXe7LFAR0SRZR4HytI',#6,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#294));
+#294 = IFCSIMPLEPROPERTYTEMPLATE('0GFs9Q78XEhRH$JdVWIsWa',#6,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
 ENDSEC;
 END-ISO-10303-21;
