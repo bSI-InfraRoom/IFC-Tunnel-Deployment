@@ -302,7 +302,7 @@ DATA;
 #291 = IFCRELASSOCIATESLIBRARY('0MI3Y_AHnFFvyT6xMMcHzQ',#6,$,$,(#19),#287);
 /* ------- Arch type object ------------------- */
 #292 = IFCARCHELEMENTTYPE('3kZgSr3zLDkukzvRODCjg_',#6,'Arch-Quadri',$,$,$,$,$,'QArchType',.USERDEFINED.);
-/* ------- Propert set template ------------------- */
+/* ------- Propert set template -------------------- */
 #293 = IFCPROPERTYSETTEMPLATE('3C8eXXe7LFAR0SRZR4HytI',#6,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#294));
 #294 = IFCSIMPLEPROPERTYTEMPLATE('0GFs9Q78XEhRH$JdVWIsWa',#6,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
 ENDSEC;
