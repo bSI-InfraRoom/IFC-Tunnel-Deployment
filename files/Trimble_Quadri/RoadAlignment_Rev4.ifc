@@ -283,7 +283,7 @@ DATA;
 #276 = IFCGEOMODEL('0gnmBvAMvFR9LhKL086iH8', #6, 'Default Geomodel Name', 'Description of GeoModel', $, $, $, $);
 #277 = IFCRELAGGREGATES('3G83cKawPC$f0xfqRKlScs', #6, $, $, #19, (#275));
 #278 = IFCRELCONTAINEDINSPATIALSTRUCTURE('1FJSyyKorCMhD9dI4C6yp4', #6, $, $, (#276, #21), #275);
-/* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
+/* ------- IfcRelDeclares with Actor declaration ---------------------------------------------- */
 #279 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #19, (#280));
 #280 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #4);
 /* ------- Project document information ------------------- */
