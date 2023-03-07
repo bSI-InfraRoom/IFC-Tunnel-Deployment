@@ -65,10 +65,10 @@ DATA;
 #72 = IFCCLASSIFICATION('Stefan Jaud', '0.0.0.1', '2023-02-09', 'Stefan Jaud classification', $, $, $);
 
 /* ------- IfcProjectedCRS provides information about the underlying CRS ----------------------- */
-#81 = IFCPROJECTEDCRS('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', #18);
-/* ------- IfcMapConversion provides data about the global-to-local transformation ------------- */
 /* ------- The last attribute is not needed, as the IfcProjectedCRS and the IfcProject --------- */
 /* ------- use the same length unit (metres, defined in #18) ----------------------------------- */
+#81 = IFCPROJECTEDCRS('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', $);
+/* ------- IfcMapConversion provides data about the global-to-local transformation ------------- */
 #82 = IFCMAPCONVERSION(#28, #81, 4468005., 5334600., 515., 1., 0., 1., $);
 /* ------- If interpreted correctly, the base point should be the main entrance to the --------- */
 /* ------- Technical University of Munich, Arcisstrasse 21, 80333 Munich, Germany -------------- */
