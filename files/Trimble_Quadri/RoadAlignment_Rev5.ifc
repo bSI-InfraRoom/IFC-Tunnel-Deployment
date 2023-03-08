@@ -304,6 +304,6 @@ DATA;
 #292 = IFCARCHELEMENTTYPE('3kZgSr3zLDkukzvRODCjge',#6,'Arch-123',$,$,$,$,$,'QArchType',.USERDEFINED.);
 /* ------- Propert set template ----------------- */
 #293 = IFCPROPERTYSETTEMPLATE('3C8eXXe7LFAR0SRZR4HytI',#6,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#294));
-#294 = IFCSIMPLEPROPERTYTEMPLATE('0GFs9Q78XEhRH$JdVWIsWa',#6,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
+#294 = IFCSIMPLEPROPERTYTEMPLATE('0GFs9Q78XEhRH$JdVWIsWb',#6,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
 ENDSEC;
 END-ISO-10303-21;
