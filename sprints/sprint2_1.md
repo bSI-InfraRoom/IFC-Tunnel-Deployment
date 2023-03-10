@@ -24,12 +24,22 @@ This sprint assumes you completed the following sprints:
 This sprint encompasses the following usages:
 
 - [Spatial Composition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-composition.htm)
-    - only including `IfcSite`, `IfcTunnel`, `IfcTunnelPart`
+    - There shall be at elast one `IfcTunnelPart` in the file with non-empty `Name`.
+    - All `IfcTunnelPart` shall be aggregated in an `IfcTunnel`.
+    - All `IfcTunnel` shall be aggregated in either an `IfcSite` or `IfcProject`.
+    - All `IfcSite` shall be aggregated in `IfcProject`.
+    - The `IfcTunnelPart.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnelPart.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcTunnel` it is part of).
+    - If `IfcTunnel` is aggregated in `IfcSite`, then the `IfcTunnel.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnel.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcSite` it is part of).
 - [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm)
-    - only including `IfcSite`, `IfcTunnel`, `IfcTunnelPart`
+    - Each `IfcTunnel` may only be decomposed by `IfcTunnel` or `IfcTunnelPart`.
 - Linear Composition
+    - in progress: https://github.com/bSI-InfraRoom/IFC-Specification/issues/523
 - [Alignment Layout](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-layout.htm)
+    - There shall be one `IfcAlignment` in the file with non-empty `Name`.
+    - There shall be at least one `LINE`, at least one `CIRCULARARC` and at least one `CLOTHOID` segments nested in the horizontal layout (see `IfcAlignmentHorizontalSegment.PredefinedType`).
+    - There shall be at least one `CONSTANTGRADIENT` and either at least one `CIRCULARARC` or at least one `PARABOLICARC` segments nested in the vertical layout (see `IfcAlignmentVerticalSegment.PredefinedType`).
 - [Object Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/object-nesting.htm)
-    - only for `IfcReferent`
+    - There shall be at least one `IfcReferent` in the file with non-empty `Name`.
+    - All `IfcReferent` shall be nested in any `IfcAlignment`.
 - [Group Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/group-assignment.htm)
-    - only for `IfcSpatialElement`
+    - There shall be at least one `IfcGroup` (or any of the subtypes) in the file with at least one element grouped.
