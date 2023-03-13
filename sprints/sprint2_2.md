@@ -1,4 +1,4 @@
-# Sprint 2.1
+# Sprint 2.2
 
 This sprint implements and tests project structure specific usages.
 
@@ -25,6 +25,8 @@ This sprint assumes you completed the following sprints:
 This sprint encompasses the following usages:
 
 - [Product Local Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-local-placement.htm)
+    - The `IfcTunnelPart.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnelPart.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcTunnel` or `IfcTunnelPart` it is part of).
+    - If `IfcTunnel` is aggregated in `IfcSite` or `IfcTunnel`, then the `IfcTunnel.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnel.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcSite` or `IfcTunnel` it is part of).
 - [Alignment Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry.htm)
 - [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
 - [Element Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-nesting.htm)
