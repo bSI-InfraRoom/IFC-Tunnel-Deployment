@@ -3,11 +3,11 @@ HEADER;
 FILE_DESCRIPTION(('ViewDefinition [ReferenceView_V1.2]'),'2;1');
 FILE_NAME(
 /* name */ 'Sprint1_1.ifc',
-/* time_stamp */ '2023-02-19T18:07:41',
-/* author */ ('Takahashi Kazunori'),
+/* time_stamp */ '2023-03-14T18:19:25',
+/* author */ ('Kazunori Takahashi'),
 /* organization */ ('OYO Corporation'),
-/* preprocessor_version */ 'GeometryGymIFC v0.2.6.0 by Geometry Gym Pty Ltd built 2023-02-05T09:59:51',
-/* originating_system */ 'Sprint1_1 v1.0.8450.32604',
+/* preprocessor_version */ 'GeometryGymIFC v0.2.14.0 by Geometry Gym Pty Ltd built 2023-03-14T00:22:11',
+/* originating_system */ 'Sprint1_1 v1.0.8473.32981',
 /* authorization */ 'Sprint1.1'
 );
 
@@ -18,7 +18,7 @@ DATA;
 #1= IFCDIRECTION((1.0,0.0,0.0));
 #2= IFCDIRECTION((0.0,1.0,0.0));
 #3= IFCDIRECTION((0.0,0.0,1.0));
-#4= IFCPROJECT('0ywkeaqhbDYBBkQMNeJjS2',$,'Test project',$,$,$,$,(#18),#5);
+#4= IFCPROJECT('1GuKaz3298jPrnzTCGGvGO',$,'Test project',$,$,$,$,(#18),#5);
 #5= IFCUNITASSIGNMENT((#6,#7,#8,#11,#13,#14,#15));
 #6= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
 #7= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
@@ -34,10 +34,13 @@ DATA;
 #17= IFCAXIS2PLACEMENT3D(#16,#3,#1);
 #18= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.00000001,#17,#19);
 #19= IFCDIRECTION((0.0,1.0));
-#20= IFCPERSON($,'Kazunori','Takahashi',$,$,$,(#21),$);
+#20= IFCPERSON($,'Takahashi','Kazunori',$,$,$,(#21),$);
 #21= IFCACTORROLE(.CONSULTANT.,$,$);
 #22= IFCORGANIZATION($,'OYO Corporation',$,(#23),$);
 #23= IFCACTORROLE(.CONSULTANT.,$,$);
+#24= IFCPERSONANDORGANIZATION(#20,#22,$);
+#25= IFCACTOR('2UEnEPobX0FPbWBXkPwzc0',$,$,$,$,#20);
+#26= IFCRELDECLARES('0hOsFLxh517OxHFg$h8BtQ',$,$,$,#4,(#25));
 ENDSEC;
 
 END-ISO-10303-21;
