@@ -40,4 +40,4 @@ This sprint encompasses the following usages:
     - There shall be at least one `IfcReferent` on `IfcAlignment` with non-empty `Name`.
     - All `IfcReferent` shall be nested in any `IfcAlignment`.
 - [Group Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/group-assignment.htm)
-    - There shall be at least one `IfcGroup` (or any of the subtypes) in the file with at least one element grouped.
+    - There shall be at least one `IfcGroup` (or any of the subtypes) declared in `IfcProject` with at least one element grouped.
