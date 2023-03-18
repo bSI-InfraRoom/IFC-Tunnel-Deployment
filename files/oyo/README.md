@@ -1,6 +1,6 @@
 ## Sprint1.2_A.ifc
 - At Tokyo Central Station
-- Lat/Lon: 35°40'53.55772", 139°45'56.47552"
+- Lat/Lon: 35°40'53.55772"N, 139°45'56.47552"E
 - JGD2011: -35329.0, -6123.0 (IX)
 - [https://goo.gl/maps/bzfUG54Mv7uwzBcGA](https://goo.gl/maps/bzfUG54Mv7uwzBcGA)
 
@@ -11,7 +11,7 @@
 
 ## Sprint1.2_B.ifc
 - At Tokyo disneyland
-- Lat/Lon: 35°37'58.5", 139°52'49.5"
+- Lat/Lon: 35°37'58.5"N, 139°52'49.5"E
 - [https://goo.gl/maps/UpRXTRNMp2Rfmp2o7](https://goo.gl/maps/UpRXTRNMp2Rfmp2o7)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/TDL_Cinderella_Castle_New_Color.jpg" height="200px">
@@ -21,7 +21,7 @@
 
 ## Sprint1.2_C.ifc
 - At Osaka Castle
-- Lat/Lon: 34°41'14.58", 135°31'32.99"
+- Lat/Lon: 34°41'14.58"N, 135°31'32.99"E
 - JGD2011: -145514.0, -43446.0 (VI)
 - https://goo.gl/maps/tbsqkeYq16TAwQMf9
 
