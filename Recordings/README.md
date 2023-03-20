@@ -18,6 +18,6 @@
 
 [Sprint 1.3 support calls 2023-03-09](https://www.youtube.com/watch?v=8kNxOAcWv3E)
 
-[Sprint 1.3 support calls 2023-03-16](https://www.youtube.com/watch?v=POpytVyEFSk)
+[Sprint 1.3 support calls 2023-03-16](https://www.youtube.com/watch?v=tVp_-9VAW0I)
 
 [Sprint 2.1 KickOff 2023-03-16](https://www.youtube.com/watch?v=_IvzdYtgfxM)
