@@ -5,6 +5,8 @@ FILE_NAME ($, $, (), (), $, $, $);
 FILE_SCHEMA (('IFC4X4'));
 ENDSEC;
 DATA;
+#991 = IFCGROUP('2FNFy8AJeHwwz7wDZHIYIu', #3, 'My group', $, $);
+#992 = IFCRELDECLARES('3FNFy8AJeHwwz7wDZHIYIu', #3, 'Project Declaration Relationship', $, #1, (#991));
 #1 = IFCPROJECT('1FNFy8AJeHwwz7wDZHIYIu', #3, 'IFC Rail Referencedata', 'Rail alignment sample', $, 'Longname', 'Design', (#17), #9);
 #2 = IFCAPPLICATION(#7, '1.0', 'HandMade', 'LandXML2IFC converter');
 #3 = IFCOWNERHISTORY(#6, #2, $, $, $, $, $, 10101);
