@@ -5,11 +5,11 @@ FILE_NAME('Boreholes_ifc4_4_LeapfrogWorks.ifc','2023-03-27T13:07:04',('Jared Wes
 FILE_SCHEMA(('IFC4X4_DEV'));
 ENDSEC;
 DATA;
-#1=IFCPERSON($,'Software','Sammy',$,$,$,$,$);
-#2=IFCORGANIZATION($,'Bug City Ltd.',$,$,$);
+#1=IFCPERSON($,'Weston','Jared',$,$,$,$,$);
+#2=IFCORGANIZATION($,'Seequent',$,$,$);
 #3=IFCORGANIZATION($,'Seequent',$,$,$);
 #4=IFCPERSONANDORGANIZATION(#1,#2,$);
-#5=IFCAPPLICATION(#3,'2023.2.0','Seequent Earth Research','Earth Research');
+#5=IFCAPPLICATION(#3,'2023.2.0','Leapfrog Works','Works');
 #6=IFCOWNERHISTORY(#4,#5,$,.ADDED.,1679828824,$,$,1679828824);
 #7=IFCCARTESIANPOINT((0.,0.,0.));
 #8=IFCAXIS2PLACEMENT3D(#7,$,$);
