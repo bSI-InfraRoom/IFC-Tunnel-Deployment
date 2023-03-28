@@ -1,0 +1,1 @@
+As of 2023.03.28 all IFC files fails in Catenda, as we are rebuilding the IFC backend for an upgrade and getting ready for IFC 4.4. etc.
