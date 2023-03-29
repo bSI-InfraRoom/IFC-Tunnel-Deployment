@@ -2,7 +2,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION((),'2;1');
 FILE_NAME('TestTunnel_sprint_2.1.ifc','2023-03-29T12:01:45+02:00',('wojciech.kurek'),('Volue'),'DDS_IFC v3.0','Gemini Terrain 19.0.2023.329','DDS');
-FILE_SCHEMA(('IFC4X4'));
+FILE_SCHEMA(('IFC4X4_BC1F65F1'));
 ENDSEC;
 DATA;
 #1=IFCPROJECT('2IO_xShTDBc8l1cufWZhcG',$,'TestTunnel_sprint_2.1',$,$,$,$,(#2),#3);
