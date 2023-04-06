@@ -38,6 +38,6 @@ This sprint encompasses the following usages:
     - There shall be at least one `CONSTANTGRADIENT` and either at least one `CIRCULARARC` or at least one `PARABOLICARC` segments nested in the vertical layout (see `IfcAlignmentVerticalSegment.PredefinedType`).
 - [Object Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/object-nesting.htm)
     - There shall be at least one `IfcReferent` on `IfcAlignment` with non-empty `Name`.
-    - All `IfcReferent` shall be nested in any `IfcAlignment`.
+    - All `IfcReferent` shall be nested in any `IfcAlignment`. The `IfcRelNests` relationship nesting instances of `IfcReferent` shall only nest instances of `IfcReferent` (see https://github.com/bSI-InfraRoom/IFC-Tunnel-Deployment/issues/112).
 - [Group Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/group-assignment.htm)
     - There shall be at least one `IfcGroup` (or any of the subtypes) declared in `IfcProject` with at least one element grouped.
