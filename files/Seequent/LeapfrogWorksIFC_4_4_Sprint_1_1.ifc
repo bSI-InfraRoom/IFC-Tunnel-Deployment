@@ -20,7 +20,7 @@ DATA;
 #13=IFCUNITASSIGNMENT((#11,#12));
 #14=IFCPROJECT('1BiHFCmuf1e81k3FdZIeJH',#6,'IFC 4_4 Project',$,$,$,$,(#9),#13);
 #15=IFCSIMPLEPROPERTYTEMPLATE('0RxBVxNFbDUADlITTzsLkA',#6,'Dummy Property Set',$,$,$,$,$,$,$,$,$);
-#16=IFCPROPERTYSETTEMPLATE('3zkYo7dWH7tfqnnX_0dbuE',#6,$,$,$,$,(#15));
+#16=IFCPROPERTYSETTEMPLATE('3zkYo7dWH7tfqnnX_0dbuE',#6,'Dummy Template',$,$,$,(#15));
 #17=IFCRELDECLARES('1Qny2LvhP0ZRvj7LJ3iwrs',#6,$,$,#14,(#16));
 #18=IFCCARTESIANPOINT((0.,0.,0.));
 #19=IFCAXIS2PLACEMENT3D(#18,$,$);
