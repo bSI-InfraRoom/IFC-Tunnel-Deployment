@@ -1,0 +1,72 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X4NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ '..\\..\\..\\Sprint1.3.ifc',
+/* time_stamp */ '2023-03-16T15:44:44',
+/* author */ ('Kazunori Takahashi'),
+/* organization */ ('OYO Corporation'),
+/* preprocessor_version */ 'GeometryGymIFC v0.2.14.0 by Geometry Gym Pty Ltd built 2023-03-14T10:36:14',
+/* originating_system */ 'Sprint1_3 v1.0.0.0',
+/* authorization */ 'Sprint1.3'
+);
+
+FILE_SCHEMA (('IFC4X4_17239AAA'));
+ENDSEC;
+
+DATA;
+#1= IFCDIRECTION((1.0,0.0,0.0));
+#2= IFCDIRECTION((0.0,1.0,0.0));
+#3= IFCDIRECTION((0.0,0.0,1.0));
+#4= IFCPROJECT('2kVu0XW8fF6f6Mn2Y1nA93',#10,'Test project',$,$,$,$,(#24),#11);
+#5= IFCPERSON($,'Takahashi','Kazunori',$,$,$,(#26),$);
+#6= IFCORGANIZATION($,'OYO Corporation',$,(#27),$);
+#7= IFCPERSONANDORGANIZATION(#5,#6,$);
+#8= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#9= IFCAPPLICATION(#8,' v1.0.0.0','Sprint1_3 v1.0.0.0','Sprint1_3 v1.0.0.0');
+#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1678949084,$,$,1678949084);
+#11= IFCUNITASSIGNMENT((#12,#13,#14,#17,#19,#20,#21));
+#12= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#13= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#14= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#15= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#16= IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.0174532925199433),#15);
+#17= IFCCONVERSIONBASEDUNIT(#18,.PLANEANGLEUNIT.,'degree',#16);
+#18= IFCDIMENSIONALEXPONENTS(0,0,0,0,0,0,0);
+#19= IFCSIUNIT(*,.MASSUNIT.,.KILO.,.GRAM.);
+#20= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#21= IFCMONETARYUNIT('EUR');
+#22= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#23= IFCAXIS2PLACEMENT3D(#22,#3,#1);
+#24= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.00000001,#23,#25);
+#25= IFCDIRECTION((0.0,1.0));
+#26= IFCACTORROLE(.CONSULTANT.,$,$);
+#27= IFCACTORROLE(.CONSULTANT.,$,$);
+#28= IFCPERSONANDORGANIZATION(#5,#6,$);
+#29= IFCACTOR('1bFmWkZjj6DwRJPXhgsBi7',#10,$,$,$,#28);
+#30= IFCRELDECLARES('2ZAnNxENf1cOm$fSDoRJzW',#10,$,$,#4,(#29,#42,#50,#53));
+#31= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#32= IFCAXIS2PLACEMENT3D(#31,#3,#1);
+#33= IFCLOCALPLACEMENT($,#32);
+#34= IFCSITE('3I_T5NMBX8zvIDAz2gCBRn',#10,'Test site',$,$,#35,$,$,$,$,$,$,$,$);
+#35= IFCLOCALPLACEMENT($,#23);
+#36= IFCRELAGGREGATES('2FjDhdUN7_H19Fe6hwpPlj',#10,$,$,#4,(#34));
+#37= IFCCLASSIFICATION('classification source',$,$,'myClassification',$,$,$);
+#38= IFCRELASSOCIATESCLASSIFICATION('2qpTXjg0P8cwo1rYGl$08X',#10,$,$,(#4),#37);
+#39= IFCPROJECTEDCRS('EPSG:6677','JGD2011 / Japan Plane Rectangular CS IX, GRS80','EPSG:1128','EPSG:7019','Japan Plane Rectangular','IX',#12);
+#40= IFCMAPCONVERSION(#24,#39,-35329.0,-6123.0,3.1,1.0,0.0,1.0);
+#41= IFCTUNNEL('1aalCDZrDBWQzwpUoOnej1',#10,'Tunnel',$,$,#33,$,$,$,.NOTDEFINED.);
+#42= IFCBUILTSYSTEM('00QqriZcf0neR2fXu1a4Fl',#10,'A system',$,$,.TUNNEL_SUPPORT.,$);
+#43= IFCRELREFERENCEDINSPATIALSTRUCTURE('11q8cSXCHFzQNILvGWNlqa',#10,$,$,(#42),#41);
+#44= IFCDOCUMENTINFORMATION('ISBN: 978-91-7725-946-6','Titel: Krav - VGU, V\\X2\\00E4\\X0\\gars och gators utformning',$,'http://trafikverket.diva-portal.org/smash/get/diva2:1621114/FULLTEXT02.pdf',$,$,$,$,$,(#28),$,$,'application/pdf',$,$,$,$);
+#45= IFCRELASSOCIATESDOCUMENT('2GZHzTu5fFOe5LSodnYGob',#10,$,$,(#4),#44);
+#46= IFCDATASETINFORMATION('Dataset-xxx','Dataset-xxx-xml',$,'http://xxx.yyy.se/Datasets/Dataset-xxx.xml',$,$,$,$,$,$,$,$,'text/xml',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#47= IFCRELASSOCIATESDATASET('2MOoKBBej0shdSKglgcXVP',#10,$,$,(#4),#46);
+#48= IFCLIBRARYINFORMATION('My library','1.0',#28,'2023-01-01T00:00:00','http://xxx.yyy.se/Libraries/MyLib.ifc',$);
+#49= IFCRELASSOCIATESLIBRARY('3KF_uuAFLDqPzSgIK5mSaT',#10,$,$,(#4),#48);
+#50= IFCARCHELEMENTTYPE('3ZrxSPIlH5AOC8SukcKtCt',#10,'Arch-123',$,$,$,$,$,'MYArchType',.USERDEFINED.);
+#52= IFCSIMPLEPROPERTYTEMPLATE('3ht7Np1jXCMOUg7kiTlltB',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
+#53= IFCPROPERTYSETTEMPLATE('2BkA_pkND5Yg6p_zh$5Zjg',#10,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#52));
+ENDSEC;
+
+END-ISO-10303-21;
