@@ -1,6 +1,6 @@
 ISO-10303-21;
 HEADER;
-FILE_DESCRIPTION (('ViewDefinition [Ikke spesifisert]'), '2;1');
+FILE_DESCRIPTION (('ViewDefinition [Inte spesifiserad]'), '2;1');
 FILE_NAME ('D:\\Download\\Export IFC4.4_8.ifc', '2023-04-08T18:51:49', ('Artemis_Karlatou'), ('Trimble Solutions Sandvika AS'), 'Ifc Engine <1.0.1.1361>', 'Quadri <25.0.40308.0>', 'Artemis_Karlatou');
 FILE_SCHEMA (('IFC4X4_A0BAE928'));
 ENDSEC;
