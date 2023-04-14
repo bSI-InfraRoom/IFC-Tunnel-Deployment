@@ -1,14 +1,14 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ikke spesifisert]'), '2;1');
-FILE_NAME ('D:\\Download\\Export IFC4.4_8.ifc', '2023-04-08T18:51:49', ('Jan_Erik Hoel'), ('Trimble Solutions Sandvika AS'), 'Ifc Engine <1.0.1.1361>', 'Quadri <25.0.40308.0>', 'Jan_Erik Hoel');
+FILE_NAME ('D:\\Download\\Export IFC4.4_8.ifc', '2023-04-08T18:51:49', ('Artemis_Karlatou'), ('Trimble Solutions Sandvika AS'), 'Ifc Engine <1.0.1.1361>', 'Quadri <25.0.40308.0>', 'Artemis_Karlatou');
 FILE_SCHEMA (('IFC4X4_A0BAE928'));
 ENDSEC;
 DATA;
 #1 = IFCPOSTALADDRESS(.OFFICE., $, $, $, ('Leif Tronstads plass 4'), '', 'Sandvika', '', 'N-1337', 'Norway');
 #2 = IFCORGANIZATION($, 'Trimble Solutions Sandvika AS', '', $, $);
 #3 = IFCAPPLICATION(#2, '2023', 'Quadri for Windows', 'Quadri');
-#4 = IFCPERSON($, $, 'Jan_Erik Hoel', $, $, $, $, $);
+#4 = IFCPERSON($, $, 'Artemis_Karlatou', $, $, $, $, $);
 #5 = IFCPERSONANDORGANIZATION(#4, #2, $);
 #6 = IFCOWNERHISTORY(#5, #3, $, .NOCHANGE., $, $, $, 1680972709);
 #7 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
@@ -663,7 +663,7 @@ DATA;
 #5286= IFCRELASSOCIATESDATASET('3405BEFv59wOrPxJYxijAB',#6,$,$,(#19),#5285);
 /* ------- Project library information ------------------- */
 #5287 = IFCLIBRARYINFORMATION('AgileAssets','1.0',#5290,'2023-03-05T18:00:00','https://svvqa.agileassets.net',$);
-#5288 = IFCPERSON($,'Hoel','Jan Erik',$,$,$,$,$);
+#5288 = IFCPERSON($,'Karlatou','Artemis_Karlatou',$,$,$,$,$);
 #5289 = IFCORGANIZATION($,'Trimble',$,$,$);
 #5290 = IFCPERSONANDORGANIZATION(#5288,#5289,$);
 #5291 = IFCRELASSOCIATESLIBRARY('0MI3Y_AHnFFvyT6xMMcHzQ',#6,$,$,(#19),#5287);
