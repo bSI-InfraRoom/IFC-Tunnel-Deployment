@@ -25,8 +25,8 @@ This sprint assumes you completed the following sprints:
 This sprint encompasses the following usages:
 
 - [Product Local Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-local-placement.htm)
-    - The `IfcTunnelPart.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnelPart.Decomposes.RelatingObject.ObjectPlacement` or `IfcTunnel.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcTunnel` or `IfcTunnelPart` it is part of).
-    - If `IfcTunnel` is aggregated in `IfcSite` or `IfcTunnel`, then the `IfcTunnel.ObjectPlacement.PlacementRelTo` shall point to the `IfcSite.Decomposes.RelatingObject.ObjectPlacement` or `IfcTunnel.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcSite` or `IfcTunnel` it is part of).
+    - The `IfcTunnelPart.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnelPart.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcTunnel` or `IfcTunnelPart` it is part of).
+    - If `IfcTunnel` is aggregated in `IfcSite` or `IfcTunnel`, then the `IfcTunnel.ObjectPlacement.PlacementRelTo` shall point to the `IfcTunnel.Decomposes.RelatingObject.ObjectPlacement` (i.e., the `IfcSite` or `IfcTunnel` it is part of).
 - [Alignment Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry.htm)
     - Any `IfcAlignment` nested by only an `IfcAligmentHorizontal` and an `IfcAlignmentVertical` shall be represented according to concept template [Alignment Geometry Gradient](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry-gradient.htm):
         - `RepresentationIdentifier = 'Axis'`
@@ -43,5 +43,5 @@ This sprint encompasses the following usages:
 - [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
     - All `IfcReferent` instances shall be linearly placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template (i.e. `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`).
 - [Linear Composition](https://github.com/bSI-InfraRoom/IFC-Specification/pull/557)
-    - All `IfcAlignment` instances shall be aggregated in `IfcProject`.
+    - All `IfcAlignment` instances shall be aggregated in `IfcProject`. It shall use its own `IfcRelAggregates` instance and not share it with the [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm) usage from Sprint 1.2.
 
