@@ -612,7 +612,7 @@ DATA;
 #586= IFCPROPERTYSETTEMPLATE('2e3pgpwerBwuLkbm22Ui$g',#10,'Pset_GeoObsBoreholeConstruction',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#587));
 #587= IFCSIMPLEPROPERTYTEMPLATE('2PpeGNxWn0EPRqQfXiVCKo',#10,'DrillingDiameter',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,$,$,$,$);
 /* IFCSITE (#4) positioned relative to start referent (#478) */
-#1000= IFCRELPOSITIONS('',#10,$,$,#478,(#4));
+#1000= IFCRELPOSITIONS('I2FvgSdIG0mh4ies09Zrzg',#10,$,$,#478,(#4));
 /* IFCALIGNMENT references also the IFCCOMPOSITECURVE (2D) */
 #1010= IFCSHAPEREPRESENTATION(#1011,'Axis','Curve2D',(#143));
 #1011= IFCGEOMETRICREPRESENTATIONCONTEXT('2D','Plan',2,0.0000000254,#1012,#561);
