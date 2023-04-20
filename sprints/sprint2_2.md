@@ -42,6 +42,10 @@ This sprint encompasses the following usages:
         - representation is `IfcCompositeCurve` (the same instance used as `IfcGradientCurve.BaseCurve` or `IfcSegmentedReferenceCurve.BaseCurve.BaseCurve` above),
 - [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
     - All `IfcReferent` instances shall be linearly placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template (i.e. `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`).
+- [Element Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-nesting.htm)
+    - All `IfcReferent` instances shall be linearly placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template:
+        - `IfcReferent.ObjectPlacement` shall be `IfcLinearPlacement`.
+        - `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.Nests.RelatingObject.ObjectPlacement`.
 - [Linear Composition](https://github.com/bSI-InfraRoom/IFC-Specification/pull/557)
     - All `IfcAlignment` instances shall be aggregated in `IfcProject`. It shall use its own `IfcRelAggregates` instance and not share it with the [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm) usage from Sprint 1.2.
 
