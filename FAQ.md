@@ -38,6 +38,12 @@ See [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/gene
 
 ## Review
 
+**The check is not running.**
+
+If this is your first pull request with this repository, we (the project team) need to *manually* start the checking procedure (it's a GitHub *feature*). Please remain patient until we merge the first pull request. 
+
+After a successful merge the checker will run automatically, not needing our intervention anymore.
+
 **The check of my Pull request is failing. Where is the report?**
 
 ![grafik](https://user-images.githubusercontent.com/59165496/214881281-2f428c31-2de1-48f3-8564-2a7b27fe4174.png "In the Action tab, click on *Summary*.")
