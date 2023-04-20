@@ -40,8 +40,6 @@ This sprint encompasses the following usages:
         - `RepresentationIdentifier = 'Axis'`
         - `RepresentationType = 'Curve2D'`
         - representation is `IfcCompositeCurve` (the same instance used as `IfcGradientCurve.BaseCurve` or `IfcSegmentedReferenceCurve.BaseCurve.BaseCurve` above),
-- [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
-    - All `IfcReferent` instances shall be linearly placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template (i.e. `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`).
 - [Element Nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-nesting.htm)
     - All `IfcReferent` instances shall be linearly placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template:
         - `IfcReferent.ObjectPlacement` shall be `IfcLinearPlacement`.
