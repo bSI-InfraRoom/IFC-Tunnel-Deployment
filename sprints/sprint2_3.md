@@ -1,4 +1,4 @@
-# Sprint 2.1
+# Sprint 2.3
 
 This sprint implements and tests project structure specific usages.
 
@@ -25,6 +25,10 @@ This sprint assumes you completed the following sprints:
 
 This sprint encompasses the following usages:
 
+- Linear Composition
+    - in progress: https://github.com/bSI-InfraRoom/IFC-Specification/issues/523
+- [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
+    - All `IfcElement` instances which are linearly placed, shall be placed according to the [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm) concept template, i.e. `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`.
 - [Body Tesselation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-tessellation-geometry.htm)
     - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
 - [Body Brep Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-brep-geometry.htm)
