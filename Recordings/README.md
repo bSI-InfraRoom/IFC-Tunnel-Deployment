@@ -29,3 +29,5 @@
 [Sprint 2.2 KickOff 2023-04-13](https://www.youtube.com/watch?v=Yl_uAzncCBE)
 
 [Sprint 2.2 support calls 2023-04-20](https://www.youtube.com/watch?v=KXzNEuwPUuI)
+
+[Sprint 2.2 support calls 2023-04-27](https://www.youtube.com/watch?v=9tc7fz9EVH4)
