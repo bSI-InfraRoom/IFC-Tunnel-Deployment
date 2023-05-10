@@ -367,8 +367,8 @@ DATA;
 #360 = IFCGEOMODEL('0NL6r2$_HDzAU1Fflg_G2K', #6, 'Default Geomodel Name', 'Description of GeoModel', $, $, $, $);
 #361 = IFCRELAGGREGATES('2zU92kxav5Gvvy0DgYvGqk', #6, $, $, #19, (#33));
 #362 = IFCTUNNEL('3tMDWqFj11zg_x0YVPjEoQ', #6, 'Tunnel test', $, $, #22, $, $, $, .RAILWAY.);
-#363 = IFCTUNNELPART('0AgMBOunH3Qvh5bjRTBjjQ', #6, 'Tunnel part test', $, $, #502, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
-#364 = IFCTUNNELPART('0h4QlmoJjDD9kRh5uTDj9k', #6, 'Tunnel part test', $, $, #507, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
+#363 = IFCTUNNELPART('0AgMBOunH3Qvh5bjRTBjjQ', #6, 'Tunnel part test1', $, $, #502, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
+#364 = IFCTUNNELPART('0h4QlmoJjDD9kRh5uTDj9k', #6, 'Tunnel part test2', $, $, #507, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
 #365 = IFCRELCONTAINEDINSPATIALSTRUCTURE('1F3K7o3hTAKBBwI0pkkEIc', #6, $, $, (#23, #28), #364);
 #366 = IFCRELAGGREGATES('0SCc68lU101Bq2bfEWC15J', #6, $, $, #363, (#364));
 #367 = IFCRELAGGREGATES('1K8oywc6f3WfVjwWpokcZw', #6, $, $, #362, (#363));
@@ -386,10 +386,6 @@ DATA;
 #608 = IFCGROUP('1rJVBXYDn5y8mErFzRAFdb', #6, 'Road 1|TUNNELTEST', $, 'TUNNELTEST');
 #609 = IFCRELASSIGNSTOGROUP('1c7WhJYbHFsg8Lgwr3YveB', #6, $, $, (#23), $, #608);
 #610 = IFCRELDECLARES('0gPOfrgXrFc85WcPhtJHLZ', #6, $, $, #19, (#608));
-/* ----------- ifcTunnel/ifcTunnelPart that should be switched with ifcRoad/ifcRoadPart----------------- */
-#593 = IFCTUNNEL('2EXtLIHOP5pw7Fx1aglOln', #6, 'Tunnel test', $, $, #22, $, $, $, .ROAD.);
-#594 = IFCTUNNELPART('33e$0Mks5EPxqjpKKUwCFr', #6, 'Tunnel part test', $, $, #22, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
-#595 = IFCTUNNELPART('0nQJiCdQrDCwn3T6H6WXfH', #6, 'Tunnel part test', $, $, #22, $, $, $, .LONGITUDINAL., .TUNNELSECTION.);
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #5279 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', #6, $, $, #19, (#5280,#5292,#5293));
 #5280 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #4);
