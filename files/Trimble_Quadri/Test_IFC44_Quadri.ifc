@@ -375,7 +375,7 @@ DATA;
 #368 = IFCRELAGGREGATES('0UAzjc_u10owBX38RlqKlf', #6, $, $, #359, (#362));
 #369 = IFCRELAGGREGATES('3rl4XnSzn9WwFFOsZ5Sqec', #6, $, $, #19, (#359));
 #370 = IFCRELCONTAINEDINSPATIALSTRUCTURE('0C1w4OtS91Durx3Gahmjur', #6, $, $, (#360), #359);
-/* ------- Manually insert relative placement for ifcTunnelParts --------*/
+/* ------- Manually insert relative placement for ifcTunnelParts -------*/
 #500 = IFCCARTESIANPOINT((0.0,0.0,0.0));
 #501 = IFCAXIS2PLACEMENT3D(#500,$,$);
 #502 = IFCLOCALPLACEMENT(#22,#501);
