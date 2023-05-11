@@ -26,7 +26,7 @@ This sprint assumes you completed the following sprints:
 This sprint encompasses the following usages:
 
 - [Product Relative Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-relative-positioning.htm) and [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
-    - Either `IfcSite` or `IfcTunnel` (defined in Sprint 2.1) should be placed using the above concepts:
+    - The `IfcSite`  (defined in Sprint 2.1) should be placed using the above concepts:
         - either along the `IfcAlignment` (defined in Sprint 2.1) 
         - or relative to an `IfcReferent` (defined in Sprint 2.1, which is nested according to Sprint 2.2). 
     - That is: `IfcElement.ObjectPlacement.PlacementRelTo` shall point to `IfcElement.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`.
@@ -38,10 +38,15 @@ This sprint encompasses the following usages:
         - [Body Surface Model Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-surfacemodel-geometry.htm) or
         - Voxel Geometry - [in progress](https://github.com/bSI-InfraRoom/IFC-Specification/issues/524) or
         - [Surface Tessellation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-tessellation-geometry.htm) with [`IfcTriangulatedIrregularNetwork`](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifctriangulatedirregularnetwork.htm).
-- [Library Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm) (optional)
-    - TBD
 - [Property Sets with Override](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/property-sets-with-override.htm)
-    - TBD
+    - The IfcSite shall have the property set [Pset_LandRegistration](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/pset_landregistration.htm) assigned where the values LandId, IsPermanentId and LandTitleId shall have values where IsPermanentId = .TRUE..
+- [Library Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm) (optional)
+    - The Pset_LandRegistration shall associate an IfcLibraryReference where:
+      - Location = A URI value pointing to the computer interpretable listing for the IFC 4.4 draft specification
+      - Identification = "#3540"
+      - Name = "Pset_LandRegistration"
 - [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
-    - TBD
+    - Any instance shall be associated with an IfcClassificationReference where:
+      - Identification and Name shall exist
+      - ReferencedSource shall reference the IfcClassification occurrence associated with the IfcProject in sprint 1.2
 
