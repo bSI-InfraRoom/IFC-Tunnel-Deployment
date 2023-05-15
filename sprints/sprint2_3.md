@@ -1,4 +1,4 @@
-# Sprint 2.1
+# Sprint 2.3
 
 This sprint implements and tests project structure specific usages.
 
@@ -25,10 +25,28 @@ This sprint assumes you completed the following sprints:
 
 This sprint encompasses the following usages:
 
-- [Body Tesselation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-tessellation-geometry.htm)
-    - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
-- [Body Brep Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-brep-geometry.htm)
-    - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
-- Voxel Geometry
-    - on the example of `IfcGeoScienceModel` (other `IfcProduct` allowed)
+- [Product Relative Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-relative-positioning.htm) and [Product Linear Placement](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm)
+    - The `IfcSite`  (defined in Sprint 2.1) should be placed using the above concepts:
+        - either along the `IfcAlignment` (defined in Sprint 2.1) 
+        - or relative to an `IfcReferent` (defined in Sprint 2.1, which is nested according to Sprint 2.2). 
+    - That is: `IfcElement.ObjectPlacement.PlacementRelTo` shall point to `IfcElement.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`.
+- [Product Geometric Representation](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-geometric-representation.htm)
+    - We encourage to provide examples for `IfcGeoScienceModel` (other `IfcElement` allowed).
+    - Provide at least one of the listed alternatives for the [volumetric](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-geometry.htm) or [surfaic](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-geometry.htm) representation:
+        - [Body Tesselation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-tessellation-geometry.htm) or
+        - [Body Brep Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-brep-geometry.htm) or
+        - [Body Surface Model Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-surfacemodel-geometry.htm) or
+        - Voxel Geometry - [in progress](https://github.com/bSI-InfraRoom/IFC-Specification/issues/524) or
+        - [Surface Tessellation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-tessellation-geometry.htm) with [`IfcTriangulatedIrregularNetwork`](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifctriangulatedirregularnetwork.htm).
+- [Property Sets with Override](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/property-sets-with-override.htm)
+    - The IfcSite shall have the property set [Pset_LandRegistration](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/pset_landregistration.htm) assigned where the values LandId, IsPermanentId and LandTitleId shall have values where IsPermanentId = .TRUE..
 - [Library Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm) (optional)
+    - The Pset_LandRegistration shall associate an IfcLibraryReference where:
+      - Location = A URI value pointing to the computer interpretable listing for the IFC 4.4 draft specification
+      - Identification = "#3540"
+      - Name = "Pset_LandRegistration"
+- [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
+    - Any instance shall be associated with an IfcClassificationReference where:
+      - Identification and Name shall exist
+      - ReferencedSource shall reference the IfcClassification occurrence associated with the IfcProject in sprint 1.2
+
