@@ -84,8 +84,8 @@ jobs:
         id: results
         run: |
           dir results
-          Get-ChildItem results | ForEach {
-            Get-Content -Path .\results\*.md -Exclude *Full.md | ForEach { 
+          Get-ChildItem -Path .\results\*.md -Exclude *Full.md | ForEach {
+            Get-Content $_.FullName | ForEach { 
               echo $_ >> $env:GITHUB_STEP_SUMMARY 
             }
           }
