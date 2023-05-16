@@ -50,7 +50,7 @@ DATA;
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
 #52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
-#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, #54, $);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
 #54 = IFCACTORROLE(.CONSULTANT., $, $);
 
 
