@@ -4,6 +4,7 @@ FILE_DESCRIPTION(('ViewDefinition[Undefined]'),'2;1');
 FILE_NAME('Sprint_2_1.ifc','2023-05-03T07:40:15',('Author/creator of the IFC file'),('Trimble Inc.'),'IfcExportSDK2 ver. 4.7.1','Trimble Software - Version xx.x','Authorizer of the IFC file');
 FILE_SCHEMA(('IFC4X4'));
 ENDSEC;
+
 DATA;
 #1= IFCPOSTALADDRESS(.HOME.,'My postal address',$,$,('StreetAddress 1','StreetAddress 2'),'Box 1','Town','Region','Box 1','Country');
 #2= IFCACTORROLE(.CONSULTANT.,'Role','Role Description');
@@ -83,7 +84,7 @@ DATA;
 #76= IFCALIGNMENTHORIZONTALSEGMENT('StartTag','EndTag',#75,4.71238898038469,15.,15.,47.1238898038469,$,.CIRCULARARC.);
 #77= IFCALIGNMENTSEGMENT('0wUl8QgTn7UupOJ3$I$Klb',#9,'Name','Description',$,$,$,#76);
 #78= IFCCARTESIANPOINT((60.,0.));
-#79= IFCALIGNMENTHORIZONTALSEGMENT('StartTag','EndTag',#78,1.5707963267949,15.,15.,47.1238898038469,$,.CLOTHOID.);
+#79= IFCALIGNMENTHORIZONTALSEGMENT('StartTag','EndTag',#78,1.5707963267949,15.,15.,47.1238898038469,$,.CIRCULARARC.);
 #80= IFCALIGNMENTSEGMENT('2F9wnWrtnCmud3JPT817Ha',#9,'Name','Description',$,$,$,#79);
 #81= IFCALIGNMENTVERTICALSEGMENT('StartTag','EndTag',0.,30.,0.,-0.0333333333333333,-0.0333333333333333,$,.CONSTANTGRADIENT.);
 #82= IFCALIGNMENTSEGMENT('09sIVQoGH7WA51fDi4_BHH',#9,'Name','Description',$,$,$,#81);
@@ -121,4 +122,5 @@ DATA;
 #114= IFCPRESENTATIONLAYERASSIGNMENT('AlignementHorizontal',$,(#64),$);
 #115= IFCPRESENTATIONLAYERASSIGNMENT('AlignementVertical',$,(#69),$);
 ENDSEC;
+
 END-ISO-10303-21;
