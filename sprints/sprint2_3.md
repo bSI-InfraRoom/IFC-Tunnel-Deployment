@@ -29,7 +29,7 @@ This sprint encompasses the following usages:
     - The `IfcSite`  (defined in [Sprint 2.1](./sprint2_1.md)) should be placed using the above concepts:
         - either along the `IfcAlignment` (defined in [Sprint 2.1](./sprint2_1.md)) 
         - or relative to an `IfcReferent` (defined in [Sprint 2.1](./sprint2_1.md), which is nested according to [Sprint 2.2](./sprint2_2.md)). 
-    - In other words: `IfcElement.ObjectPlacement.PlacementRelTo` shall point to `IfcElement.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`.
+    - In other words: `IfcSite.ObjectPlacement.PlacementRelTo` shall point to `IfcSite.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement`.
 - [Product Geometric Representation](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-geometric-representation.htm)
     - We encourage to provide examples for `IfcGeoScienceModel` (other `IfcElement` are allowed).
     - Provide at least one of the listed alternatives for the [volumetric](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-geometry.htm) or [surfaic](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-geometry.htm) representation:
