@@ -49,7 +49,7 @@ This sprint encompasses the following usages:
         - `Identification` being `"#3540"`, and
         - `Name` being `"Pset_LandRegistration"`.
 - [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
-    - At least one instance of `IfcProdcut` shall be associated with an `IfcClassificationReference` where:
+    - At least one instance of `IfcProduct` shall be associated with an `IfcClassificationReference` where:
       - `Identification` and `Name` shall exist, and
       - `ReferencedSource` shall reference the `IfcClassification` occurrence associated with the `IfcProject` in [Sprint 1.2](./sprint1_2.md).
 
