@@ -43,13 +43,16 @@ This sprint encompasses the following usages:
         - the property `LandId` provided with non-empty value (the exact value is arbitrary),
         - the property `IsPermanentId` provided with value `.T.` (i.e. `true`) and 
         - the property `LandTitleId` provided with non-empty value (the exact value is arbitrary).
+- [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
+    - At least one instance of `IfcProduct` shall be associated with an `IfcClassificationReference` where:
+      - `Identification` and `Name` shall exist, and
+      - `ReferencedSource` shall reference the `IfcClassification` occurrence associated with the `IfcProject` in [Sprint 1.2](./sprint1_2.md).
+
+Optional usage in this sprint:
+
 - [Library Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm) (optional)
     - The `Pset_LandRegistration` from above shall associate an `IfcLibraryReference` where:
         - `Location` shall be a URI value pointing to the computer interpretable listing for the IFC 4.4 draft specification (you need to find it yourself in the specification),
         - `Identification` being `"#3540"`, and
         - `Name` being `"Pset_LandRegistration"`.
-- [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
-    - At least one instance of `IfcProduct` shall be associated with an `IfcClassificationReference` where:
-      - `Identification` and `Name` shall exist, and
-      - `ReferencedSource` shall reference the `IfcClassification` occurrence associated with the `IfcProject` in [Sprint 1.2](./sprint1_2.md).
 
