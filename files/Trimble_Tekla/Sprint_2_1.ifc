@@ -55,7 +55,7 @@ DATA;
 #48= IFCDOCUMENTINFORMATION('Identification','IfcDocumentInformation Name',$,'Location',$,$,$,$,$,(#47),$,$,'application/pdf',$,$,$,$);
 #49= IFCRELASSOCIATESDOCUMENT('26vI_s9czBEvhy7T0WjsBW',#9,$,$,(#35),#48);
 #50= IFCPERSON($,$,'Given name',$,$,$,$,$);
-#51= IFCDATASETINFORMATION('Identification','IfcDatasetInformation Name',$,'Location',$,$,$,$,$,(#50),$,$,'text/xm',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
+#51= IFCDATASETINFORMATION('Identification','IfcDatasetInformation Name',$,'Location',$,$,$,$,$,(#50),$,$,'text/xml',$,$,$,$,'http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd');
 #52= IFCRELASSOCIATESDATASET('0NTsjDHVP28RhjRJ1nXuIj',#9,$,$,(#35),#51);
 #53= IFCPERSON($,$,'Given name',$,$,$,$,$);
 #54= IFCLIBRARYINFORMATION('Name','Version',#53,'2023-03-17T12:39:06','Location',$);
