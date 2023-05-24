@@ -25,7 +25,7 @@ DATA;
 #18=IFCSIMPLEPROPERTYTEMPLATE('2BDK_M2zr9Z8HPH$HEqaOB',#6,'Dummy Property Set',$,$,$,$,$,$,$,$,$);
 #19=IFCPROPERTYSETTEMPLATE('1ZTyapIUn4suRoC0xrM0WX',#6,'Dummy Template',$,$,$,(#18));
 #20=IFCRELDECLARES('0VFtnJwyrB4f1LR2wpbvvu',#6,$,$,#17,(#19));
-#21=IFCPROJECTEDCRS('AGD 1966 ISG 56 2','Australian Geodetic Datum 1966 Integrated Survey Grid Zone 56/2','AGD 1966',$,'Transverse Mercator','ISG 56 2',#11);
+#21=IFCPROJECTEDCRS('EPSG:20356','Australian Geodetic Datum 1966 Integrated Survey Grid Zone 56/2','AGD 1966',$,'Transverse Mercator','ISG 56 2',#11);
 #22=IFCRIGIDOPERATION(#9,#21,IFCLENGTHMEASURE(0.),IFCLENGTHMEASURE(0.), 0.);
 #23=IFCCARTESIANPOINT((0.,0.,0.));
 #24=IFCAXIS2PLACEMENT3D(#23,$,$);
