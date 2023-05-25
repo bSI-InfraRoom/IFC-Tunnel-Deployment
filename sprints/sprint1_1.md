@@ -21,23 +21,23 @@ This sprint assumes you completed the following sprints:
 
 This sprint encompasses the following usages:
 
-- [Project Unit Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-units.htm)
+1. [Project Unit Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-units.htm)
 	1. at least two units
-	2. a `LENGTHUNIT` and a `PLANEANGLEUNIT` (regardless of SI unit or conversion based)
-- [Project Representation Context](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-representation-context.htm)
+	1. a `LENGTHUNIT` and a `PLANEANGLEUNIT` (regardless of SI unit or conversion based)
+1. [Project Representation Context](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-representation-context.htm)
 	1. at least one of these should be defined:
-		- Model in 3D
-		- Plan in 2D
-- [Project Declaration](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-declaration.htm)
+		1. Model in 3D
+		1. Plan in 2D
+1. [Project Declaration](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-declaration.htm)
 	1. at least one of these should be declared:
-		- `IfcProjectLibrary`
-		- `IfcPropertySetTemplate`
-		- `IfcTypeObject`
-		- `IfcActor`
-		- `IfcControl`
-		- `IfcGroup`
-		- `IfcProcess`
-		- `IfcResource`
+		1. `IfcProjectLibrary`
+		1. `IfcPropertySetTemplate`
+		1. `IfcTypeObject`
+		1. `IfcActor`
+		1. `IfcControl`
+		1. `IfcGroup`
+		1. `IfcProcess`
+		1. `IfcResource`
 
 
 See also [IfcProject usages](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcproject.htm):
