@@ -60,13 +60,33 @@ This sprint encompasses the following usages:
 	1. body geometry
 	1. aggregated in tunnel
 
-### Presupport
-
-1. 
-
 ### Support
+
+1. `IfcElementAssembly/ARCH`
+   1. Pset?
+   2. Decomposed by `IfcArchElement/SEGMENT`
+2. `IfcArchElement/SEGMENT`
+   1. Body geometry
+   2. Pset_ArchElementCommon
+   3. Material + Pset_MaterialConcrete
+3. `IfcTunnelTypicalSection/EXCAVATIONSUPPORT`
+   1. Pset still in the makings
+   2. contained in Tunnel
+   3. [Product Span Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm)
+4. `IfcBuiltSystem/TUNNEL_SUPPORT`
+   1. Declared in project
+   2. Groups `IfcElementAssembly/ARCH`
+   3. Pset?
 
 ### Lining
 
-1. `IfcTunnelTypicalSection/EXCAVATIONSUPPORT`
+1. `IfcArchElement/LINING`
+   1. Body geometry
+   2. Pset_ArchElementCommon
+   3. Material + Pset_MaterialConcrete (or other?)
+
+2. `IfcBuiltSystem/TUNNEL_LINING`
+   1. Declared in project
+   2. Groups `IfcElementAssembly/LINING`
+   3. Pset?
 

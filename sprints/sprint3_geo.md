@@ -96,3 +96,4 @@ This sprint encompasses the following usages:
 1. `IfcTunnelTypicalSection/GEOTECH`
 	1. Pset still in the makings
 	1. contained in Tunnel
+	1. [Product Span Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm)
