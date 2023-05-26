@@ -22,32 +22,65 @@ This sprint assumes you completed the following sprints:
 | 2023.06.15. | 2023.08.15. | 2023.08.31. |
 
 
+## Concepts
+
+### New concepts
+
+1. [Spatial containment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-containment.htm)
+1. [Port connectivity](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-connectivity.htm)
+1. [Port nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-nesting.htm)
+1. [Port to Distribution system](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-to-distribution-system.htm)
+1. [Control flow](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/control-flow.htm)
+
+### Additional geometries
+
+1. [Body SweptSolid Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sweptsolid-geometry.htm)
+1. [Body AdvancedSwept DiskSolid Polycurve Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-advancedswept-disksolid-polycurve-geometry.htm)
+
+
 ## Usages
 
 This sprint encompasses the following usages:
 
-1. Ports connectivity
-1. Ports nesting
-1. Port to Distribution system
-
-Example on fire protection:
+### Example on fire protection
 
 1. `IfcPipeSegment`
-	1. contained in Tunnel
-	1. body geometry, e.g. swept profile solid
+	1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md)
+	1. [body geometry](./sprint2_3.md), e.g. see geometry concepts listed [here](#additional-geometries), or any volumetric representation from [sprint 2.3](./sprint2_3.md)
+	1. [local placement](./sprint2_2.md)
+	1. [nesting ports](#new-concepts): see also Table 599 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcpipesegment.htm)
+	1. [properties](./sprint2_3.md) with `Pset_PipeSegmentTypeCommon`
 1. `IfcPipeFitting`
-	1. contained in Tunnel
-	1. body geometry
-1. `IfcSensor`
-	1. contained in Tunnel
-	1. body geometry
-	1. `IfcRelFlowControlElements` to the sprinkler below
+	1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md)
+	1. [body geometry](./sprint2_3.md)
+	1. [local placement](./sprint2_2.md)
+	1. [properties](./sprint2_3.md) with `Pset_PipeFittingTypeCommon`
+	1. [nesting ports](#new-concepts): see also Table 594 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcpipefitting.htm)
 1. `IfcFireSuppressionTerminal/SPRINKLER`
-	1. contained in Tunnel
-	1. body geometry
+	1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md)
+	1. [body geometry](./sprint2_3.md)
+	1. [local placement](./sprint2_2.md)
+	1. [nesting ports](#new-concepts): see also Table 640 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcfiresuppressionterminal.htm)
+1. `IfcSensor`
+	1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md)
+	1. [body geometry](./sprint2_3.md)
+	1. [local placement](./sprint2_2.md)
+	1. [nesting ports](#new-concepts): see also Table 318 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcsensor.htm)
+	1. [flow control](#new-concepts) to the `IfcFireSuppressionTerminal/SPRINKLER` above: see also Table 319 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcsensor.htm)
 1. `IfcDistributionPort`
-	1. connected to other ports
-	1. nested to elements above
+	1. [connected](#new-concepts) to other `IfcDistributionPort`
+		1. one side shall be `SOURCE` and the other a `SINK` as [per documentation](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcdistributionport.htm)
+	1. [nested](#new-concepts) to all elements listed above
+	1. no [geometry](./sprint2_3.md)
+	1. no [containment](#new-concepts)
+	1. [properties](./sprint2_3.md) with `Pset_DistributionPortTypePipe`
 1. `IfcDistributionSystem/FIREPROTECTION`
-	1. declare in `IfcProject`
-	1. group all elements above
+	1. [declared](./sprint1_1.md) in `IfcProject`
+	1. [groups](./sprint2_1.md) all elements listed above
+
+### Other example
+
+You don't have fire protection support capabilities within your suite?
+If you have a different `IfcSystem` that is more easily supported with your software suite,
+ please come forward at the support meetings or contact us per email.
+We will try to come up with (tunnel specific) instructions for your example.
