@@ -45,5 +45,5 @@ This sprint encompasses the following usages:
         - `IfcReferent.ObjectPlacement` shall be `IfcLinearPlacement`.
         - `IfcReferent.ObjectPlacement.PlacementRelTo` shall point to `IfcReferent.Nests.RelatingObject.ObjectPlacement`.
 - [Linear Composition](https://github.com/bSI-InfraRoom/IFC-Specification/pull/557)
-    - All `IfcAlignment` instances shall be aggregated in `IfcProject`. It shall use its own `IfcRelAggregates` instance and not share it with the [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm) usage from Sprint 1.2.
+    - All `IfcAlignment` instances shall be aggregated in `IfcProject`. It shall use its own `IfcRelAggregates` instance and not share it with the [Spatial Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm) usage from [Sprint 1.2](./sprint1_2.md).
 
