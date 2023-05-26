@@ -22,6 +22,13 @@ This sprint assumes you completed the following sprints:
 | 2023.06.15. | 2023.08.15. | 2023.08.31. |
 
 
+## Concepts
+
+### New concepts
+
+1. [Spatial containment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-containment.htm)
+
+
 ## Usages
 
 This sprint encompasses the following usages:
