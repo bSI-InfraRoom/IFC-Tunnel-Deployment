@@ -31,7 +31,6 @@ This sprint encompasses the following usages:
     - Each `IfcTunnel` may only be decomposed by `IfcTunnel` or `IfcTunnelPart`.
     - There shall be at least one `IfcTunnel` in the file with non-empty `Name`.
 - Linear Composition
-    - in progress: https://github.com/bSI-InfraRoom/IFC-Specification/issues/523
     - There shall be one `IfcAlignment` in the file with non-empty `Name`.
 - [Alignment Layout](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-layout.htm)
     - There shall be at least one `LINE`, at least one `CIRCULARARC` and at least one `CLOTHOID` segments nested in the horizontal layout (see `IfcAlignmentHorizontalSegment.PredefinedType`).

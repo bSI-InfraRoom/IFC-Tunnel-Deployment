@@ -7,7 +7,7 @@ ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
 FILE_NAME ('example_sprint_1.1.ifc', '2023-01-26T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
-FILE_SCHEMA (('IFC4X4_notYetAgreed'));
+FILE_SCHEMA (('IFC4X4_17239AAA'));
 ENDSEC;
 
 DATA;
@@ -50,7 +50,7 @@ DATA;
 /* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
 #51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
 #52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
-#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, #54, $);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
 #54 = IFCACTORROLE(.CONSULTANT., $, $);
 
 
