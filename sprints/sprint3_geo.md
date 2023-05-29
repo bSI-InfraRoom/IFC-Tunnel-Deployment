@@ -44,101 +44,109 @@ This sprint encompasses the following usages:
 ### Book A
 
 1. `IfcBorehole`
-  1. [contained](#new-concepts) in `IfcSite`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsBorehole`
+   1. [contained](#new-concepts) in `IfcSite`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsBorehole`
 
 1. `IfcGeoScienceObservation/BOREHOLELOG`
    1. [assigned](#new-concepts) `IfcBorehole` above
    1. [declared](./sprint1_1.md) in `IfcProject`
    1. [properties](./sprint2_3.md) with `Pset_GeoObsBoreholeGeoLogInterval`
 1. `IfcDatasetInformation`
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. [associated](#new-concepts) to `IfcGeoScienceObservation/BOREHOLELOG`
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. [associated](#new-concepts) to `IfcGeoScienceObservation/BOREHOLELOG`
 
 1. `IfcSpatialZone/MAPPEDZONE`
-  1. [aggregated](#new-concepts) in `IfcSite`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsMappedZoneCommon`
+   1. [aggregated](#new-concepts) in `IfcSite`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsMappedZoneCommon`
 
 1. `IfcGeoScienceObservation/MAPPEDFEATURE`
-  1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
+   1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
 
 1. `IfcGeoScienceObservation/LOCALINFORMATION`
-  1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
+   1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
 
 1. `IfcGeoScienceObservation/INSITUTESTRESULT`
-  1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
+   1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
 
 1. `IfcGeoScienceObservation/LABTESTRESULT`
-  1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_LabTestCommon`
+   1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_LabTestCommon`
 
 1. `IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT`
-  1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
-  1. [declared](./sprint1_1.md) in `IfcProject`
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
+   1. [assigned](#new-concepts) `IfcSpatialZone/MAPPEDZONE` above
+   1. [declared](./sprint1_1.md) in `IfcProject`
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
+
 
 
 ### Book B
 
 1. `IfcGeoScienceModel/GEOTECHMODEL` (PredefinedType depending on decomposition!)
-  1. [contained](#new-concepts) in `IfcSite`
-  1. [decomposed by](#new-concepts) `IfcGeoScienceFeature/*` below
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_GeoScienceModelCommon`
+   1. [contained](#new-concepts) in `IfcSite`
+   1. [decomposed by](#new-concepts) `IfcGeoScienceFeature/*` below
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_GeoScienceModelCommon`
 
 1. `IfcGeoScienceFeature`
-  1. [part of](#new-concepts) `IfcGeoScienceModel/GEOTECHMODEL`
-  1. PredefinedType - at least one of:
-  	1. `PHYSICALPROPERTYDISTRIBUTION`
-  	  1. [body geometry](./sprint2_3.md) 
-  	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypePropertyDistribution`
-  	1. `GEOLOGICALUNIT`
-  	  1. [body geometry](./sprint2_3.md) 
-  	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeologicalUnit`
-  	1. `FAULT`
-  	  1. [body geometry](./sprint2_3.md) 
-  	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeFault`
-  	1. `CONTACT`
-  	  1. [surface geometry](./sprint2_3.md) 
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeContact`
-  	1. `GEOTECHNICALUNIT`
-  	  1. [body geometry](./sprint2_3.md) 
-  	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGroundTypeDistribution`
-  	1. `HAZARDAREA`
-  	  1. [body geometry](./sprint2_3.md) 
-  	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
-  	  1. [local placement](./sprint2_2.md)
-  	  1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeoHazard`
+   1. [part of](#new-concepts) `IfcGeoScienceModel/GEOTECHMODEL`
+   1. PredefinedType - at least one of:
+
+   1. `PHYSICALPROPERTYDISTRIBUTION`
+        	  1. [body geometry](./sprint2_3.md) 
+                	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        	  2. [local placement](./sprint2_2.md)
+        	  3. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypePropertyDistribution`
+   1. `GEOLOGICALUNIT`
+        	  1. [body geometry](./sprint2_3.md) 
+                	     1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        	  2. [local placement](./sprint2_2.md)
+        	  3. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeologicalUnit`
+   1. `FAULT`
+      1. [body geometry](./sprint2_3.md) 
+         1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+
+      1. [local placement](./sprint2_2.md)
+      1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeFault`
+
+   1. `CONTACT`
+      1. [surface geometry](./sprint2_3.md) 
+      2. [local placement](./sprint2_2.md)
+      3. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeContact`
+   1. `GEOTECHNICALUNIT`
+      1. [body geometry](./sprint2_3.md) 
+         1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+
+      1. [local placement](./sprint2_2.md)
+      1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGroundTypeDistribution`
+
+   1. `HAZARDAREA`
+      1. [body geometry](./sprint2_3.md) 
+         1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+
+      1. [local placement](./sprint2_2.md)
+      1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeoHazard`
+
 
 ### Book C
 

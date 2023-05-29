@@ -74,29 +74,33 @@ This sprint encompasses the following usages:
 ### Waterproofing
 
 1. `IfcCovering/MEMBRANE`
-  1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
-  1. [body geometry or surface tesselation geometry](./sprint2_3.md) 
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_CoveringTypeMembrane`
-  1. [material layer set](#new-concepts) (see also https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-layer-set.htm - Table 157)
-     1. IfcMaterialLayer-1
-        1. LayerThickness = 2 mm
-        1. Name = 'Front'
-        1. Material.Name = "Synthetic"
-     1. IfcMaterialLayer-2
-        1. LayerThickness = 0.5 mm
-        1. Name = "Fill"
-        1. Material.Name = 'GeoTextile'
+   1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
+   1. [body geometry or surface tesselation geometry](./sprint2_3.md) 
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_CoveringTypeMembrane`
+   1. [material layer set](#new-concepts) (see also https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-layer-set.htm - Table 157)
+      1. IfcMaterialLayer-1
+         1. LayerThickness = 2 mm
+         1. Name = 'Front'
+         1. Material.Name = "Synthetic"
+
+      1. IfcMaterialLayer-2
+         1. LayerThickness = 0.5 mm
+         1. Name = "Fill"
+         1. Material.Name = 'GeoTextile'
+
 1. `IfcDiscreteAccessory/WATER_BARRIER`
-  1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
-  1. Geometry?
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_DiscreteAccessoryTypeWaterBarrier`
+   1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
+   1. Geometry?
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_DiscreteAccessoryTypeWaterBarrier`
+
 1. `IfcSpatialZone/COMPARTMENT`
-  1. [aggregated](./sprint2_1.md) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
-  1. [body geometry](./sprint2_3.md)
-  1. [local placement](./sprint2_2.md)
-  1. [properties](./sprint2_3.md) with `Pset_SpatialZoneTypeCompartment`
+   1. [aggregated](./sprint2_1.md) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
+   1. [body geometry](./sprint2_3.md)
+   1. [local placement](./sprint2_2.md)
+   1. [properties](./sprint2_3.md) with `Pset_SpatialZoneTypeCompartment`
+
 1. `IfcBuiltSystem/WATERPROOFING`
    1. [declared](./sprint2_1.md) by `IfcProject`
    1. [groups](./sprint2_1.md) elements IfcCovering/MEMBRANE, IfcDiscreteAccessory/WATER_BARRIER and IfcSpatialZone/COMPARTMENT
