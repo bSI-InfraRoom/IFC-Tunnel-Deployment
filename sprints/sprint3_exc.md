@@ -54,7 +54,7 @@ This sprint encompasses the following usages:
     1. [properties](./sprint2_3.md) with `Pset_ExcavationCommon`
     1. [excavation cuttings](#new-concepts)
         1. The excavation shall void (`IfcRelVoidsElements`) the `IfcGeoScienceModel` below
-        
+
 1. `IfcEarthworksCut`
     1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) (does this need to be contained?)
     1. [body geometry](./sprint2_3.md)
@@ -105,7 +105,7 @@ This sprint encompasses the following usages:
 
 1. `IfcBuiltSystem/WATERPROOFING`
     1. [declared](./sprint2_1.md) by `IfcProject`
-    1. [groups](./sprint2_1.md) elements IfcCovering/MEMBRANE, IfcDiscreteAccessory/WATER_BARRIER and IfcSpatialZone/COMPARTMENT
+    1. [groups](./sprint2_1.md) elements `IfcCovering/MEMBRANE`, `IfcDiscreteAccessory/WATER_BARRIER` and `IfcSpatialZone/COMPARTMENT`
     1. [properties](./sprint2_3.md) with `Pset_BuiltSystemTypeWaterproofing`
 
 ### Support

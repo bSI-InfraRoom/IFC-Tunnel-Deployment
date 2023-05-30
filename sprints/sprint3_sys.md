@@ -32,9 +32,6 @@ This sprint assumes you completed the following sprints:
 1. [Port nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-nesting.htm)
 1. [Port to Distribution system](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-to-distribution-system.htm)
 1. [Control flow](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/control-flow.htm)
-
-### Additional geometries
-
 1. [Body SweptSolid Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sweptsolid-geometry.htm)
 1. [Body AdvancedSwept DiskSolid Polycurve Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-advancedswept-disksolid-polycurve-geometry.htm)
 
@@ -47,7 +44,7 @@ This sprint encompasses the following usages:
 
 1. `IfcPipeSegment`
 	1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md)
-	1. [body geometry](./sprint2_3.md), e.g. see geometry concepts listed [here](#additional-geometries), or any volumetric representation from [sprint 2.3](./sprint2_3.md)
+	1. [body geometry](./sprint2_3.md), e.g. see geometry concepts listed [above](#new-concepts), or any volumetric representation from [sprint 2.3](./sprint2_3.md)
 	1. [local placement](./sprint2_2.md)
 	1. [associates material](#new-concepts), e.g. steel
 	1. [nesting ports](#new-concepts): see also Table 599 [here](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcpipesegment.htm)
