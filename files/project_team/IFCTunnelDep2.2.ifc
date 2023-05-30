@@ -47,12 +47,14 @@ DATA;
 #25= IFCAXIS2PLACEMENT3D(#24,$,$);
 #26= IFCLOCALPLACEMENT(#18,#25);
 #27= IFCTUNNELPART('0viQbYyAL0xxca2xjwsVC1',#10,$,$,$,#26,$,$,$,.LONGITUDINAL.,.TUNNELSECTION.);
-#28= IFCALIGNMENT('02N$NVmQ94BvRFE4JZGxNH',$,'E, oID:2','315',$,#13,#550,$);
+/*#28= IFCALIGNMENT('02N$NVmQ94BvRFE4JZGxNH',$,'E, oID:2','315',$,#13,#550,$);*/
+#28= IFCALIGNMENT('02N$NVmQ94BvRFE4JZGxNH',$,'E, oID:2','The geometric representation of this instance is not correct in its use and mixing of IfcNonNegativeLengthMeasure and IfcParameterValue',$,#13,#550,$);
 #29= IFCPROPERTYSINGLEVALUE('Status',$,IFCLABEL('NEW'),$);
 #30= IFCPROPERTYSET('0qp0JANF53Fh7PG6Fdw0y$',$,'Pset_CivilElementCommon',$,(#29));
 #31= IFCRELDEFINESBYPROPERTIES('3eQRkdqjj2cBDYhAZqQH8q',#10,$,$,(#28),#30);
 #32= IFCRELNESTS('2SBA2P$JD2sR2Xrw4PHolF',$,'name',$,#28,(#33,#144,#359));
-#33= IFCALIGNMENTHORIZONTAL('1INPHBCd19EwZAMY0j_Qun',$,$,'VMU',$,#138,#141);
+/*#33= IFCALIGNMENTHORIZONTAL('1INPHBCd19EwZAMY0j_Qun',$,$,'VMU',$,#138,#141);*/
+#33= IFCALIGNMENTHORIZONTAL('1INPHBCd19EwZAMY0j_Qun',$,$,'The geometric representation of this instance is not correct in its use and mixing of IfcNonNegativeLengthMeasure and IfcParameterValue',$,#138,#141);
 #34= IFCRELNESTS('1MB$C_BUX0bPGhzYQd6LH3',$,'name',$,#33,(#35,#58,#74,#90,#106,#122));
 #35= IFCALIGNMENTSEGMENT('3DykKH4A18gQFgDBppHg44',$,'E',$,$,#36,#39,#56);
 #36= IFCLOCALPLACEMENT($,#37);
@@ -163,7 +165,8 @@ DATA;
 #141= IFCPRODUCTDEFINITIONSHAPE($,$,(#142));
 #142= IFCSHAPEREPRESENTATION(#41,'Axis','Curve2D',(#143));
 #143= IFCCOMPOSITECURVE((#48,#64,#80,#96,#112,#128),.F.);
-#144= IFCALIGNMENTVERTICAL('36hb63vVH2jfkNjPbYrL$Z',$,'Sp\X2\00E5\X0\r 2(E)',$,$,#356,$);
+/*#144= IFCALIGNMENTVERTICAL('36hb63vVH2jfkNjPbYrL$Z',$,'Sp\X2\00E5\X0\r 2(E)',$,$,#356,$);*/
+#144= IFCALIGNMENTVERTICAL('36hb63vVH2jfkNjPbYrL$Z',$,'Sp\X2\00E5\X0\r 2(E)','The geometric representation of this instance is not correct in its use and mixing of IfcNonNegativeLengthMeasure and IfcParameterValue',$,#356,$);
 #145= IFCRELNESTS('0PQ1T6YRX51Pw60umr_h99',$,'name',$,#144,(#146,#161,#176,#191,#206,#221,#236,#251,#266,#281,#296,#311,#326,#341));
 #146= IFCALIGNMENTSEGMENT('23TuQD2X56hA3qcOiNbqNw',$,'E',$,$,#147,#150,#160);
 #147= IFCLOCALPLACEMENT($,#148);
