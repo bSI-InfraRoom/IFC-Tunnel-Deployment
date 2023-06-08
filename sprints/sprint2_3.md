@@ -40,9 +40,9 @@ This sprint encompasses the following usages:
         1. [Surface Tessellation Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-tessellation-geometry.htm) with [`IfcTriangulatedIrregularNetwork`](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifctriangulatedirregularnetwork.htm).
 1. [Property Sets with Override](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/property-sets-with-override.htm)
     1. The `IfcSite` shall have the property set [Pset_LandRegistration](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/pset_landregistration.htm) assigned with:
-        1. the property `LandId` provided with non-empty value (the exact value is arbitrary),
-        1. the property `IsPermanentId` provided with value `.T.` (i.e. `true`) and 
-        1. the property `LandTitleId` provided with non-empty value (the exact value is arbitrary).
+        1. the property `LandID` provided with non-empty value (the exact value is arbitrary),
+        1. the property `IsPermanentID` provided with value `.T.` (i.e. `true`) and 
+        1. the property `LandTitleID` provided with non-empty value (the exact value is arbitrary).
 1. [Classification Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm)
     1. At least one instance of `IfcProduct` shall be associated with an `IfcClassificationReference` where:
         1. `Identification` and `Name` shall exist, and
