@@ -30,6 +30,7 @@ This sprint assumes you completed the following sprints:
 1. [Material Layer Set](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/schema/templates/material-layer-set-usage.htm)
 1. [Port connectivity](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-connectivity.htm)
 1. [Port nesting](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-nesting.htm)
+1. [Component to Distribution system](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/component-to-distribution-system.htm)
 1. [Port to Distribution system](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-to-distribution-system.htm)
 1. [Control flow](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/control-flow.htm)
 1. [Body SweptSolid Geometry](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sweptsolid-geometry.htm)
