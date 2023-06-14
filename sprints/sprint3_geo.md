@@ -32,18 +32,22 @@ This sprint assumes you completed the following sprints:
 1. [Product Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-assignment.htm)
 1. [Dataset Association](https://github.com/bSI-InfraRoom/IFC-Specification/pull/646)
 1. [Product Span Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm)
+1. [Assignment to Product](https://github.com/bSI-InfraRoom/IFC-Specification/pull/656)
 
 
 ## Usages
 
-This sprint encompasses the following usages:
+This sprint encompasses the following usages.
+
+The participants are encouraged to submit three separate files, each with a different book included.
+To enable easier review process, please denote the file names with `Book_A`, `Book_B` or `Book_C` corresponding to the options below.
 
 
 ### Book A
 
 1. `IfcBorehole`
     1. [contained](#new-concepts) in `IfcSite`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsBorehole`
 
@@ -58,42 +62,42 @@ This sprint encompasses the following usages:
 
 1. `IfcSpatialZone/MAPPEDZONE`
     1. [aggregated](#new-concepts) in `IfcSite`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsMappedZoneCommon`
 
 1. `IfcGeoScienceObservation/MAPPEDFEATURE`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
 
 1. `IfcGeoScienceObservation/LOCALINFORMATION`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
 
 1. `IfcGeoScienceObservation/INSITUTESTRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
 
 1. `IfcGeoScienceObservation/LABTESTRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_LabTestCommon`
 
 1. `IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry?
+    1. Geometry: WIP
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
 
@@ -101,44 +105,49 @@ This sprint encompasses the following usages:
 
 ### Book B
 
-1. `IfcGeoScienceModel/GEOTECHMODEL` 
-    1. (PredefinedType depending on decomposition!)
+1. `IfcGeoScienceModel` 
+    1. `PredefinedType` is depending on decomposition (valid pairs: WIP) 
     1. [contained](#new-concepts) in `IfcSite`
     1. [decomposed by](#new-concepts) `IfcGeoScienceFeature/*` below
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeoScienceModelCommon`
 
 1. `IfcGeoScienceFeature`
-    1. [part of](#new-concepts) `IfcGeoScienceModel/GEOTECHMODEL`
+    1. [part of](#new-concepts) `IfcGeoScienceModel` above
     1. `PredefinedType` - at least one of:
 
     1. `PHYSICALPROPERTYDISTRIBUTION`
-        1. [body geometry](./sprint2_3.md) 
-            1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        1. body geometry
+            1. if geometry is [`IfcVoxelGrid`](./sprint2_3.md) an [associated instance of `IfcVoxelData`](#new-concepts) is required
+            1. otherwise any other *body* geometry from [Sprint 2.3](./sprint2_3.md) is required
         1. [local placement](./sprint2_2.md)
-        1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypePropertyDistribution`
+        1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureCommon`
     1. `GEOLOGICALUNIT`
-        1. [body geometry](./sprint2_3.md) 
-            1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        1. body geometry
+            1. if geometry is [`IfcVoxelGrid`](./sprint2_3.md) an [associated instance of `IfcVoxelData`](#new-concepts) is required
+            1. otherwise any other *body* geometry from [Sprint 2.3](./sprint2_3.md) is required
         1. [local placement](./sprint2_2.md)
         1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeologicalUnit`
     1. `FAULT`
-        1. [body geometry](./sprint2_3.md) 
-            1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        1. body geometry
+            1. if geometry is [`IfcVoxelGrid`](./sprint2_3.md) an [associated instance of `IfcVoxelData`](#new-concepts) is required
+            1. otherwise any other *body* geometry from [Sprint 2.3](./sprint2_3.md) is required
         1. [local placement](./sprint2_2.md)
         1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeFault`
     1. `CONTACT`
-        1. [surface geometry](./sprint2_3.md) 
+        1. [surface geometry](./sprint2_3.md)
         1. [local placement](./sprint2_2.md)
         1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeContact`
     1. `GEOTECHNICALUNIT`
-        1. [body geometry](./sprint2_3.md) 
-            1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        1. body geometry
+            1. if geometry is [`IfcVoxelGrid`](./sprint2_3.md) an [associated instance of `IfcVoxelData`](#new-concepts) is required
+            1. otherwise any other *body* geometry from [Sprint 2.3](./sprint2_3.md) is required
         1. [local placement](./sprint2_2.md)
-        1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGroundTypeDistribution`
+        1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureCommon`
     1. `HAZARDAREA`
-        1. [body geometry](./sprint2_3.md) 
-            1. If geometry = IfcVoxelGrid an associated instance of IfcVoxelData (new CT!) is required
+        1. body geometry
+            1. if geometry is [`IfcVoxelGrid`](./sprint2_3.md) an [associated instance of `IfcVoxelData`](#new-concepts) is required
+            1. otherwise any other *body* geometry from [Sprint 2.3](./sprint2_3.md) is required
         1. [local placement](./sprint2_2.md)
         1. [properties](./sprint2_3.md) with `Pset_GeoScienceFeatureTypeGeoHazard`
 
@@ -148,4 +157,12 @@ This sprint encompasses the following usages:
 1. `IfcTunnelTypicalSection/GEOTECH`
 	1. [contained](#new-concepts) in `IfcTunnel`
 	1. [positioned between two](#new-concepts) `IfcReferent`
-	1. [properties](./sprint2_3.md) with `TBD`
+	1. [properties](./sprint2_3.md) with `WIP`
+
+
+### Other example
+
+You don't have some of these specific geotechnic support capabilities within your suite (regardless of Book option)?
+If you have a different idea that is more easily supported with your software suite,
+ please come forward at the support meetings or contact us per email.
+We will try to come up with (tunnel specific) instructions for your example.
