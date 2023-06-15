@@ -99,12 +99,12 @@ This sprint encompasses the following usages:
 
 1. `IfcElementAssembly/ARCH`
     1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
-    1. [decomposed by](#new-concepts) `IfcArchElement/SEGMENT`
+    1. [decomposed](#new-concepts) by `IfcArchElement/SEGMENT` below
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `WIP`
 
 1. `IfcArchElement/SEGMENT`
-    1. [part of](#new-concepts) `IfcElementAssembly/ARCH`
+    1. [part of](#new-concepts) `IfcElementAssembly/ARCH` above
     1. [body geometry](./sprint2_3.md) 
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_ArchElementCommon`
