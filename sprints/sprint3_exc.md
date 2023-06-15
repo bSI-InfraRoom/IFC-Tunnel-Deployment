@@ -68,7 +68,7 @@ This sprint encompasses the following usages:
     1. [body geometry or surface tesselation geometry](./sprint2_3.md) 
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_CoveringTypeMembrane`
-    1. [material layer set](#new-concepts) (see also https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifccovering.htm - Table 157) with at least 2 layers:
+    1. [material layer set](#new-concepts) (see also [Table 157](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifccovering.htm)) with at least 2 layers:
         1. Layer
             1. `LayerThickness` being `2 mm`
             1. `Name` being `'Front'`
