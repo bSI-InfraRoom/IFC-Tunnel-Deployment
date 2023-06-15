@@ -46,13 +46,12 @@ This sprint encompasses the following usages:
 ### Excavation
 
 1. `IfcUndergroundExcavation` or `IfcEarthworksCut`
-    1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) (does this need to be contained?)
     1. body geometry
         1. [Body Sectioned SolidHorizontal](#new-concepts) and [Guide Curves](#new-concepts) or
         1. any other [body geometry](./sprint2_3.md)
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_ExcavationCommon`
-    1. [excavation cuttings](#new-concepts)
+    1. [excavation cuttings](#new-concepts) and thus no [containment](#new-concepts)
         1. The excavation shall void (`IfcRelVoidsElements`) the `IfcGeoScienceModel` below
 
 1. `IfcGeoScienceModel/GEOTECHMODEL` 
