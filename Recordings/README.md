@@ -49,3 +49,5 @@
 [Sprint 3.C KickOff 2023-06-15](https://www.youtube.com/watch?v=BW5Pw_B_5SU))
 
 [Sprint 3.x support calls 2023-06-22](https://www.youtube.com/watch?v=OeaKIO2ZWss)
+
+[Sprint 3.x support calls 2023-06-29](https://www.youtube.com/watch?v=NjSKVBroqIw)
