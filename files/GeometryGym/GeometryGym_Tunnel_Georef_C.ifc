@@ -1,0 +1,55 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X4NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ 'GeometryGym_Tunnel_Georef_C.ifc',
+/* time_stamp */ '2023-02-16T22:12:33',
+/* author */ ('JonMirtschin'),
+/* organization */ ('Geometry Gym Pty Ltd'),
+/* preprocessor_version */ 'GeometryGymIFCcore v0.2.8.0 by Geometry Gym Pty Ltd built 2023-02-16T06:55:15',
+/* originating_system */ 'IFC4X4_Tunnel_Deployment v1.0.0.0',
+/* authorization */ 'None'
+);
+
+FILE_SCHEMA (('IFC4X4_17239AAA'));
+ENDSEC;
+
+DATA;
+#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#2= IFCAXIS2PLACEMENT3D(#1,$,$);
+#3= IFCLOCALPLACEMENT($,#2);
+#4= IFCTUNNEL('0E2ZKIPQz6ffn1eXESL3b1',#10,'IFC4X4 Tunnel Deployment Geometry Gym',$,$,#3,$,$,$,.NOTDEFINED.);
+#5= IFCPERSON('JonMirtschin',$,$,$,$,$,$,$);
+#6= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#7= IFCPERSONANDORGANIZATION(#5,#6,$);
+#8= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#9= IFCAPPLICATION(#8,' v1.0.0.0','IFC4X4_Tunnel_Deployment v1.0.0.0','IFC4X4_Tunnel_Deployment v1.0.0.0');
+#10= IFCOWNERHISTORY(#7,#9,$,.ADDED.,1676545953,$,$,1676545953);
+#11= IFCPROJECT('0TlIZYF$LFOO5pNkUYROwT',#10,'IFC4X4 Tunnel Deployment Geometry Gym',$,$,$,$,(#19),#12);
+#12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17));
+#13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#18= IFCRELAGGREGATES('16fqBulnrjCVk0E0cG$VMd',#10,$,$,#11,(#4));
+#19= IFCGEOMETRICREPRESENTATIONCONTEXT('3D','Model',3,0.0001,#21,#22);
+#20= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#21= IFCAXIS2PLACEMENT3D(#20,$,$);
+#22= IFCDIRECTION((0.0,1.0));
+#23= IFCCLASSIFICATION('NBS',$,$,'Uniclass',$,'https://uniclass.thenbs.com/',$);
+#24= IFCRELASSOCIATESCLASSIFICATION('0m8GWNajL549FiXhHn_B2m',#10,$,$,(#11),#23);
+#25= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en','En','Entities',#23,$,$);
+#26= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80','En_80','Transport Entities',#25,$,$);
+#27= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80_96','En_80_96','Tunnels and Shafts',#26,$,$);
+#28= IFCCLASSIFICATIONREFERENCE('https://uniclass.thenbs.com/taxon/en_80_96_90','En_80_96_90','Tunnels',#27,$,$);
+#29= IFCRELASSOCIATESCLASSIFICATION('2VN9vJbqn0YhpLlZGKkJDa',#10,$,$,(#4),#28);
+#30= IFCPROJECTEDCRS('EPSG:7854',$,$,$,$,$,$);
+#31= IFCWELLKNOWNTEXT('PROJCS["MGA/20-54",GEOGCS["GDA2020.LL",DATUM["GDA2020-7P",SPHEROID["GRS1980",6378137.000,298.25722210]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Transverse_Mercator"],PARAMETER["false_easting",500000.000],PARAMETER["false_northing",10000000.000],PARAMETER["scale_factor",0.999600000000],PARAMETER["central_meridian",141.00000000000000],PARAMETER["latitude_of_origin",0.00000000000000],UNIT["Meter",1.00000000000000]]',#30);
+#32= IFCRIGIDOPERATION(#19,#30,IFCLENGTHMEASURE(607814.0),IFCLENGTHMEASURE(5750920.0),0.0);
+#33= IFCSIMPLEPROPERTYTEMPLATE('2mYJGaPSXBr8ThSqtxjsYl',#10,'Example Simple Property Template',$,$,$,$,$,$,$,$,$);
+#34= IFCPROPERTYSETTEMPLATE('1bn04YtY923RLJyYu0Dp1f',#10,'Example Property Set Template',$,$,$,(#33));
+#35= IFCRELDECLARES('1LCvqvDe1CuwaseSctmhtv',#10,$,$,#11,(#34));
+ENDSEC;
+
+END-ISO-10303-21;
