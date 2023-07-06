@@ -46,13 +46,12 @@ This sprint encompasses the following usages:
 ### Excavation
 
 1. `IfcUndergroundExcavation` or `IfcEarthworksCut`
-    1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) (does this need to be contained?)
     1. body geometry
         1. [Body Sectioned SolidHorizontal](#new-concepts) and [Guide Curves](#new-concepts) or
         1. any other [body geometry](./sprint2_3.md)
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_ExcavationCommon`
-    1. [excavation cuttings](#new-concepts)
+    1. [excavation cuttings](#new-concepts) and thus no [containment](#new-concepts)
         1. The excavation shall void (`IfcRelVoidsElements`) the `IfcGeoScienceModel` below
 
 1. `IfcGeoScienceModel/GEOTECHMODEL` 
@@ -69,7 +68,7 @@ This sprint encompasses the following usages:
     1. [body geometry or surface tesselation geometry](./sprint2_3.md) 
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_CoveringTypeMembrane`
-    1. [material layer set](#new-concepts) (see also https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifccovering.htm - Table 157) with at least 2 layers:
+    1. [material layer set](#new-concepts) (see also [Table 157](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifccovering.htm)) with at least 2 layers:
         1. Layer
             1. `LayerThickness` being `2 mm`
             1. `Name` being `'Front'`
@@ -100,12 +99,12 @@ This sprint encompasses the following usages:
 
 1. `IfcElementAssembly/ARCH`
     1. [contained](#new-concepts) in [`IfcTunnel`](./sprint2_1.md) or [`IfcTunnelPart`](./sprint2_1.md) 
-    1. [decomposed by](#new-concepts) `IfcArchElement/SEGMENT`
+    1. [decomposed](#new-concepts) by `IfcArchElement/SEGMENT` below
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `WIP`
 
 1. `IfcArchElement/SEGMENT`
-    1. [part of](#new-concepts) `IfcElementAssembly/ARCH`
+    1. [part of](#new-concepts) `IfcElementAssembly/ARCH` above
     1. [body geometry](./sprint2_3.md) 
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_ArchElementCommon`
