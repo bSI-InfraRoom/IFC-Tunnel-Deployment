@@ -47,7 +47,7 @@ To enable easier review process, please denote the file names with `Book_A`, `Bo
 
 1. `IfcBorehole`
     1. [contained](#new-concepts) in `IfcSite`
-    1. Geometry: WIP
+    1. Geometry: See IfcBorehole [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsBorehole`
 
@@ -62,42 +62,42 @@ To enable easier review process, please denote the file names with `Book_A`, `Bo
 
 1. `IfcSpatialZone/MAPPEDZONE`
     1. [aggregated](#new-concepts) in `IfcSite`
-    1. Geometry: WIP
+    1. Geometry: See IfcSpatialZone/MAPPEDZONE [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsMappedZoneCommon`
 
 1. `IfcGeoScienceObservation/MAPPEDFEATURE`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry: WIP
+    1. Geometry: See IfcGeoScienceObservation/MAPPEDFEATURE [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
 
 1. `IfcGeoScienceObservation/LOCALINFORMATION`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry: WIP
+    1. Geometry: See IfcGeoScienceObservation/LOCALINFORMATION [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
 
 1. `IfcGeoScienceObservation/INSITUTESTRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry: WIP
+    1. Geometry: See IfcGeoScienceObservation/INSITUTESTRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
 
 1. `IfcGeoScienceObservation/LABTESTRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry: WIP
+    1. Geometry: See IfcGeoScienceObservation/LABTESTRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_LabTestCommon`
 
 1. `IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
-    1. Geometry: WIP
+    1. Geometry: See IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
 
@@ -157,7 +157,7 @@ To enable easier review process, please denote the file names with `Book_A`, `Bo
 1. `IfcTunnelTypicalSection/GEOTECH`
 	1. [contained](#new-concepts) in `IfcTunnel`
 	1. [positioned between two](#new-concepts) `IfcReferent`
-	1. [properties](./sprint2_3.md) with `WIP`
+	1. [properties](./sprint2_3.md) with `Pset_GeoAspects`
 
 
 ### Other example

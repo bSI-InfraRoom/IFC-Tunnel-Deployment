@@ -80,6 +80,7 @@ jobs:
         with:
           name: IFC_check_results
           path: ${{ github.workspace }}\results
+          if-no-files-found: error
       - name: Publish results
         id: results
         run: |
