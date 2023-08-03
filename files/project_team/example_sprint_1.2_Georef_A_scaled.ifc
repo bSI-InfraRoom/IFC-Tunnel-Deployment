@@ -71,7 +71,7 @@ DATA;
 /* ------- IfcMapConversionScaled provides data about the global-to-local transformation ------- */
 /* ------- The last 3 attributes provide the constant distortion factors of the geometries ----- */
 /* ------- in the referenced context between the reality and the model ------------------------- */
-#86 = IFCMAPCONVERSIONSCALED(#28, #81, 0., 0., 0., 1., 0., 1., $, 1.0000185, 1.0000185, 1.);
+#86 = IFCMAPCONVERSIONSCALED(#28, #81, 0., 0., 0., 1., 0., $, 1.0000185, 1.0000185, 1.);
 /* ------- If interpreted correctly, the base point should be somewhere close to --------------- */
 /* ------- Bielefeld Main Train Station, Am Bahnhof 1, 33602 Bielefeld, Germany ---------------- */
 
