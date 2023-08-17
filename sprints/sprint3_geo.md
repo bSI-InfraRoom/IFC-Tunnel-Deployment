@@ -166,3 +166,8 @@ You don't have some of these specific geotechnic support capabilities within you
 If you have a different idea that is more easily supported with your software suite,
  please come forward at the support meetings or contact us per email.
 We will try to come up with (tunnel specific) instructions for your example.
+
+### Geometric representations
+
+The geometry representations specified above are suggestions from the IFC Tunnel technical team. For general requirements on geometric representations, please consult the [geometry requirements as specified by the IFC Tunnel geoscience domain experts](./IFC-Tunnel_Geotechnics_Geometry.xlsx).
+
