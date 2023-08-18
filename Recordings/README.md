@@ -62,3 +62,9 @@
 
 [Sprint 3.x support calls 2023-08-03](https://www.youtube.com/watch?v=2O0ES_cdHM8)
 
+[Sprint 3.x support call 2023-08-17 - Morning](https://youtu.be/UuZKduSE-rc)
+
+[Sprint 3.x support call 2023-08-17 - Evening](https://youtu.be/KoDUy_IcDJ4)
+
+
+
