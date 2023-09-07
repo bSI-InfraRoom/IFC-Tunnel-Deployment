@@ -80,11 +80,12 @@ jobs:
         with:
           name: IFC_check_results
           path: ${{ github.workspace }}\results
+          if-no-files-found: error
       - name: Publish results
         id: results
         run: |
           dir results
-          Get-ChildItem results | ForEach {
+          Get-ChildItem -Path .\results\*.ifc.md | ForEach {
             Get-Content $_.FullName | ForEach { 
               echo $_ >> $env:GITHUB_STEP_SUMMARY 
             }
@@ -93,7 +94,7 @@ jobs:
         id: output
         run: |
           echo "hasfailing=false" >> $env:GITHUB_OUTPUT
-          Get-ChildItem results | ForEach {
+          Get-ChildItem -Path .\results\*Full.md | ForEach {
             if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing"}) -contains $True ) {
               echo "hasfailing=true" >> $env:GITHUB_OUTPUT
               break
@@ -114,10 +115,13 @@ jobs:
         if: ${{ needs.check-ifc.outputs.hasfailing == 'false' }}
         id: inform_right
         run: |
-          echo ":heavy_check_mark: We could not find any mistakes in the submitted IFC files. :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "# Success" >> $GITHUB_STEP_SUMMARY
+          echo ""
+          echo ":heavy_check_mark: Verification and validation were successful." >> $GITHUB_STEP_SUMMARY
+          echo ":heavy_check_mark: We could not find any mistakes in the submitted IFC file(s). :rocket:" >> $GITHUB_STEP_SUMMARY
           echo ""
           echo ":exclamation: Note: :exclamation:"
-          echo "This does not mean that the file is *completely* correct, though. :broken_heart:" >> $GITHUB_STEP_SUMMARY
+          echo "This does not mean that the content is *completely* correct, though. :broken_heart:" >> $GITHUB_STEP_SUMMARY
           echo "We are not checking everything, only what is required by the current [sprint](https://github.com/bSI-InfraRoom/IFC-Tunnel-Deployment/tree/main/sprints)." >> $GITHUB_STEP_SUMMARY
 
 

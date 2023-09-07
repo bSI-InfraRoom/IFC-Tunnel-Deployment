@@ -1,4 +1,4 @@
-# Bever Control Sprint 2.1
+# Bever Control Sprint 2.3
 
 Sample data is from Trimble Quadri Sprint 1.1
 
