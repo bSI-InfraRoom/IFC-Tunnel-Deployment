@@ -1,0 +1,80 @@
+ISO-10303-21;
+
+/* ------- This file was produced manually for IFC Infra Extension Deployment project. --------- */
+/* ------- And further adapted for IFC-for-Tunneling Deployment Programme ---------------------- */
+/* ------- Stefan Jaud, stefan@the-hard-code.com, 2023.01.25. ---------------------------------- */
+
+HEADER;
+FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
+FILE_NAME ('example_sprint_1.2_Georef_A_scaled.ifc', '2023-02-09T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
+FILE_SCHEMA (('IFC4X4_17239aaa'));
+ENDSEC;
+
+DATA;
+
+/* ------- General definitions ----------------------------------------------------------------- */
+#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
+/* ------- Reusable X direction ---------------------------------------------------------------- */
+#2 = IFCDIRECTION((1., 0., 0.));
+/* ------- Reusable Y direction ---------------------------------------------------------------- */
+#3 = IFCDIRECTION((0., 1., 0.));
+/* ------- Reusable Z direction ---------------------------------------------------------------- */
+#4 = IFCDIRECTION((0., 0., 1.));
+/* ------- Reusable origin --------------------------------------------------------------------- */
+#5 = IFCCARTESIANPOINT((0., 0., 0.));
+
+/* ------- IfcProject is the top most element in the project structure ------------------------- */
+#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'Sprint 1.2', 'Ifc Tunnel Deployment Sprint 1.2.', $, $, $, (#28), #17);
+
+/* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
+/* ------- when the units are not otherwise defined -------------------------------------------- */
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #24, #25, #26, #27));
+#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
+#19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
+#20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+
+/* ------- Example of non-SI unit used for angles: degree instead of radian -------------------- */
+#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.017453292519943295), #22);
+#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'degree', #23);
+
+#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
+#27 = IFCMONETARYUNIT('EUR');
+
+/* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
+#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #29, #30);
+#29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#30 = IFCDIRECTION((0.,1.));
+
+/* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
+#51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
+#52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
+#54 = IFCACTORROLE(.CONSULTANT., $, $);
+
+/* ------- IfcSite is the top most element in the spatial structure ---------------------------- */
+#61 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, 'Top element in project structure', $, $, #62, $, $, .ELEMENT., $, $, $, $, $);
+/* ------- The IfcSite's placement is the top-most placement ----------------------------------- */
+#62 = IFCLOCALPLACEMENT($, #29);
+/* ------- Project/Spatial structure ----------------------------------------------------------- */
+#63 = IFCRELAGGREGATES('3Hu7f6BmT14B_XS9yS78Jr', $, $, $, #16, (#61));
+
+/* ------- Associating a made up classification ------------------------------------------------ */
+#71 = IFCRELASSOCIATESCLASSIFICATION('3Hu7f6BmT14B_XS9yS78Ja', $, $, $, (#16), #72);
+#72 = IFCCLASSIFICATION('Stefan Jaud', '0.0.0.1', '2023-02-09', 'Stefan Jaud classification', $, $, $);
+
+/* ------- IfcProjectedCRS provides information about the underlying CRS ----------------------- */
+/* ------- through specifying the WellKnownText representation (ISO19162) ---------------------- */
+#81 = IFCPROJECTEDCRS($, 'VA_0622 + GNTRANS2016 height', $, $, $, $, #18);
+#82 = IFCWELLKNOWNTEXT('COMPOUNDCRS["VA_0622 + GNTRANS2016 height",PROJCRS["VA_0622",BASEGEOGCRS["DB_REF",DATUM["Deutsche Bahn Reference System",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",5681]],CONVERSION["Local Projection",METHOD["Transverse_Mercator"],PARAMETER["central_meridian",8.533,ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]],PARAMETER["latitude_of_origin",52.0314,ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]],PARAMETER["scale_factor",1.0000185,SCALEUNIT["unity",1,ID["EPSG",9201]]],PARAMETER["false_easting",5000,LENGTHUNIT["metre",1,ID["EPSG",9001]]],PARAMETER["false_northing",10000,LENGTHUNIT["metre",1,ID["EPSG",9001]]]],CS[Cartesian,2],AXIS["e",east,ORDER[1],LENGTHUNIT["metre",1,ID["EPSG",9001]]],AXIS["n",north,ORDER[2],LENGTHUNIT["metre",1,ID["EPSG",9001]]]],VERTCRS["GNTRANS2016 height",VDATUM["GNTRANS2016"],CS[vertical,1],AXIS["gravity-related height",up,LENGTHUNIT["metre",1]],ID["EPSG",9927]],USAGE[SCOPE["Vermessung und Planung von Verkehrsanlagen"],AREA["Bielefeld Hbf"],BBOX[52.0214,8.523,52.0414,8.543]]]', #81);
+/* ------- IfcMapConversionScaled provides data about the global-to-local transformation ------- */
+/* ------- The last 3 attributes provide the constant distortion factors of the geometries ----- */
+/* ------- in the referenced context between the reality and the model ------------------------- */
+#86 = IFCMAPCONVERSIONSCALED(#28, #81, 0., 0., 0., 1., 0., $, 1.0000185, 1.0000185, 1.);
+/* ------- If interpreted correctly, the base point should be somewhere close to --------------- */
+/* ------- Bielefeld Main Train Station, Am Bahnhof 1, 33602 Bielefeld, Germany ---------------- */
+
+
+ENDSEC;
+END-ISO-10303-21;

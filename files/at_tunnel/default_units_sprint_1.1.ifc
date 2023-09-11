@@ -1,0 +1,59 @@
+ISO-10303-21;
+
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('','2023-02-09T10:58:21',(),(),'','','');
+FILE_SCHEMA(('IFC4X4_notYetAgreed'));
+ENDSEC;
+
+DATA;
+
+/* ------- General definitions ----------------------------------------------------------------- */
+#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
+/* ------- Reusable X direction ---------------------------------------------------------------- */
+#2 = IFCDIRECTION((1., 0., 0.));
+/* ------- Reusable Y direction ---------------------------------------------------------------- */
+#3 = IFCDIRECTION((0., 1., 0.));
+/* ------- Reusable Z direction ---------------------------------------------------------------- */
+#4 = IFCDIRECTION((0., 0., 1.));
+/* ------- Reusable origin --------------------------------------------------------------------- */
+#5 = IFCCARTESIANPOINT((0., 0., 0.));
+
+/* ------- IfcProject is the top most element in the project structure ------------------------- */
+#16 = IFCPROJECT('2HO72PAk5BIBbhpwo9W572', $, 'Sprint 1.1', 'Ifc Tunnel Deployment Sprint 1.1.', $, $, $, (#40), #17);
+
+/* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
+/* ------- when the units are not otherwise defined -------------------------------------------- */
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #21, #24, #25, #26, #27, #28, #29));
+#18 = IFCSIUNIT(*, .LENGTHUNIT., .KILO., .METRE.);
+#19 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
+#20 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
+#21 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+
+/* ------- non-SI unit used for angles: GON instead of radian ---------------------------------- */
+#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.015707963267948966), #22);
+#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'GON', #23);
+
+#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = IFCSIUNIT(*, .FORCEUNIT., .KILO., .NEWTON.);
+#27 = IFCSIUNIT(*, .PRESSUREUNIT., .MEGA., .PASCAL.);
+#28 = IFCSIUNIT(*, .THERMODYNAMICTEMPERATUREUNIT., $, .DEGREE_CELSIUS.);
+
+/* ------- none unit used to represent change (e.g. slope -------------------------------------- */
+#29 = IFCCONTEXTDEPENDENTUNIT($,.USERDEFINED.,'percentage');
+
+/* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
+#40 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #41, #42);
+#41 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#42 = IFCDIRECTION((0.,1.));
+
+/* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
+#51 = IFCRELDECLARES('2HO72PAk5BIBbhpwo9W572', $, $, $, #16, (#52));
+#52 = IFCACTOR('2HO72PAk5BIBbhpwo9W572', $, $, $, $, #53);
+#53 = IFCPERSON($, 'Guentert', 'Johannes', $, $, $, #54, $);
+#54 = IFCACTORROLE(.ENGINEER., $, $);
+
+
+ENDSEC;
+END-ISO-10303-21;

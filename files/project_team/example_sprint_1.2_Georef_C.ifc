@@ -1,0 +1,75 @@
+ISO-10303-21;
+
+/* ------- This file was produced manually for IFC Infra Extension Deployment project. --------- */
+/* ------- And further adapted for IFC-for-Tunneling Deployment Programme ---------------------- */
+/* ------- Stefan Jaud, stefan@the-hard-code.com, 2023.01.25. ---------------------------------- */
+
+HEADER;
+FILE_DESCRIPTION (('ViewDefinition [Ifc4x4NotAssigned]'), '2;1');
+FILE_NAME ('example_sprint_1.2_Georef_C.ifc', '2023-02-09T18:00:00', ('Stefan Jaud'), ('based on bSI Infra Extension Deployment project'), 'manual text editing', 'SublimeText 3.0', 'GitHub pull request');
+FILE_SCHEMA (('IFC4X4_17239aaa'));
+ENDSEC;
+
+DATA;
+
+/* ------- General definitions ----------------------------------------------------------------- */
+#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
+/* ------- Reusable X direction ---------------------------------------------------------------- */
+#2 = IFCDIRECTION((1., 0., 0.));
+/* ------- Reusable Y direction ---------------------------------------------------------------- */
+#3 = IFCDIRECTION((0., 1., 0.));
+/* ------- Reusable Z direction ---------------------------------------------------------------- */
+#4 = IFCDIRECTION((0., 0., 1.));
+/* ------- Reusable origin --------------------------------------------------------------------- */
+#5 = IFCCARTESIANPOINT((0., 0., 0.));
+
+/* ------- IfcProject is the top most element in the project structure ------------------------- */
+#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'Sprint 1.2', 'Ifc Tunnel Deployment Sprint 1.2.', $, $, $, (#28), #17);
+
+/* ------- IfcUnitAssignment defines the global units for measures and values ------------------ */
+/* ------- when the units are not otherwise defined -------------------------------------------- */
+#17 = IFCUNITASSIGNMENT((#18, #19, #20, #24, #25, #26, #27));
+#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
+#19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
+#20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+
+/* ------- Example of non-SI unit used for angles: degree instead of radian -------------------- */
+#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.017453292519943295), #22);
+#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'degree', #23);
+
+#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
+#27 = IFCMONETARYUNIT('EUR');
+
+/* ------- IfcGeometricRepresentationContext is the global context of the geometry ------------- */
+#28 = IFCGEOMETRICREPRESENTATIONCONTEXT('3D', 'Model', 3, 1.E-6, #29, #30);
+#29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#30 = IFCDIRECTION((0.,1.));
+
+/* ------- IfcRelDeclares with Actor declaration ----------------------------------------------- */
+#51 = IFCRELDECLARES('2DAvEupIz0HQr73cMacwtY', $, $, $, #16, (#52));
+#52 = IFCACTOR('2DAvEupIz0HQr73cMacwtX', $, $, $, $, #53);
+#53 = IFCPERSON($, 'Jaud', 'Stefan', $, $, $, (#54), $);
+#54 = IFCACTORROLE(.CONSULTANT., $, $);
+
+/* ------- IfcSite is the top most element in the spatial structure ---------------------------- */
+#61 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, 'Top element in project structure', $, $, #62, $, $, .ELEMENT., $, $, $, $, $);
+/* ------- The IfcSite's placement is the top-most placement ----------------------------------- */
+#62 = IFCLOCALPLACEMENT($, #29);
+/* ------- Project/Spatial structure ----------------------------------------------------------- */
+#63 = IFCRELAGGREGATES('3Hu7f6BmT14B_XS9yS78Jr', $, $, $, #16, (#61));
+
+/* ------- Associating a made up classification ------------------------------------------------ */
+#71 = IFCRELASSOCIATESCLASSIFICATION('3Hu7f6BmT14B_XS9yS78Ja', $, $, $, (#16), #72);
+#72 = IFCCLASSIFICATION('Stefan Jaud', '0.0.0.1', '2023-02-09', 'Stefan Jaud classification', $, $, $);
+
+/* ------- IfcProjectedCRS provides information about the underlying CRS ----------------------- */
+#81 = IFCPROJECTEDCRS('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', #18);
+/* ------- IfcRigidOperation provides data about the global-to-local transformation ------------ */
+#82 = IFCRIGIDOPERATION(#28, #81, IFCLENGTHMEASURE(4468005.), IFCLENGTHMEASURE(5334600.), 515.);
+/* ------- If interpreted correctly, the base point should be the main entrance to the --------- */
+/* ------- Technical University of Munich, Arcisstrasse 21, 80333 Munich, Germany -------------- */
+
+ENDSEC;
+END-ISO-10303-21;

@@ -1,0 +1,70 @@
+
+COMPOUNDCRS["VA_0622 + GNTRANS2016 height",
+	PROJCRS["VA_0622",
+		BASEGEOGCRS["DB_REF",
+			DATUM["Deutsche Bahn Reference System",
+				ELLIPSOID["Bessel 1841",6377397.155,299.1528128,
+					LENGTHUNIT["metre",1]
+				]
+			],
+			PRIMEM["Greenwich",0,
+				ANGLEUNIT["degree",0.0174532925199433]
+			],
+			ID["EPSG",5681]
+		],
+		CONVERSION["Local Projection",
+			METHOD["Transverse_Mercator"],
+			PARAMETER["central_meridian",8.533,
+				ANGLEUNIT["degree",0.0174532925199433,
+					ID["EPSG",9122]
+				]
+			],
+			PARAMETER["latitude_of_origin",52.0314,
+				ANGLEUNIT["degree",0.0174532925199433,
+					ID["EPSG",9122]
+				]
+			],
+			PARAMETER["scale_factor",1.0000185,
+				SCALEUNIT["unity",1,
+					ID["EPSG",9201]
+				]
+			],
+			PARAMETER["false_easting",5000,
+				LENGTHUNIT["metre",1,
+					ID["EPSG",9001]
+				]
+			],
+			PARAMETER["false_northing",10000,
+				LENGTHUNIT["metre",1,
+					ID["EPSG",9001]
+				]
+			]
+		],
+		CS[Cartesian,2],
+		AXIS["e",east,
+			ORDER[1],
+			LENGTHUNIT["metre",1,
+				ID["EPSG",9001]
+			]
+		],
+		AXIS["n",north,
+			ORDER[2],
+			LENGTHUNIT["metre",1,
+				ID["EPSG",9001]
+			]
+		]
+	],
+	VERTCRS["GNTRANS2016 height",
+		VDATUM["GNTRANS2016"],
+		CS[vertical,1],
+		AXIS["gravity-related height",up,
+			LENGTHUNIT["metre",1]
+		],
+		ID["EPSG",9927]
+	],
+	USAGE[
+		SCOPE["Vermessung und Planung von Verkehrsanlagen"],
+		AREA["Bielefeld Hbf"],
+		BBOX[52.0214,8.523,52.0414,8.543]
+	]
+]
