@@ -89,6 +89,8 @@ jobs:
             Get-Content $_.FullName | ForEach { 
               echo $_ >> $env:GITHUB_STEP_SUMMARY 
             }
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
           }
       - name: Prepare output
         id: output
