@@ -69,9 +69,9 @@ jobs:
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
-            Write-Host "Checking filename:" "$("$filename")" " --> writing to" "$("${{ github.workspace }}\results\$filename.md")"
             $ifcFilePath = $("${{ github.workspace }}\$_")
             $outFilePath = $("${{ github.workspace }}\results\Report_$filename.md")
+            Write-Host "Checking:" "$("$filename")" "$("$ifcFilePath")" " --> writing to" "$("$outFilePath")"
             & $cmnd $ifcFilePath $outFilePath "Sprint_1.1"
             Write-Host "Last exit code was:" "$LastExitCode"
           }
