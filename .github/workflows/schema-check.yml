@@ -55,7 +55,7 @@ jobs:
         id: downloadfile
         run: |
           mkdir download
-          $urlPath = "https://thc.lyforms.com/documents/thc/public/IFChecker.TunnelDeployment"
+          $urlPath = "https://thc.lyforms.app/documents/thc/public/IFChecker.TunnelDeployment"
           $path = "${{ github.workspace }}\download\IFChecker.TunnelDeployment"
           Invoke-WebRequest -URI $urlPath -OutFile $path
           Expand-Archive $path -DestinationPath "${{ github.workspace }}\.github\workflows\"
