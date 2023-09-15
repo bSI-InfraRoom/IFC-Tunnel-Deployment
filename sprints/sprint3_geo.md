@@ -30,9 +30,9 @@ This sprint assumes you completed the following sprints:
 1. [Element Decomposition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-decomposition.htm)
 1. [Element Composition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-composition.htm)
 1. [Product Assignment](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-assignment.htm)
-1. [Dataset Association](https://github.com/bSI-InfraRoom/IFC-Specification/pull/646)
+1. [Dataset Association](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/dataset-association.htm)
 1. [Product Span Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm)
-1. [Assignment to Product](https://github.com/bSI-InfraRoom/IFC-Specification/pull/656)
+1. [Assignment to Product](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/assignment-to-product.htm)
 
 
 ## Usages

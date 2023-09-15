@@ -31,11 +31,11 @@ This sprint assumes you completed the following sprints:
 1. [Element Composition](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-composition.htm)
 1. [Material single](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-single.htm)
 1. [Material Layer Set Usage](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-layer-set-usage.htm)
-1. [Assigning properties to material](https://github.com/bSI-InfraRoom/IFC-Specification/issues/649)
+1. [Assigning properties to material](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material.htm)
 1. [Earthworks Cuttings](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/earthworks-cuttings.htm)
-1. [Excavation Cuttings](https://github.com/bSI-InfraRoom/IFC-Specification/pull/653)
+1. [Excavation Cuttings](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/excavation-cuttings.htm)
 1. [Body Sectioned SolidHorizontal](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sectionedsolidhorizontal.htm)
-1. [Guide Curves](https://github.com/bSI-InfraRoom/IFC-Specification/pull/655)
+1. [Guide Curves](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/guide-curve-geometry.htm)
 1. [Product Span Positioning](https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm)
 
 
