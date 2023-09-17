@@ -55,7 +55,7 @@ jobs:
         id: downloadfile
         run: |
           mkdir download
-          $urlPath = "https://thc.lyforms.com/documents/thc/public/IFChecker.TunnelDeployment"
+          $urlPath = "https://thc.lyforms.app/documents/thc/public/IFChecker.TunnelDeployment"
           $path = "${{ github.workspace }}\download\IFChecker.TunnelDeployment"
           Invoke-WebRequest -URI $urlPath -OutFile $path
           Expand-Archive $path -DestinationPath "${{ github.workspace }}\.github\workflows\"
@@ -69,9 +69,9 @@ jobs:
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
-            Write-Host "Checking filename:" "$("$filename")" " --> writing to" "$("${{ github.workspace }}\results\$filename.md")"
             $ifcFilePath = $("${{ github.workspace }}\$_")
             $outFilePath = $("${{ github.workspace }}\results\Report_$filename.md")
+            Write-Host "Checking:" "$("$filename")" "$("$ifcFilePath")" " --> writing to" "$("$outFilePath")"
             & $cmnd $ifcFilePath $outFilePath "Sprint_1.1"
             Write-Host "Last exit code was:" "$LastExitCode"
           }
@@ -89,6 +89,8 @@ jobs:
             Get-Content $_.FullName | ForEach { 
               echo $_ >> $env:GITHUB_STEP_SUMMARY 
             }
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
           }
       - name: Prepare output
         id: output
