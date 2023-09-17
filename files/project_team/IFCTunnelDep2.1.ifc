@@ -19,7 +19,7 @@ DATA;
 #2= IFCAXIS2PLACEMENT3D(#1,$,$);
 #4= IFCSITE('1afTUXWFH5n8kJl_rR_x$G',#10,'My site',$,$,#13,$,$,$,$,$,$,$,$);
 #5= IFCPERSON('lars',$,$,$,$,$,$,$);
-#6= IFCORGANIZATION($,'Unknown',$,$,$);
+#6= IFCORGANIZATION($,'Not known',$,$,$);
 #7= IFCPERSONANDORGANIZATION(#5,#6,$);
 #8= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
 #9= IFCAPPLICATION(#8,' v1.0.0.0','IFCTunnelDep2 v1.0.0.0','IFCTunnelDep2 v1.0.0.0');
