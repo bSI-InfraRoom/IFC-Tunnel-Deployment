@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION (('ViewDefinition [Ikke spesifisert]'), '2;1');
-FILE_NAME ('D:\\Download\\IFC44_0611.ifc', '2023-06-11T20:07:54', ('Jan_Erik Hoel'), ('Trimble Solutions Sandvika AS'), 'Ifc Engine <1.0.1.1364>', 'Quadri <25.0.40446.0>', 'Jan_Erik Hoel');
+FILE_NAME ('D:\\Download\\IFC44_0611.ifc', '2023-06-11T20:07:54', ('Jan Erik Hoel'), ('Trimble Solutions Sandvika AS'), 'Ifc Engine <1.0.1.1364>', 'Quadri <25.0.40446.0>', 'Jan Erik Hoel');
 FILE_SCHEMA (('IFC4X4_B072BCCA'));
 ENDSEC;
 DATA;
