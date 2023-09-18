@@ -39,3 +39,35 @@
 [Sprint 2.3 support calls 2023-05-25](https://www.youtube.com/watch?v=sZCQGM0HHl0)
 
 [Sprint 2.3 support calls 2023-06-01](https://www.youtube.com/watch?v=3jBfSYwgxRU)
+
+[Sprint 2.3 support calls 2023-06-08](https://www.youtube.com/watch?v=S4kOa7M9L7M)
+
+[Sprint 3.A KickOff 2023-06-15](https://www.youtube.com/watch?v=cONC2Qv-l80)
+
+[Sprint 3.B KickOff 2023-06-15](https://www.youtube.com/watch?v=NP2BovH3qxU))
+
+[Sprint 3.C KickOff 2023-06-15](https://www.youtube.com/watch?v=BW5Pw_B_5SU))
+
+[Sprint 3.x support calls 2023-06-22](https://www.youtube.com/watch?v=OeaKIO2ZWss)
+
+[Sprint 3.x support calls 2023-06-29](https://www.youtube.com/watch?v=NjSKVBroqIw)
+
+[Sprint 3.x support calls 2023-07-06](https://www.youtube.com/watch?v=V0t8opRl6EQ)
+
+[Sprint 3.x support calls 2023-07-13](https://www.youtube.com/watch?v=txHoAtqlB5E)
+
+[Sprint 3.x support calls 2023-07-20](https://www.youtube.com/watch?v=7ZuqncYvsoY)
+
+[Sprint 3.x support calls 2023-07-27](https://www.youtube.com/watch?v=gKdALpX93PE)
+
+[Sprint 3.x support calls 2023-08-03](https://www.youtube.com/watch?v=2O0ES_cdHM8)
+
+[Sprint 3.x support call 2023-08-17 - Morning](https://youtu.be/UuZKduSE-rc)
+
+[Sprint 3.x support call 2023-08-17 - Evening](https://youtu.be/KoDUy_IcDJ4)
+
+[Sprint 3.x support call 2023-08-24 - Morning](https://youtu.be/EfKeuPVui5Y)
+
+Sprint 3.x support call 2023-08-24 - Evening - No recording
+
+[Sprint 3.x support calls 2023-09-07](https://www.youtube.com/watch?v=gVvymSoHQs8)
