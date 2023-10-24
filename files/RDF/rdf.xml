@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LandXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.landxml.org/schema/LandXML-1.2 http://www.landxml.org/schema/landxml-1.2/LandXML-1.2.xsd" version="1.2" date="2023-03-25" time="17:18:19" xmlns="http://www.landxml.org/schema/LandXML-1.2">
+	<Units>
+		<Metric areaUnit="squareMeter" linearUnit="meter" volumeUnit="cubicMeter" temperatureUnit="celsius" pressureUnit="HPA" directionUnit="radians" />
+	</Units>
+	<Application name="HandMade" version="1.0" manufacturer="RDF Ltd." manufacturerURL="https://rdf.bg" />
+	<CgPoints />
+	<Alignments>
+		<Alignment name="Axis" length="40.274" staStart="0.0">
+			<CoordGeom>
+				<Line>
+					<Start>0.0 0.0 0.0</Start>
+					<End>0.0 3.0 0.0</End>
+				</Line>
+				<Curve rot="ccw" length="14.1371669412">
+					<Start>0.0 3.0 0</Start>
+					<Center>3.0 3.0 0</Center>
+					<End>3.0 0.0 0</End>
+				</Curve>
+				<Line>
+					<Start>3.0 0.0 0.0</Start>
+					<End>-3.0 0.0 0.0</End>
+				</Line>
+				<Curve rot="cw" length="14.1371669412">
+					<Start>-3.0 0.0 0</Start>
+					<Center>-3.0 -3.0 0</Center>
+					<End>0.0 -3.0 0</End>
+				</Curve>
+				<Line>
+					<Start>0.0 -3.0 0.0</Start>
+					<End>0.0 0.0 0.0</End>
+				</Line>
+			</CoordGeom>
+			<Profile>
+				<ProfAlign name="Asse_Prf">
+					<PVI>0.0 1.0</PVI>
+					<CircCurve length="2.0" radius="3">16.137 1.0</CircCurve>
+					<CircCurve length="2.0" radius="3">18.137 3.0</CircCurve>
+					<CircCurve length="2.0" radius="3">22.137 3.0</CircCurve>
+					<CircCurve length="2.0" radius="3">24.137 1.0</CircCurve>
+					<PVI>40.274 1.0</PVI>
+				</ProfAlign>
+			</Profile>
+			<Cant name="BP_Cant" gauge="1.5">
+				<CantStation station="0.0" appliedCant="0" cantGradient="0" curvature="ccw"/>
+				<CantStation station="40.274" appliedCant="0" cantGradient="0" curvature="ccw"/>
+			</Cant>
+		</Alignment>
+	</Alignments>
+</LandXML>
