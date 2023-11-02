@@ -820,7 +820,7 @@ DATA;
 #813 = IFCSITE('1NGLV6bq9CnxuE5TPYiiXT', #2, 'Site 01', $, $, #17, $, $, $, $, $, $, $, $);
 #814 = IFCPROPERTYSET('1P$PFwGvT4dBfUI_omz5ir', #2, 'Pset_LandRegistration', $, (#815, #816, #817, #818));
 #815 = IFCPROPERTYSINGLEVALUE('LandID', $, IFCLABEL('My Land'), $);
-#816 = IFCPROPERTYSINGLEVALUE('IsPermanentID', $, IFCBOOLEAN(..T..), $);
+#816 = IFCPROPERTYSINGLEVALUE('IsPermanentID', $, IFCBOOLEAN(.T.), $);
 #817 = IFCPROPERTYSINGLEVALUE('LandTitleID', $, IFCLABEL('1234'), $);
 #818 = IFCCOMPLEXPROPERTY('IfcLibraryReference', $, '12d_attribute_group', (#819, #820, #821));
 #819 = IFCPROPERTYSINGLEVALUE('Location', $, IFCLABEL('https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/annex/annex-a/general-usage/IFC4x3.ifc'), $);
