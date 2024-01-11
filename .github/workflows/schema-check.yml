@@ -55,7 +55,7 @@ jobs:
         id: downloadfile
         run: |
           mkdir download
-          $urlPath = "https://thc.lyforms.com/documents/thc/public/IFChecker.TunnelDeployment"
+          $urlPath = "https://thc.lyforms.app/documents/thc/public/IFChecker.TunnelDeployment"
           $path = "${{ github.workspace }}\download\IFChecker.TunnelDeployment"
           Invoke-WebRequest -URI $urlPath -OutFile $path
           Expand-Archive $path -DestinationPath "${{ github.workspace }}\.github\workflows\"
@@ -69,9 +69,9 @@ jobs:
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
-            Write-Host "Checking filename:" "$("$filename")" " --> writing to" "$("${{ github.workspace }}\results\$filename.md")"
             $ifcFilePath = $("${{ github.workspace }}\$_")
             $outFilePath = $("${{ github.workspace }}\results\Report_$filename.md")
+            Write-Host "Checking:" "$("$filename")" "$("$ifcFilePath")" " --> writing to" "$("$outFilePath")"
             & $cmnd $ifcFilePath $outFilePath "Sprint_1.1"
             Write-Host "Last exit code was:" "$LastExitCode"
           }
@@ -80,20 +80,23 @@ jobs:
         with:
           name: IFC_check_results
           path: ${{ github.workspace }}\results
+          if-no-files-found: error
       - name: Publish results
         id: results
         run: |
           dir results
-          Get-ChildItem results | ForEach {
+          Get-ChildItem -Path .\results\*.ifc.md | ForEach {
             Get-Content $_.FullName | ForEach { 
               echo $_ >> $env:GITHUB_STEP_SUMMARY 
             }
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
+            echo "---" >> $env:GITHUB_STEP_SUMMARY 
           }
       - name: Prepare output
         id: output
         run: |
           echo "hasfailing=false" >> $env:GITHUB_OUTPUT
-          Get-ChildItem results | ForEach {
+          Get-ChildItem -Path .\results\*Full.md | ForEach {
             if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing"}) -contains $True ) {
               echo "hasfailing=true" >> $env:GITHUB_OUTPUT
               break
@@ -114,10 +117,13 @@ jobs:
         if: ${{ needs.check-ifc.outputs.hasfailing == 'false' }}
         id: inform_right
         run: |
-          echo ":heavy_check_mark: We could not find any mistakes in the submitted IFC files. :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "# Success" >> $GITHUB_STEP_SUMMARY
+          echo ""
+          echo ":heavy_check_mark: Verification and validation were successful." >> $GITHUB_STEP_SUMMARY
+          echo ":heavy_check_mark: We could not find any mistakes in the submitted IFC file(s). :rocket:" >> $GITHUB_STEP_SUMMARY
           echo ""
           echo ":exclamation: Note: :exclamation:"
-          echo "This does not mean that the file is *completely* correct, though. :broken_heart:" >> $GITHUB_STEP_SUMMARY
+          echo "This does not mean that the content is *completely* correct, though. :broken_heart:" >> $GITHUB_STEP_SUMMARY
           echo "We are not checking everything, only what is required by the current [sprint](https://github.com/bSI-InfraRoom/IFC-Tunnel-Deployment/tree/main/sprints)." >> $GITHUB_STEP_SUMMARY
 
 
