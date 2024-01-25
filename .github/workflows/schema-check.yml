@@ -16,12 +16,12 @@ jobs:
       removedfiles: ${{ steps.file_changes.outputs.deleted_files }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
       - name: Get changed files
         id: file_changes
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v42
         with:
           files: |
             **/*.ifc
@@ -48,7 +48,7 @@ jobs:
       hasfailing: ${{ steps.output.outputs.hasfailing }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Verify the workspace context
         run: echo 'Workspace directory is ${{ github.workspace }}'
       - name: Download the file
@@ -76,7 +76,7 @@ jobs:
             Write-Host "Last exit code was:" "$LastExitCode"
           }
       - name: Upload check results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: IFC_check_results
           path: ${{ github.workspace }}\results
@@ -97,7 +97,7 @@ jobs:
         run: |
           echo "hasfailing=false" >> $env:GITHUB_OUTPUT
           Get-ChildItem -Path .\results\*Full.md | ForEach {
-            if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing"}) -contains $True ) {
+            if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing|exception"}) -contains $True ) {
               echo "hasfailing=true" >> $env:GITHUB_OUTPUT
               break
             }
@@ -109,7 +109,7 @@ jobs:
       - name: Inform failure
         if: ${{ needs.check-ifc.outputs.hasfailing == 'true' }}
         id: inform_failure
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             core.setFailed('The submitted IFC file(s) have mistakes. Review the report(s).')
