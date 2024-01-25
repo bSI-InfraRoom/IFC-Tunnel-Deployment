@@ -109,7 +109,7 @@ jobs:
       - name: Inform failure
         if: ${{ needs.check-ifc.outputs.hasfailing == 'true' }}
         id: inform_failure
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             core.setFailed('The submitted IFC file(s) have mistakes. Review the report(s).')
