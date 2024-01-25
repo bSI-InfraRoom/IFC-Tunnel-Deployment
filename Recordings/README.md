@@ -87,3 +87,5 @@
 [Sprint 3.x support calls 2023-12-21](https://www.youtube.com/watch?v=BCdPzYDyhSw)
 
 [Sprint 3.x support calls 2024-01-11](https://www.youtube.com/watch?v=PL03z4rIV5I)
+
+[Sprint 3.x support calls 2024-01-18](https://www.youtube.com/watch?v=KMcSqGgBRhU)
