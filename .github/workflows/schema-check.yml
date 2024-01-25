@@ -97,7 +97,7 @@ jobs:
         run: |
           echo "hasfailing=false" >> $env:GITHUB_OUTPUT
           Get-ChildItem -Path .\results\*Full.md | ForEach {
-            if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing"}) -contains $True ) {
+            if( (Get-Content $_.FullName | ForEach-Object {$_ -match "failing|exception"}) -contains $True ) {
               echo "hasfailing=true" >> $env:GITHUB_OUTPUT
               break
             }
