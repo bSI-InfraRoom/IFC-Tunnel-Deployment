@@ -30,7 +30,7 @@ jobs:
         run: |
           echo 'The following files were identified for checking:' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          IFS='§'
+          IFS='\§'
           files="${{ steps.file_changes.outputs.all_changed_files }}"
           deletedFiles=("${{ steps.file_changes.outputs.deleted_files }}")
           for i in $files; do
@@ -65,7 +65,7 @@ jobs:
           mkdir results
           $removed = "${{ needs.filter.outputs.removedfiles }}"
           $cmnd = "${{ github.workspace }}\.github\workflows\IFChecker.TunnelDeployment.exe"
-          "${{ needs.filter.outputs.allchangedfiles }}".Split("§") | ForEach {
+          "${{ needs.filter.outputs.allchangedfiles }}".Split("\§") | ForEach {
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
