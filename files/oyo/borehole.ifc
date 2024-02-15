@@ -11,7 +11,7 @@ DATA;
 #1= IFCPROJECT('2x_b1bE89729rT9vQf$xYv',#18,'\X2\25cb25cb5730533a90538def57308cea8abf67fb696d52d9\X0\ Geotechnical survey in oo',$,$,$,$,(#16),#2);      /* ○○地区道路地質調査業務 */
 #2= IFCUNITASSIGNMENT((#3,#4,#5,#9,#10,#11));
 #3= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
-#4= IFCSIUNIT(*,.AREAUNIT.,$,.CUBIC_METRE.);
+#4= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
 #5= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
 #6= IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.0174532925199433),#5);
 #7= IFCCONVERSIONBASEDUNIT(#8,.PLANEANGLEUNIT.,'degree',#6);
@@ -42,7 +42,7 @@ DATA;
 #26= IFCRELAGGREGATES('3t1pjfGpWRVTaTw1bYeY8U',$,$,$,#1,(#24));
 
 /* Pset_Address */
-#27= IFCPROPERTYENUMERATION('PEnum_AddressType',('DISTRIBUTIONPOINT','HOME','OFFICE','SITE','OTHER','NOTKNOWN','UNSET'),$);
+/*#27= IFCPROPERTYENUMERATION('PEnum_AddressType',('DISTRIBUTIONPOINT','HOME','OFFICE','SITE','OTHER','NOTKNOWN','UNSET'),$);
 #28= IFCSIMPLEPROPERTYTEMPLATE('3t1pjfGpWRVTaTw1tueY8U',#18,'Purpose',$,.P_ENUMERATEDVALUE.,'PEnum_AddressType',$,#27,$,$,$,$);
 #29= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpWRVTaTw1tYeY8U',#18,'Description',$,.P_SINGLEVALUE.,'IfcText',$,$,$,$,$,$);
 #30= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjjpWRVTaTw1tYeY8U',#18,'UserDefinedPurpose',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
@@ -59,20 +59,20 @@ DATA;
 #41= IFCSIMPLEPROPERTYTEMPLATE('3tnpntGpWRVTkpw1pYeY8U',#18,'ElectronicMailAddresses',$,.P_LISTVALUE.,'IfcLabel',$,$,$,$,$,$);
 #42= IFCSIMPLEPROPERTYTEMPLATE('3tnpjtGpWRVTkpw1pYeY8U',#18,'WWWHomePageURL',$,.P_SINGLEVALUE.,'IfcURIReference',$,$,$,$,$,$);
 #43= IFCSIMPLEPROPERTYTEMPLATE('3tnpjtGpWRVfkpw1pYeY8U',#18,'MessagingIDs',$,.P_LISTVALUE.,'IfcURIReference',$,$,$,$,$,$);
-#44= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfkpw1pYeY8U',#18,'Pset_Address',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcSite',(#28,#29,#30,#31,#32,#33,#34,#35,#36,#37,#38,#39,#40,#41,#42,#43));
+#44= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfkpw1pYeY8U',#18,'Pset_Address',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcSite',(#28,#29,#30,#31,#32,#33,#34,#35,#36,#37,#38,#39,#40,#41,#42,#43));*/
 
-#45= IFCPROPERTYENUMERATEDVALUE('Purpose',$,('SITE'),#27);
-#46= IFCPROPERTYSINGLEVALUE('AddressLines',$,(IFCLABEL('\X2\5317533a5bae539f753a\X0\ 1-66-2 Miyahara 1-66-2, Kita-ku')),$);      /* 北区宮原町 */
+#45= IFCPROPERTYENUMERATEDVALUE('Purpose',$,(IFCLABEL('SITE')),$);
+#46= IFCPROPERTYLISTVALUE('AddressLines',$,(IFCLABEL('\X2\5317533a5bae539f753a\X0\ 1-66-2 Miyahara 1-66-2, Kita-ku')),$);      /* 北区宮原町 */
 #47= IFCPROPERTYSINGLEVALUE('Town',$,IFCLABEL('\X2\30553044305f307e5e02\X0\ Saitama-city'),$);       /* さいたま市 */
 #48= IFCPROPERTYSINGLEVALUE('Region',$,IFCLABEL('\X2\57fc7389770c\X0\ Saitama'),$);      /* 埼玉県 */
 #49= IFCPROPERTYSINGLEVALUE('PostalCode',$,IFCLABEL('331-0812'),$);
 #50= IFCPROPERTYSINGLEVALUE('Country',$,IFCLABEL('\X2\65e5672c\X0\ Japan'),$);       /* 日本 */
 #51= IFCPROPERTYSET('3MkkB99I99dAzhqEv5T8pS',#18,'Pset_Address',$,(#45,#46,#47,#48,#49,#50));
 #52= IFCRELDEFINESBYPROPERTIES('3q1meoSNf4qu6pTgYbNa3O',#18,$,$,(#24),#51);
-#53= IFCRELDEFINESBYTEMPLATE('3MkkB99l99dAzhqEv5T8pS',#18,'Pset_Address',$,(#51),#44);
+/*#53= IFCRELDEFINESBYTEMPLATE('3MkkB99l99dAzhqEv5T8pS',#18,'Pset_Address',$,(#51),#44);*/
 
 /* declare property templates */
-#99= IFCRELDECLARES('1iH3$hs119$Bj0TJ$ZDa4l',#18,$,$,#1,(#44,#309,#410,#422,#510,#513));
+/*#99= IFCRELDECLARES('1iH3$hs119$Bj0TJ$ZDa4l',#18,$,$,#1,(#44,#310,#410,#422,#510,#513));*/
 
 /* geographic reference */
 #101= IFCPROJECTEDCRS('EPSG:6677','JGD2011 / Japan Plane Rectangular CS IX, GRS80','EPSG:1128','EPSG:7019','Japan Plane Rectangular','IX',#3);
@@ -99,7 +99,7 @@ DATA;
 #213= IFCDIRECTION((0.0,0.0,-1.0));
 
 /* borehole properties */
-#301= IFCPROPERTYENUMERATION('PEnum_BoreholeState',('CAP_REPLACED','CASING_INSTALLED','CASING_PARTIALLY_REPLACED','CASING_REPLACED','CHAMBER_RECONDITIONED','DECONSTRUCTED','INSTALLED','PARTIALLY_DECONSTRUCTED','PARTIALLY_REFILLED','RECONDITIONED','REFILLED','OTHER','NOTKNOWN','UNSET'),$);
+/*#301= IFCPROPERTYENUMERATION('PEnum_BoreholeState',('CAP_REPLACED','CASING_INSTALLED','CASING_PARTIALLY_REPLACED','CASING_REPLACED','CHAMBER_RECONDITIONED','DECONSTRUCTED','INSTALLED','PARTIALLY_DECONSTRUCTED','PARTIALLY_REFILLED','RECONDITIONED','REFILLED','OTHER','NOTKNOWN','UNSET'),$);
 #302= IFCSIMPLEPROPERTYTEMPLATE('3t1pj9GpWRVTaTw1tueY8U',#18,'BoreholeState',$,.P_ENUMERATEDVALUE.,'PEnum_BoreholeState',$,#301,$,$,$,$);
 #303= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpMRVTaTS1tYeY8U',#18,'CapDepth',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,#3,$,$,$);
 #304= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpMRVTaTSitYeY8U',#18,'CapMaterial',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
@@ -108,16 +108,16 @@ DATA;
 #307= IFCSIMPLEPROPERTYTEMPLATE('3t1pjxGpMRVTaTSitYeY8U',#18,'GroundwaterDepth',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,#3,$,$,$);
 #308= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpMRbTaTSitzeY8U',#18,'LiningMaterial',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
 #309= IFCSIMPLEPROPERTYTEMPLATE('3t1psxGpMRVTaTSitYeY8U',#18,'LiningThckness',$,.P_SINGLEVALUE.,'IfcPositiveLengthMeasure',$,$,#3,$,$,$);
-#310= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfkpw1pYgY8U',#18,'Pset_BoreholeCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#302,#303,#304,#305,#306,#307,#308,#309));
+#310= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfkpw1pYgY8U',#18,'Pset_BoreholeCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#302,#303,#304,#305,#306,#307,#308,#309));*/
 
-#311= IFCPROPERTYENUMERATEDVALUE('BoreholeState',$,('NOTKNOWN'),#301);
+#311= IFCPROPERTYENUMERATEDVALUE('BoreholeState',$,(IFCLABEL('NOTKNOWN')),$);
 #312= IFCPROPERTYSINGLEVALUE('CapDepth',$,IFCPOSITIVELENGTHMEASURE(41.0),$);
 #313= IFCPROPERTYSINGLEVALUE('GroundwaterDepth',$,IFCPOSITIVELENGTHMEASURE(1.15),$);
 #314= IFCPROPERTYSET('3MkkB99h99dAzhqEv5T8pS',#18,'Pset_BoreholeCommon',$,(#311,#312,#313));
 #315= IFCRELDEFINESBYPROPERTIES('3q1xeoSNf4qu6pTgYbNa3O',#18,$,$,(#201),#314);
-#316= IFCRELDEFINESBYTEMPLATE('3MkkB99p99dAzhqEv5T8pS',#18,'Pset_BoreholeCommon',$,(#314),#310);
+/*#316= IFCRELDEFINESBYTEMPLATE('3MkkB99p99dAzhqEv5T8pS',#18,'Pset_BoreholeCommon',$,(#314),#310);*/
 
-#401= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpnRVTaTS1tYeY8U',#18,'BoreholeElevation',$,.P_SINGLEVALUE.,'IfcLengthMeasure',$,$,#3,$,$,$);
+/*#401= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGpnRVTaTS1tYeY8U',#18,'BoreholeElevation',$,.P_SINGLEVALUE.,'IfcLengthMeasure',$,$,#3,$,$,$);
 #402= IFCSIMPLEPROPERTYTEMPLATE('3t1pjjGsnRVTaTS1tYeY8U',#18,'BoreholeInclination',$,.P_SINGLEVALUE.,'IfcPlaneAngleMeasure',$,$,#7,$,$,$);
 #403= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRVTaTS1tYeY8U',#18,'BoreholeAzimuth',$,.P_SINGLEVALUE.,'IfcPlaneAngleMeasure',$,$,#7,$,$,$);
 #404= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRVbaTS1tYeY8U',#18,'BoreholePurpose',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
@@ -126,9 +126,9 @@ DATA;
 #407= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRMzaTS1tYeY8U',#18,'BoreholeLengthPlanned',$,.P_SINGLEVALUE.,'IfcPsitiveLengthMeasure',$,$,#3,$,$,$);
 #408= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRMzaTS1xYeY8U',#18,'BoreholeLengthDrilled',$,.P_SINGLEVALUE.,'IfcPsitiveLengthMeasure',$,$,#3,$,$,$);
 #409= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRMzaTa1xYeY8U',#18,'DrillingMethod',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
-#410= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfzpw1pYgY8U',#18,'Pset_SpatialGeoObsBorehole',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#401,#402,#403,#404,#405,#406,#407,#408,#409));
+#410= IFCPROPERTYSETTEMPLATE('3tnpjtGpWYVfzpw1pYgY8U',#18,'Pset_SpatialGeoObsBorehole',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBorehole',(#401,#402,#403,#404,#405,#406,#407,#408,#409));*/
 
-#411= IFCPROPERTYSINGLEVALUE('BoreholeElevation',$,IfCLENGTHMEASURE(5.23),$);
+#411= IFCPROPERTYSINGLEVALUE('BoreholeElevation',$,IFCLENGTHMEASURE(5.23),$);
 #412= IFCPROPERTYSINGLEVALUE('BoreholeInclination',$,IFCPLANEANGLEMEASURE(0.0),$);
 #413= IFCPROPERTYSINGLEVALUE('BoreholeAzimuth',$,IFCPLANEANGLEMEASURE(0.0),$);
 #414= IFCPROPERTYSINGLEVALUE('BoreholePurpose',$,IFCLABEL(''),$);
@@ -138,8 +138,8 @@ DATA;
 #418= IFCPROPERTYSINGLEVALUE('BoreholeLengthDrilled',$,IFCPOSITIVELENGTHMEASURE(41.0),$);
 #419= IFCPROPERTYSINGLEVALUE('DrillingMethod',$,IFCLABEL(''),$);
 #420= IFCPROPERTYSET('3XRTzQHnz7cAIfMZXXPySu',#18,'Pset_SpatialGeoObsBorehole',$,(#411,#412,#413,#414,#415,#416,#417,#418,#419));
-#421= IFCRELDEFINESBYPROPERTIES('3q1meoSNf4qu6pTgYbNa3O',#18,$,$,(#201),#420);
-#422= IFCRELDEFINESBYTEMPLATE('3MkkB99p99dAzhqEv5T8pS',#18,'Pset_SpatialGeoObsBorehole',$,(#420),#410);
+#421= IFCRELDEFINESBYPROPERTIES('3q1meoSNf4qu6oTgYbNa3O',#18,$,$,(#201),#420);
+/*#422= IFCRELDEFINESBYTEMPLATE('3MkkB99p99dAzhqEv5T8pS',#18,'Pset_SpatialGeoObsBorehole',$,(#420),#410);*/
 
 /******** geoscience observations, borehole log ************/
 #501= IFCGEOSCIENCEOBSERVATION('3l_OKNTJr4yBOR5rYl6b9w',#18,'\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,$,#203,$,.BOREHOLELOG.);      /* 工学的地質区分名現場土質名 */
@@ -150,18 +150,18 @@ DATA;
 #503= IFCRELAGGREGATES('05_XilsUH1VROiy8KwqwoF',$,$,$,#501,(#601,#651,#701,#751,#801));
 
 /* property template, Pset_GeoObsBoreholeLogInterval */
-#504= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRMzaTa1xYeY8s',#18,'GeologyCode',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
+/*#504= IFCSIMPLEPROPERTYTEMPLATE('3t1pljGsnRMzaTa1xYeY8s',#18,'GeologyCode',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
 #505= IFCSIMPLEPROPERTYTEMPLATE('3t1pgjGsnRMzaTa1xYeY8s',#18,'Weathering',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
 #506= IFCSIMPLEPROPERTYTEMPLATE('3t1pgjGsnRMzsTa1xYeY8s',#18,'FractureIndex',$,.P_SINGLEVALUE.,'IfcCountMeasure',$,$,$,$,$,$);
 #507= IFCSIMPLEPROPERTYTEMPLATE('3t1pgjGsfRMzsTa1xYeY8s',#18,'RockQualityDesignation',$,.P_SINGLEVALUE.,'IfcRatioMeasure',$,$,$,$,$,$);
 #508= IFCSIMPLEPROPERTYTEMPLATE('3t1pgsGsfRMzsTa1xYeY8s',#18,'TotalCoreRecovery',$,.P_SINGLEVALUE.,'IfcRatioMeasure',$,$,$,$,$,$);
 #509= IFCSIMPLEPROPERTYTEMPLATE('3t1pgsGsfRMasTa1xYeY8s',#18,'SolidCoreRecovery',$,.P_SINGLEVALUE.,'IfcRatioMeasure',$,$,$,$,$,$);
-#510= IFCPROPERTYSETTEMPLATE('3tnpjtGpWgVfzpw1pYgY8U',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#504,#505,#506,#507,#508,#509));
+#510= IFCPROPERTYSETTEMPLATE('3tnpjtGpWgVfzpw1pYgY8U',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#504,#505,#506,#507,#508,#509));*/
 
 /* property template, GeoObsBoreholeLogInterval_additional */
-#511= IFCSIMPLEPROPERTYTEMPLATE('3tnpjtGfWgVfzpw1pYgY8U',#18,'\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
+/*#511= IFCSIMPLEPROPERTYTEMPLATE('3tnpjtGfWgVfzpw1pYgY8U',#18,'\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
 #512= IFCSIMPLEPROPERTYTEMPLATE('3tnpjtGfWgVfhpw1pYgY8U',#18,'DepthRange',$,.P_BOUNDEDVALUE.,'IfcLengthMeasure',$,$,#3,$,$,$);
-#513= IFCPROPERTYSETTEMPLATE('3tngjtGpWgVfzpw1pYgY8U',#18,'GeoObsBoreholeGeoLogInterval_additional',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#511,#512));
+#513= IFCPROPERTYSETTEMPLATE('3tngjtGpWgVfzpw1pYgY8U',#18,'GeoObsBoreholeGeoLogInterval_additional',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#511,#512));*/
 
 
 #601= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr4yBOR5rYl6b9w',#18,$,$,$,#203,#602,.BOREHOLELOG.);
@@ -180,13 +180,13 @@ DATA;
 #626= IFCPROPERTYSINGLEVALUE('SolidCoreRecorvery',$,IFCRATIOMEASURE($),$);
 #627= IFCPROPERTYSET('3JCBjt01LFaR5Bw6ZlXzWv',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#621,#622,#623,#624,#625,#626));
 #628= IFCRELDEFINESBYPROPERTIES('382$dvtiozmhoz66iHtCwJ',#18,$,$,(#601),#627);
-#629= IFCRELDEFINESBYTEMPLATE('3MkkBb9p99dAzhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#627),#510);
+/*#629= IFCRELDEFINESBYTEMPLATE('3MkkBb9p99dAzhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#627),#510);*/
 
-#630= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\76db571f0028792b6df73058308a78028cea7c98571f0029\0\ Fill (Sandy clay with gravel)'),$);		/* added */ /* 工学的地質区分名現場土質名, 盛土(礫混じり砂質粘土) */
+#630= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\76db571f0028792b6df73058308a78028cea7c98571f0029\X0\ Fill (Sandy clay with gravel)'),$);		/* added */ /* 工学的地質区分名現場土質名, 盛土(礫混じり砂質粘土) */
 #631= IFCPROPERTYBOUNDEDVALUE('DepthRange',$,IFCLENGTHMEASURE(0.00),IFCLENGTHMEASURE(1.65),$,$);	/* added */
 #632= IFCPROPERTYSET('3JCBjl01LFaR5Bw6ZlXzWv',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#630,#631));
 #633= IFCRELDEFINESBYPROPERTIES('382$dvtvozmhoz66iHtCwJ',#18,$,$,(#601),#632);
-#634= IFCRELDEFINESBYTEMPLATE('3MkkBb9e99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#632),#513);
+/*#634= IFCRELDEFINESBYTEMPLATE('3MkkBb9e99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#632),#513);*/
 
 
 #651= IFCGEOSCIENCEOBSERVATION('3l_OKNTJr4yBOd5rYl6b9w',#18,$,$,$,#203,#652,.BOREHOLELOG.);
@@ -203,16 +203,16 @@ DATA;
 #676= IFCPROPERTYSINGLEVALUE('SolidCoreRecorvery',$,IFCRATIOMEASURE($),$);
 #677= IFCPROPERTYSET('3JCBjt01LFak5Bw6ZlXzWv',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#671,#672,#673,#674,#675,#676));
 #678= IFCRELDEFINESBYPROPERTIES('382$dvtiodmhoz66iHtCwJ',#18,$,$,(#651),#677);
-#679= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAzhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#677),#510);
+/*#679= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAzhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#677),#510);*/
 
-#680= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\8150690d571f\0\ Humus'));        /* 工学的地質区分名現場土質名, 腐植土 */
+#680= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\8150690d571f\X0\ Humus'));        /* 工学的地質区分名現場土質名, 腐植土 */
 #681= IFCPROPERTYBOUNDEDVALUE('DepthRange',$,IFCLENGTHMEASURE(1.65),IFCLENGTHMEASURE(2.80),$,$);
 #682= IFCPROPERTYSET('3sGofpoqP5vvIaalPtcSe9',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#680,#681));
 #683= IFCRELDEFINESBYPROPERTIES('1YcXImxSD6gBELL$2QeYyb',#18,$,$,(#651),#682);
-#684= IFCRELDEFINESBYTEMPLATE('3JkkBbop99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#677),#513);
+/*#684= IFCRELDEFINESBYTEMPLATE('3JkkBbop99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#677),#513);*/
 
 
-#701= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr4yBOR5rYl6b9w',#18,$,$,$,#203,#702,.BOREHOLELOG.);
+#701= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr3yBOR5rYl6b9w',#18,$,$,$,#203,#702,.BOREHOLELOG.);
 #702= IFCPRODUCTDEFINITIONSHAPE($,$,(#703));
 #703= IFCSHAPEREPRESENTATION(#208,'Body','Curve3D',(#704));
 #704= IFCPOLYLINE((#655,#705));
@@ -226,13 +226,13 @@ DATA;
 #726= IFCPROPERTYSINGLEVALUE('SolidCoreRecorvery',$,IFCRATIOMEASURE($),$);
 #727= IFCPROPERTYSET('3JkBjt01LFak5Bw6ZlXzWv',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#721,#722,#723,#724,#725,#726));
 #728= IFCRELDEFINESBYPROPERTIES('382$svtiodmhoz66iHtCwJ',#18,$,$,(#701),#727);
-#729= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAvhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#727),#510);
+/*#729= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAvhqEv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#727),#510);*/
 
-#730= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\78026df73058308a7c98571f\0\ Clay with sand'),$);     /*工学的地質区分名現場土質名, 砂混じり粘土 */
+#730= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\78026df73058308a7c98571f\X0\ Clay with sand'),$);     /*工学的地質区分名現場土質名, 砂混じり粘土 */
 #731= IFCPROPERTYBOUNDEDVALUE('DepthRange',$,IFCLENGTHMEASURE(2.80),IFCLENGTHMEASURE(3.80),$,$);
 #732= IFCPROPERTYSET('3sGofpoqP5vvIaalPtcSe0',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#730,#731));
 #733= IFCRELDEFINESBYPROPERTIES('1YcXImxSD6gBELL$1QeYyb',#18,$,$,(#701),#732);
-#734= IFCRELDEFINESBYTEMPLATE('3JkkBuop99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#732),#513);
+/*#734= IFCRELDEFINESBYTEMPLATE('3JkkBuop99dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#732),#513);*/
 
 
 #751= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr4yBtR5rYl6b9w',#18,$,$,$,#203,#752,.BOREHOLELOG.);
@@ -249,16 +249,16 @@ DATA;
 #776= IFCPROPERTYSINGLEVALUE('SolidCoreRecorvery',$,IFCRATIOMEASURE($),$);
 #777= IFCPROPERTYSET('3Jkijt01LFak5Bw6ZlXzWv',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#771,#772,#773,#774,#775,#776));
 #778= IFCRELDEFINESBYPROPERTIES('382$svliodmhoz66iHtCwJ',#18,$,$,(#751),#777);
-#779= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAvhqSv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#777),#510);
+/*#779= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99dAvhqSv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#777),#510);*/
 
-#780= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\30b730eb30c88cea7c98571f\0\ Silty sand'),$);     /* 工学的地質区分名現場土質名, シルト質粘土 */
+#780= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\30b730eb30c88cea7c98571f\X0\ Silty sand'),$);     /* 工学的地質区分名現場土質名, シルト質粘土 */
 #781= IFCPROPERTYBOUNDEDVALUE('DepthRange',$,IFCLENGTHMEASURE(3.80),IFCLENGTHMEASURE(9.20),$,$);
 #782= IFCPROPERTYSET('3sGofpoqP5vvIaalPtcSe1',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#780,#781));
 #783= IFCRELDEFINESBYPROPERTIES('1YcXImxSD6gBELL$4QeYyb',#18,$,$,(#751),#782);
-#784= IFCRELDEFINESBYTEMPLATE('3JkkBuop09dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#782),#513);
+/*#784= IFCRELDEFINESBYTEMPLATE('3JkkBuop09dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#782),#513);*/
 
 
-#801= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr4yBtR5rYl6b9w',#18,$,$,$,#203,#802,.BOREHOLELOG.);
+#801= IFCGEOSCIENCEOBSERVATION('3l_OKNTsr4yBtR5rYl5b9w',#18,$,$,$,#203,#802,.BOREHOLELOG.);
 #802= IFCPRODUCTDEFINITIONSHAPE($,$,(#803));
 #803= IFCSHAPEREPRESENTATION(#208,'Body','Curve3D',(#804));
 #804= IFCPOLYLINE((#755,#805));
@@ -272,34 +272,34 @@ DATA;
 #826= IFCPROPERTYSINGLEVALUE('SolidCoreRecorvery',$,IFCRATIOMEASURE($),$);
 #827= IFCPROPERTYSET('3Jkjjt01LFak5Bw6ZlXzWv',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#821,#822,#823,#824,#825,#826));
 #828= IFCRELDEFINESBYPROPERTIES('38f$svliodmhoz66iHtCwJ',#18,$,$,(#801),#827);
-#829= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99kAvhqSv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#827),#510);
+/*#829= IFCRELDEFINESBYTEMPLATE('3JkkBb9p99kAvhqSv5T8pS',#18,'Pset_GeoObsBoreholeGeoLogInterval',$,(#827),#510);*/
 
-#830= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\8c9d6bbb6df73058308a7d307802\0\ Fine sand with shells'),$);     /* 工学的地質区分名現場土質名, 貝殻混じり細砂 */
+#830= IFCPROPERTYSINGLEVALUE('\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,IFCLABEL('\X2\8c9d6bbb6df73058308a7d307802\X0\ Fine sand with shells'),$);     /* 工学的地質区分名現場土質名, 貝殻混じり細砂 */
 #831= IFCPROPERTYBOUNDEDVALUE('DepthRange',$,IFCLENGTHMEASURE(9.20),IFCLENGTHMEASURE(9.75),$,$);
 #832= IFCPROPERTYSET('3sGofpoqPavvIaalPtcSe1',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#830,#831));
 #833= IFCRELDEFINESBYPROPERTIES('1YcXImxwD6gBELL$4QeYyb',#18,$,$,(#801),#832);
-#834= IFCRELDEFINESBYTEMPLATE('3JkkBusp09dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#832),#513);
+/*#834= IFCRELDEFINESBYTEMPLATE('3JkkBusp09dAzhqEv5T8pS',#18,'GeoObsBoreholeGeoLogInterval_additional',$,(#832),#513);*/
 
 
 /******** geoscience observation, insitu test common, permeability *******/
-#1001= IFCGEOSCIENCEOBSERVATION('3l_OKNTJr4yBOR5rYl6b0w',#18,'\X2\900f6c348a669a13\X0\ Permeability test',$,$,$,$,.INSITUTESTRESULT.);      /* 透水試験 */
+#1001= IFCGEOSCIENCEOBSERVATION('3l_OKfTJr4yBOR5rYl6b0w',#18,'\X2\900f6c348a669a13\X0\ Permeability test',$,$,$,$,.INSITUTESTRESULT.);      /* 透水試験 */
 #1002= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwaF',$,$,$,#201,(#1001));
 
 /* aggregates intervals */
 #1003= IFCRELAGGREGATES('05_XilTUH3VROiy8KwqwaF',$,$,$,#1001,(#1101,#1151,#1201,#1251));
 
 /* property template, Pset_InSituTestCommon */
-#1004= IFCSIMPLEPROPERTYTEMPLATE('05_XiljUH3VROiy8KwqwaF',#18,'DepthRange',$,.P_BOUNDEDVALUE.,'IfcNonNegativeLengthMeasure',$,$,#3,$,$,$);
+/*#1004= IFCSIMPLEPROPERTYTEMPLATE('05_XiljUH3VROiy8KwqwaF',#18,'DepthRange',$,.P_BOUNDEDVALUE.,'IfcNonNegativeLengthMeasure',$,$,#3,$,$,$);
 #1005= IFCSIMPLEPROPERTYTEMPLATE('05_XiljUH3VRhiy8KwqwaF',#18,'TestMethod',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
 #1006= IFCSIMPLEPROPERTYTEMPLATE('05_XiljUd3VRhiy8KwqwaF',#18,'TestType',$,.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,$,$);
-#1007= IFCPROPERTYSETTEMPLATE('05_XiljUd3VRhiyoKwqwaF',#18,'Pset_InSituTestCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#1004,#1005,#1006));
+#1007= IFCPROPERTYSETTEMPLATE('05_XiljUd3VRhiyoKwqwaF',#18,'Pset_InSituTestCommon',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#1004,#1005,#1006));*/
 
 /* property tmplate, Pset_InSituTestPumping */
-#1008= IFCSIMPLEPROPERTYTEMPLATE('05_XijjUH3VROiy8KwqwaF',#18,'HydraulicPermeability',$,.P_SINGLEVALUE.,'IfcVolumeMeasure',$,$,$,$,$,$);
+/*#1008= IFCSIMPLEPROPERTYTEMPLATE('05_XijjUH3VROiy8KwqwaF',#18,'HydraulicPermeability',$,.P_SINGLEVALUE.,'IfcVolumeMeasure',$,$,$,$,$,$);
 #1009= IFCSIMPLEPROPERTYTEMPLATE('05_XijjUH3VROiy8KwqwaF',#18,'HydraulicConductivity',$,.P_SINGLEVALUE.,'IfcVolumeMeasure',$,$,$,$,$,$);
 #1010= IFCSIMPLEPROPERTYTEMPLATE('05_XijjUj3VROiy8KwqwaF',#18,'Transmissivity',$,.P_SINGLEVALUE.,'IfcReal',$,$,$,$,$,$);
 #1011= IFCSIMPLEPROPERTYTEMPLATE('05_Xijjpj3VROiy8KwqwaF',#18,'Storativity',$,.P_SINGLEVALUE.,'IFcPositiveRatioMeasure',$,$,$,$,$,$);
-#1012= IFCPROPERTYSETTEMPLATE('05_XiljUd3VRhiyoKkqwaF',#18,'Pset_InSituTestPumping',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#1008,#1009,#1010,#1011));
+#1012= IFCPROPERTYSETTEMPLATE('05_XiljUd3VRhiyoKkqwaF',#18,'Pset_InSituTestPumping',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcGeoscienceObservation',(#1008,#1009,#1010,#1011));*/
 
 
 /* insitu test, permeability */
@@ -315,7 +315,7 @@ DATA;
 #1123= IFCPROPERTYSINGLEVALUE('TestType',$,IFCLABEL('02'),$);
 #1124= IFCPROPERTYSET('1p6yl9M3jF8fqe_W5a3Kjo',#18,'Pset_InSituTestCommon',$,(#1121,#1122,#1123));
 #1125= IFCRELDEFINESBYPROPERTIES('27OJeC9_HE9herldR9UZ90',#18,$,$,(#1101),#1124);
-#1126= IFCRELDEFINESBYTEMPLATE('27OJel9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1124),#1007);
+/*#1126= IFCRELDEFINESBYTEMPLATE('27OJel9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1124),#1007);*/
 
 #1127= IFCPROPERTYSINGLEVALUE('HydraulicPermeability',$,IFCLINEARVELOCITYMEASURE($),$);
 #1128= IFCPROPERTYSINGLEVALUE('HydraulicConductivity',$,IFCLINEARVELOCITYMEASURE(2.47E-7),$);
@@ -323,7 +323,7 @@ DATA;
 #1130= IFCPROPERTYSINGLEVALUE('Storativity',$,IFCPOSITIVERATIOMEASURE($),$);
 #1131= IFCPROPERTYSET('1p6wl9M3jF8fqe_W5a3Kjo',#18,'Pset_InSituTestPumping',$,(#1127,#1128,#1129,#1130));
 #1132= IFCRELDEFINESBYPROPERTIES('27OJwC9_HE9herldR9UZ90',#18,$,$,(#1101),#1131);
-#1133= IFCRELDEFINESBYTEMPLATE('27OJwb9_HE9herldR9UZ90',#18,'Pset_InSituTestPumping',$,(#1131),#1012);
+/*#1133= IFCRELDEFINESBYTEMPLATE('27OJwb9_HE9herldR9UZ90',#18,'Pset_InSituTestPumping',$,(#1131),#1012);*/
 
 
 #1151= IFCGEOSCIENCEOBSERVATION('3l_OKNTJm4yBOR5rYl6b0w',#18,$,$,$,#203,#1152,.INSITUTESTRESULT.);
@@ -338,7 +338,7 @@ DATA;
 #1173= IFCPROPERTYSINGLEVALUE('TestType',$,IFCLABEL('01'),$);
 #1174= IFCPROPERTYSET('1p6wl9M3jF8fqe_W5a4Kjo',#18,'Pset_InSituTestCommon',$,(#1171,#1172,#1173));
 #1175= IFCRELDEFINESBYPROPERTIES('27OJwC9_HE9herldR9UZ91',#18,$,$,(#1151),#1174);
-#1176= IFCRELDEFINESBYTEMPLATE('27OJtl9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1174),#1007);
+/*#1176= IFCRELDEFINESBYTEMPLATE('27OJtl9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1174),#1007);*/
 
 #1177= IFCPROPERTYSINGLEVALUE('HydraulicPermeability',$,IFCLINEARVELOCITYMEASURE($),$);
 #1178= IFCPROPERTYSINGLEVALUE('HydraulicConductivity',$,IFCLINEARVELOCITYMEASURE(3.41E-7),$);
@@ -346,7 +346,7 @@ DATA;
 #1180= IFCPROPERTYSINGLEVALUE('Storativity',$,IFCPOSITIVERATIOMEASURE($),$);
 #1181= IFCPROPERTYSET('1p6wl9M3fF8fqe_W5a4Kjo',#18,'Pset_InSituTestPumping',$,(#1177,#1178,#1179,#1180));
 #1182= IFCRELDEFINESBYPROPERTIES('27OJsC9_HE9herldR9UZ91',#18,$,$,(#1151),#1181);
-#1183= IFCRELDEFINESBYTEMPLATE('27OJwb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1181),#1012);
+/*#1183= IFCRELDEFINESBYTEMPLATE('27OJwb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1181),#1012);*/
 
 
 #1201= IFCGEOSCIENCEOBSERVATION('3l_OKNoJm4yBOR5rYl6b0w',#18,$,$,$,#203,#1202,.INSITUTESTRESULT.);
@@ -361,7 +361,7 @@ DATA;
 #1223= IFCPROPERTYSINGLEVALUE('TestType',$,IFCLABEL('01'),$);
 #1224= IFCPROPERTYSET('1p6wl9M3jh8fqe_W5a5Kjo',#18,'Pset_InSituTestCommon',$,(#1221,#1222,#1223));
 #1225= IFCRELDEFINESBYPROPERTIES('27OJwC9_HEoherldR9UZ92',#18,$,$,(#1201),#1224);
-#1226= IFCRELDEFINESBYTEMPLATE('27kJtl9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1224),#1007);
+/*#1226= IFCRELDEFINESBYTEMPLATE('27kJtl9_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1224),#1007);*/
 
 #1227= IFCPROPERTYSINGLEVALUE('HydraulicPermeability',$,IFCLINEARVELOCITYMEASURE($),$);
 #1228= IFCPROPERTYSINGLEVALUE('HydraulicConductivity',$,IFCLINEARVELOCITYMEASURE(4.53E-6),$);
@@ -369,7 +369,7 @@ DATA;
 #1230= IFCPROPERTYSINGLEVALUE('Storativity',$,IFCPOSITIVERATIOMEASURE($),$);
 #1231= IFCPROPERTYSET('1p6wl9M3jF8fqe_W5a5Kjo',#18,'Pset_InSituTestPumping',$,(#1227,#1228,#1229,#1230));
 #1232= IFCRELDEFINESBYPROPERTIES('27OJwC9_HE9herldR9UZ92',#18,$,$,(#1201),#1231);
-#1233= IFCRELDEFINESBYTEMPLATE('27OJkb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1231),#1012);
+/*#1233= IFCRELDEFINESBYTEMPLATE('27OJkb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1231),#1012);*/
 
 
 #1251= IFCGEOSCIENCEOBSERVATION('3l_OKNoJm4yBOR5rYl6bpw',#18,$,$,$,#203,#1252,.INSITUTESTRESULT.);
@@ -384,7 +384,7 @@ DATA;
 #1273= IFCPROPERTYSINGLEVALUE('TestType',$,IFCLABEL('01'),$);
 #1274= IFCPROPERTYSET('1p6wl9M3jh8fqe_W5a6Kjo',#18,'Pset_InSituTestCommon',$,(#1271,#1272,#1273));
 #1275= IFCRELDEFINESBYPROPERTIES('27OJwC9_HE9hdrldR9UZ93',#18,$,$,(#1251),#1274);
-#1276= IFCRELDEFINESBYTEMPLATE('27kJtle_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1274),#1007);
+/*#1276= IFCRELDEFINESBYTEMPLATE('27kJtle_HE9herldR9UZ90',#18,'Pset_InSituTestCommon',$,(#1274),#1007);*/
 
 #1277= IFCPROPERTYSINGLEVALUE('HydraulicPermeability',$,IFCLINEARVELOCITYMEASURE($),$);
 #1278= IFCPROPERTYSINGLEVALUE('HydraulicConductivity',$,IFCLINEARVELOCITYMEASURE(1.06E-6),$);
@@ -392,7 +392,7 @@ DATA;
 #1280= IFCPROPERTYSINGLEVALUE('Storativity',$,IFCPOSITIVERATIOMEASURE($),$);
 #1281= IFCPROPERTYSET('1p6wl9M3jF8fqe_W5a6Kjo',#18,'Pset_InSituTestPumping',$,(#1277,#1278,#1279,#1280));
 #1282= IFCRELDEFINESBYPROPERTIES('27OJwC9_HE9herldR9UZ93',#18,$,$,(#1251),#1281);
-#1283= IFCRELDEFINESBYTEMPLATE('27OJeb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1281),#1012);
+/*#1283= IFCRELDEFINESBYTEMPLATE('27OJeb9_HE9herljR9UZ90',#18,'Pset_InSituTestPumping',$,(#1281),#1012);*/
 
 
 /******** geoscience observation, insitu test common, P-wave voelocity ********/
@@ -432,7 +432,7 @@ DATA;
 
 
 /* aggregate of samples */
-#10001= IFCGEOSCIENCEOBSERVATION('2vDiRxtlv2Wgb8XOWwCU4M',#18,'\X2\8a66659963a153d6\X0\ Sample collection',$,$,$,$,.USERDEFINED.);       /* 試料採取 */
+#10001= IFCGEOSCIENCEOBSERVATION('2vDiRxtlv2Wgb8XOWwCU4M',#18,'\X2\8a66659963a153d6\X0\ Sample collection',$,'Sample collection',$,$,.USERDEFINED.);       /* 試料採取 */
 #10002= IFCRELAGGREGATES('3LrutsCpn5DPF9Zt4zdIEU',$,$,$,#201,(#10001));
 
 #10003= IFCRELAGGREGATES('3LrutsCpn5DPF9Zt4YdIEU',$,$,$,#10001,(#10004,#10101));
@@ -442,7 +442,7 @@ DATA;
 
 /* local placement, sample */
 #10005= IFCLOCALPLACEMENT(#203,#10006);
-#10006= IFCAXIS2PLACEMENT3D(#10007,#40,#41);
+#10006= IFCAXIS2PLACEMENT3D(#10007,#206,#207);
 #10007= IFCCARTESIANPOINT((0.0,0.0,-2.15));
 
 /* geometric representation of sample */
@@ -454,7 +454,7 @@ DATA;
 
 /* properties of sample */
 #10013= IFCPROPERTYSINGLEVALUE('\X2\63a153d665b96cd530b330fc30c9\X0\ Sample collection',$,IFCLABEL('100'),$);       /* 採取方法コード */
-#10014= IFCPROPERTYLISTVALUE('\X2\8a669a13540d\X0\ Test methods',$,(IFCLABEL('\X2\571f7c925b50306e5bc65ea68a669a13\X0\ Density test of soil particle'),IFCLABEL('\X2\542b6c346bd48a669a13\0\ Water content test'),IFCLABEL('\X2\7c925ea68a669a13\0\ Grain size analysis')),$);   /* 試験名, 土粒子の密度試験, 含水比試験, 粒度試験 */
+#10014= IFCPROPERTYLISTVALUE('\X2\8a669a13540d\X0\ Test methods',$,(IFCLABEL('\X2\571f7c925b50306e5bc65ea68a669a13\X0\ Density test of soil particle'),IFCLABEL('\X2\542b6c346bd48a669a13\X0\ Water content test'),IFCLABEL('\X2\7c925ea68a669a13\X0\ Grain size analysis')),$);   /* 試験名, 土粒子の密度試験, 含水比試験, 粒度試験 */
 #10015= IFCPROPERTYSET('1p6wl9M3jF8fse_W5a8Kjo',#18,'Pset_BoreholeSample',$,(#10013,#10014));
 #10016= IFCRELDEFINESBYPROPERTIES('27OdwC9_HE9herldR9UZ95',#18,$,$,(#10004),#10015);
 
@@ -485,7 +485,7 @@ DATA;
 
 /* local placement, sample */
 #10102= IFCLOCALPLACEMENT(#203,#10103);
-#10103= IFCAXIS2PLACEMENT3D(#10104,#40,#41);
+#10103= IFCAXIS2PLACEMENT3D(#10104,#206,#207);
 #10104= IFCCARTESIANPOINT((0.0,0.0,-3.15));
 
 /* geometric representation of sample */
@@ -497,7 +497,7 @@ DATA;
 
 /* properties of sample */
 #10110= IFCPROPERTYSINGLEVALUE('\X2\63a153d665b96cd530b330fc30c9\X0\ Sample collection',$,IFCLABEL('100'),$);       /* 採取方法コード */
-#10111= IFCPROPERTYLISTVALUE('\X2\8a669a13540d\X0\ Test methods',$,(IFCLABEL('\X2\571f7c925b50306e5bc65ea68a669a13\X0\ Density test of soil particle'),IFCLABEL('\X2\542b6c346bd48a669a13\0\ Water content test'),IFCLABEL('\X2\7c925ea68a669a13\0\ Grain size analysis'),IFCLABEL('\X2\7c925ea68a669a13\0\ Grain size analysis'),IFCLABEL('\X2\6db260279650754c30fb585160279650754c8a669a13\0\ Liquid/plastic limit test')),$);        /* 試験名, 土粒子の密度試験, 含水比試験, 粒度試験, 粒度試験, 液性限界・塑性限界試験 */
+#10111= IFCPROPERTYLISTVALUE('\X2\8a669a13540d\X0\ Test methods',$,(IFCLABEL('\X2\571f7c925b50306e5bc65ea68a669a13\X0\ Density test of soil particle'),IFCLABEL('\X2\542b6c346bd48a669a13\X0\ Water content test'),IFCLABEL('\X2\7c925ea68a669a13\X0\ Grain size analysis'),IFCLABEL('\X2\7c925ea68a669a13\X0\ Grain size analysis'),IFCLABEL('\X2\6db260279650754c30fb585160279650754c8a669a13\X0\ Liquid/plastic limit test')),$);        /* 試験名, 土粒子の密度試験, 含水比試験, 粒度試験, 粒度試験, 液性限界・塑性限界試験 */
 #10112= IFCPROPERTYSET('1p6wp9M3jF8fse_W5a8Kjo',#18,'Pset_BoreholeSample',$,(#10110,#10111));
 #10113= IFCRELDEFINESBYPROPERTIES('27Odwm9_HE9herldR9UZ95',#18,$,$,(#10101),#10112);
 
@@ -528,7 +528,7 @@ DATA;
 #10162= IFCPROPERTYSINGLEVALUE('TestStandard',$,IFCLABEL(''),$);
 #10163= IFCPROPERTYSINGLEVALUE('TestType',$,IFCLABEL(''),$);
 #10164= IFCPROPERTYSET('1p6il9M3jF8sje_Wza8Kjo',#18,'Pset_LabTestCommon',$,(#10161,#10162,#10163));
-#10165= IFCRELDEFINESBYPROPERTIES('27OsaC9_HE9herldr9UZ95',#18,$,$,(#10121),#10164);
+#10165= IFCRELDEFINESBYPROPERTIES('27Osay9_HE9herldr9UZ95',#18,$,$,(#10121),#10164);
 
 #10171= IFCPROPERTYSINGLEVALUE('TestMethod',$,IFCLABEL('\X2\6db260279650754c30fb585160279650754c8a669a13\X0\ Liquid/plastic limit test'),$);      /* 液性限界・塑性限界試験 */
 #10172= IFCPROPERTYSINGLEVALUE('TestStandard',$,IFCLABEL(''),$);
