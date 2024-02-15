@@ -65,7 +65,7 @@ jobs:
           mkdir results
           $removed = "${{ needs.filter.outputs.removedfiles }}"
           $cmnd = "${{ github.workspace }}\.github\workflows\IFChecker.TunnelDeployment.exe"
-          "${{ needs.filter.outputs.allchangedfiles }}".Split("§") | ForEach {
+          "${{ needs.filter.outputs.allchangedfiles }}".Split("\§") | ForEach {
             if( $removed -contains $_ ) {continue}
             $filename = $("$_").Substring($("$_").LastIndexOf("/")+1)
             if( [IO.Path]::GetExtension($filename) -ne ".ifc" ) {continue}
