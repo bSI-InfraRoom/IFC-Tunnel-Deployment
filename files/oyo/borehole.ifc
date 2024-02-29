@@ -283,7 +283,8 @@ DATA;
 
 /******** geoscience observation, insitu test common, permeability *******/
 #1001= IFCGEOSCIENCEOBSERVATION('3l_OKfTJr4yBOR5rYl6b0w',#18,'\X2\900f6c348a669a13\X0\ Permeability test',$,$,$,$,.INSITUTESTRESULT.);      /* 透水試験 */
-#1002= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwaF',$,$,$,#201,(#1001));
+/*#1002= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwaF',$,$,$,#201,(#1001));*/
+#1002= IFCRELASSIGNSTOPRODUCT('05_XilTUH1VROiy8KwqwaF',#18,$,$,(#1001),$,#201);
 
 /* aggregates intervals */
 #1003= IFCRELAGGREGATES('05_XilTUH3VROiy8KwqwaF',$,$,$,#1001,(#1101,#1151,#1201,#1251));
@@ -397,7 +398,8 @@ DATA;
 
 /******** geoscience observation, insitu test common, P-wave voelocity ********/
 #2001= IFCGEOSCIENCEOBSERVATION('3l_OKNTJr4yBOR5rYl6b1w',#18,'\X2\00506ce28a669a13\X0\ P-wave velocity',$,$,$,$,.INSITUTESTRESULT.);     /* P波試験 */
-#2002= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwbF',$,$,$,#201,(#2001));
+/*#2002= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwbF',$,$,$,#201,(#2001));*/
+#2002= IFCRELASSIGNSTOPRODUCT('05_XilTUH1VROiy8KwqwbF',#18,$,$,(#2001),$,#201);
 
 #2003= IFCRELAGGREGATES('05_XilTUH1VROip8KwqwbF',$,$,$,#2001,(#2004,#2051));
 
