@@ -143,8 +143,8 @@ DATA;
 
 /******** geoscience observations, borehole log ************/
 #501= IFCGEOSCIENCEOBSERVATION('3l_OKNTJr4yBOR5rYl6b9w',#18,'\X2\5de55b66768457308cea533a5206540d73fe5834571f8cea540d\X0\ Engineering geomaterial classification',$,$,#203,$,.BOREHOLELOG.);      /* 工学的地質区分名現場土質名 */
-/*#502= IFCRELASSIGNSTOPRODUCT('05_XilTUH1VROiy8KwqwoF',#18,$,$,(#501),$,#201);*/
-#502= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwoF',#18,$,$,#201,(#501));
+#502= IFCRELASSIGNSTOPRODUCT('05_XilTUH1VROiy8KwqwoF',#18,$,$,(#501),$,#201);
+/*#502= IFCRELAGGREGATES('05_XilTUH1VROiy8KwqwoF',#18,$,$,#201,(#501));*/
 
 /* aggregates borehole log */
 #503= IFCRELAGGREGATES('05_XilsUH1VROiy8KwqwoF',$,$,$,#501,(#601,#651,#701,#751,#801));
