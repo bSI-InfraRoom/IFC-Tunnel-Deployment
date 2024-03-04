@@ -1,5 +1,6 @@
-# Bever Control Sprint 2.3
+# Bever Control Sprint 3.exc
 
 Sample data is from Trimble Quadri Sprint 1.1
 
-![Tunnel plan view](Tunnel_Plan_View.png)
+![Plan](BeverControl_Plan.png)
+![Detail](BeverControl_Detail.png)
