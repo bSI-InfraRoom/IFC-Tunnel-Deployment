@@ -50,56 +50,58 @@ To enable easier review process, please denote the file names with `Book_A`, `Bo
     1. Geometry: See IfcBorehole [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsBorehole`
-
 1. `IfcGeoScienceObservation/BOREHOLELOG`
-    1. [assigned](#new-concepts) to `IfcBorehole` above
-    1. [declared](./sprint1_1.md) in `IfcProject`
-    1. [properties](./sprint2_3.md) with `Pset_GeoObsBoreholeGeoLogInterval`
-
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcBorehole` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/BOREHOLELOG`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_GeoObsBoreholeGeoLogInterval`
 1. `IfcDatasetInformation`
     1. [declared](./sprint1_1.md) in `IfcProject`
     1. [associated](#new-concepts) to `IfcGeoScienceObservation/BOREHOLELOG`
-
 1. `IfcSpatialZone/MAPPEDZONE`
     1. [aggregated](#new-concepts) in `IfcSite`
     1. Geometry: See IfcSpatialZone/MAPPEDZONE [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
     1. [properties](./sprint2_3.md) with `Pset_SpatialGeoObsMappedZoneCommon`
-
 1. `IfcGeoScienceObservation/MAPPEDFEATURE`
-    1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
-    1. [declared](./sprint1_1.md) in `IfcProject`
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/MAPPEDFEATURE`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
     1. Geometry: See IfcGeoScienceObservation/MAPPEDFEATURE [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
-    1. [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
-
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_GeoObsMappedUnit`
 1. `IfcGeoScienceObservation/LOCALINFORMATION`
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/LOCALINFORMATION`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
     1. Geometry: See IfcGeoScienceObservation/LOCALINFORMATION [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
-    1. [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
-
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_GeoObsPtObservationCommon`
 1. `IfcGeoScienceObservation/INSITUTESTRESULT`
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` or `IfcBorehole` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/INSITUTESTRESULT`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
     1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
     1. [declared](./sprint1_1.md) in `IfcProject`
     1. Geometry: See IfcGeoScienceObservation/INSITUTESTRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
-    1. [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
-
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_InSituTestCommon`
 1. `IfcGeoScienceObservation/LABTESTRESULT`
-    1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
-    1. [declared](./sprint1_1.md) in `IfcProject`
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` or `IfcBorehole` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/LABTESTRESULT`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
     1. Geometry: See IfcGeoScienceObservation/LABTESTRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
-    1. [properties](./sprint2_3.md) with `Pset_LabTestCommon`
-
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_LabTestCommon`
 1. `IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT`
-    1. [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` above
-    1. [declared](./sprint1_1.md) in `IfcProject`
+    1. if not as part of a [composition](#new-concepts) - [assigned](#new-concepts) to `IfcSpatialZone/MAPPEDZONE` or `IfcBorehole` above
+    1. if part of a [composition](#new-concepts) - [RelatingObject](#new-concepts) shall be of type  `IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT`
+    1. if not as part of a [composition](#new-concepts) - [declared](./sprint1_1.md) in `IfcProject`
     1. Geometry: See IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT [here](./IFC-Tunnel-Geotechnics_Geometry.xlsx).
     1. [local placement](./sprint2_2.md)
-    1. [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
+    1. if not further [decomposed](#new-concepts) - [properties](./sprint2_3.md) with `Pset_GeophysicalSurveyCommon`
 
 
 
